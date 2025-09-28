@@ -2,55 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neura AI Design System - Professional, futuristic, high trust */
+/* Neura AI Design System - Omar's Dark Tech Aesthetic */
 
 @layer base {
   :root {
-    /* Core Brand Colors - HSL format */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
+    /* Omar's Dark Theme - Very dark backgrounds with cyan accents */
+    --background: 0 0% 4%; /* #0A0A0A equivalent */
+    --foreground: 0 0% 100%; /* White text */
     
-    /* Neura AI Brand Palette */
-    --primary: 210 98% 58%; /* Vibrant blue from logo */
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 189 85% 68%; /* Lighter teal from logo */
+    /* Cyan-based Brand Palette */
+    --primary: 187 100% 65%; /* Cyan-300 equivalent */
+    --primary-foreground: 0 0% 0%; /* Black text on cyan */
+    --primary-glow: 187 100% 80%; /* Lighter cyan glow */
     
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222 47.4% 11.2%;
+    --secondary: 0 0% 9%; /* neutral-900 */
+    --secondary-foreground: 0 0% 80%; /* Light gray */
     
-    --accent: 189 85% 68%; /* Teal accent */
-    --accent-foreground: 222 84% 4.9%;
+    --accent: 187 100% 65%; /* Cyan accent */
+    --accent-foreground: 0 0% 0%;
     
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 16.3% 46.9%;
+    --muted: 0 0% 9%; /* neutral-900 */
+    --muted-foreground: 0 0% 60%; /* neutral-400 */
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 98% 58%;
+    --border: 0 0% 100% / 0.1; /* white/10 */
+    --input: 0 0% 9%; /* neutral-900 */
+    --ring: 187 100% 65%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
     
     --radius: 1rem;
     
-    /* Brand Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 98% 58%), hsl(189 85% 68%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 98% 58% / 0.1), hsl(189 85% 68% / 0.05));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 99%));
+    /* Omar's Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(187 100% 65%), hsl(187 100% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 5%));
     
-    /* Sophisticated Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(210 98% 58% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(210 98% 58% / 0.1), 0 2px 4px -1px hsl(210 98% 58% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(210 98% 58% / 0.1), 0 4px 6px -2px hsl(210 98% 58% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(210 98% 58% / 0.1), 0 10px 10px -5px hsl(210 98% 58% / 0.04);
-    --shadow-glow: 0 0 30px hsl(210 98% 58% / 0.15);
+    /* Dark Theme Shadows with Cyan Glow */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.5), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsl(187 100% 65% / 0.3);
     
     /* Professional Typography Scale */
     --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -71,38 +71,39 @@
   }
 
   .dark {
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode is now the default, but keep for compatibility */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
     
-    --primary: 210 98% 58%;
-    --primary-foreground: 222 84% 4.9%;
-    --primary-glow: 189 85% 68%;
+    --primary: 187 100% 65%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 187 100% 80%;
     
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 80%;
     
-    --accent: 189 85% 68%;
-    --accent-foreground: 222 84% 4.9%;
+    --accent: 187 100% 65%;
+    --accent-foreground: 0 0% 0%;
     
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 60%;
     
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 60%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 210 98% 58%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 9%;
+    --ring: 187 100% 65%;
     
-    --card: 222 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
     
-    --popover: 222 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
     
-    /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 98% 58% / 0.15), hsl(189 85% 68% / 0.08));
-    --gradient-card: linear-gradient(145deg, hsl(222 84% 4.9%), hsl(217.2 32.6% 17.5%));
+    /* Keep the same dark gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%), hsl(0 0% 6%));
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ChallengeSolution from "@/components/ChallengeSolution";
 import Features from "@/components/Features";
 import UseCases from "@/components/UseCases";
+import { FAQ } from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
@@ -62,13 +63,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground dark">
       <Header />
       <main>
         <Hero />
         <ChallengeSolution />
         <Features />
         <UseCases />
+        <FAQ />
         <div id="final-cta">
           <FinalCTA />
         </div>

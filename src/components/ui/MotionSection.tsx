@@ -1,61 +1,124 @@
-import React, { forwardRef } from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
-import { cn } from "@/lib/utils";
+import * as React from "react";
+import { motion, useInView, Variants } from "framer-motion";
+import { Section } from "./Section";
+import { getQualityConfig, getCurrentQuality } from '@/config/visual';
 
-interface MotionSectionProps extends HTMLMotionProps<"section"> {
+interface MotionSectionProps extends React.ComponentProps<typeof Section> {
+  stagger?: number;
+  delay?: number;
+  disabled?: boolean;
   gradient?: boolean;
-  children: React.ReactNode;
 }
 
-export const MotionSection = forwardRef<HTMLElement, MotionSectionProps>(
-  ({ className, gradient, children, ...props }, ref) => {
+const MotionSection = React.forwardRef<HTMLElement, MotionSectionProps>(
+  ({ children, stagger = 0.1, delay = 0, disabled = false, gradient, ...props }, ref) => {
+    const sectionRef = React.useRef<HTMLElement>(null);
+    const isInView = useInView(sectionRef, { 
+      once: true, 
+      amount: 0.2,
+      margin: "-100px 0px -100px 0px"
+    });
+    const qualityConfig = getQualityConfig();
+
+    // Check for reduced motion preference
+    const prefersReducedMotion = React.useMemo(() => {
+      if (typeof window === 'undefined') return false;
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }, []);
+
+    const shouldAnimate = !disabled && !prefersReducedMotion;
+
+    const containerVariants: Variants = {
+      hidden: { opacity: shouldAnimate ? 0 : 1 },
+      visible: {
+        opacity: 1,
+        transition: {
+          duration: qualityConfig.animationDuration,
+          delay: delay,
+          staggerChildren: shouldAnimate ? stagger : 0
+        }
+      }
+    };
+
     return (
-      <motion.section
-        ref={ref}
-        className={cn(
-          "py-24",
-          gradient && "bg-gradient-aurora",
-          className
-        )}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+      <Section 
+        ref={sectionRef} 
         {...props}
+        className={gradient ? "bg-gradient-aurora" : props.className}
+        style={{
+          contentVisibility: qualityConfig.contentVisibility ? 'auto' : 'visible',
+          contain: qualityConfig.contentVisibility ? 'content' : 'none',
+          ...props.style
+        }}
       >
-        {children}
-      </motion.section>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {children}
+        </motion.div>
+      </Section>
     );
   }
 );
 
 MotionSection.displayName = "MotionSection";
 
-interface MotionItemProps extends HTMLMotionProps<"div"> {
-  children: React.ReactNode;
-  delay?: number;
-}
-
-export const MotionItem = forwardRef<HTMLDivElement, MotionItemProps>(
-  ({ className, children, delay = 0, ...props }, ref) => {
-    return (
-      <motion.div
-        ref={ref}
-        className={cn(className)}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ 
-          duration: 0.5, 
-          ease: "easeOut",
-          delay: delay * 0.1
-        }}
-        {...props}
-      >
-        {children}
-      </motion.div>
-    );
+// Child component for individual animated elements
+const MotionItem = React.forwardRef<
+  HTMLDivElement,
+  {
+    children?: React.ReactNode;
+    className?: string;
+    y?: number;
+    scale?: number;
+    disabled?: boolean;
+    onClick?: () => void;
   }
-);
+>(({ children, y = 20, scale = 0.95, disabled = false, className, onClick }, ref) => {
+  const qualityConfig = getQualityConfig();
+  
+  // Check for reduced motion preference
+  const prefersReducedMotion = React.useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }, []);
+
+  const shouldAnimate = !disabled && !prefersReducedMotion;
+
+  const itemVariants: Variants = {
+    hidden: { 
+      opacity: shouldAnimate ? 0 : 1,
+      y: shouldAnimate ? y : 0,
+      scale: shouldAnimate ? scale : 1
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: getCurrentQuality() === 'low' ? "tween" : "spring",
+        stiffness: getCurrentQuality() === 'low' ? undefined : 400,
+        damping: getCurrentQuality() === 'low' ? undefined : 30,
+        duration: qualityConfig.animationDuration,
+        ease: getCurrentQuality() === 'low' ? "easeOut" : undefined
+      }
+    }
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={itemVariants}
+      className={className}
+      onClick={onClick}
+    >
+      {children}
+    </motion.div>
+  );
+});
 
 MotionItem.displayName = "MotionItem";
+
+export { MotionSection, MotionItem };

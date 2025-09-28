@@ -8,6 +8,22 @@ export interface QualityConfig {
   glowIntensity: number;
 }
 
+export type QualityLevel = 'low' | 'medium' | 'high';
+
+export function getCurrentQuality(): QualityLevel {
+  // Check for reduced motion preference
+  const prefersReducedMotion = typeof window !== 'undefined' && 
+    window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+
+  // Check for low-end device indicators
+  const isLowEndDevice = typeof navigator !== 'undefined' && 
+    (navigator.hardwareConcurrency <= 2 || (navigator as any).deviceMemory <= 2);
+  
+  if (isLowEndDevice) return 'low';
+  if (prefersReducedMotion) return 'medium';
+  return 'high';
+}
+
 export function getQualityConfig(): QualityConfig {
   // Check for reduced motion preference
   const prefersReducedMotion = typeof window !== 'undefined' && 

@@ -71,8 +71,10 @@ const Index = () => {
         <Features />
         <UseCases />
         <FAQ />
-        <div id="final-cta">
-          <FinalCTA />
+        <div className="bg-gradient-aurora">
+          <div className="bg-background/95 backdrop-blur-sm border border-border/20 rounded-2xl mx-4 md:mx-8">
+            <FinalCTA />
+          </div>
         </div>
       </main>
       <Footer />

@@ -1,27 +1,71 @@
-import React, { forwardRef } from "react";
+import * as React from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { getQualityConfig } from '@/config/visual';
 
-interface GlassCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+interface GlassCardProps {
+  className?: string;
+  hover?: boolean;
+  glow?: boolean;
+  noise?: boolean;
+  children?: React.ReactNode;
+  onClick?: () => void;
 }
 
-export const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(
-  ({ className, children, ...props }, ref) => {
+const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
+  ({ className, hover = true, glow = false, noise = true, children, onClick }, ref) => {
+    const [isHovered, setIsHovered] = React.useState(false);
+    const qualityConfig = getQualityConfig();
+    
     return (
-      <div
+      <motion.div
         ref={ref}
         className={cn(
-          "backdrop-blur-sm bg-card/30 border border-border/20 rounded-2xl p-6",
-          "hover:bg-card/40 hover:border-border/30 transition-all duration-300",
-          "shadow-lg hover:shadow-xl",
+          "relative rounded-2xl",
+          qualityConfig.contentVisibility ? "backdrop-blur-xl" : "",
+          "bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-white/[0.08]",
+          !qualityConfig.contentVisibility && "bg-background/80",
+          "border border-white/[0.08]",
+          "shadow-lg shadow-black/20",
+          hover && "transition-all duration-300",
+          hover && isHovered && "scale-[1.01]",
+          hover && isHovered && "shadow-xl shadow-primary/10",
+          glow && "shadow-2xl shadow-primary/20",
+          noise && "glass-noise",
           className
         )}
-        {...props}
+        style={{
+          contentVisibility: qualityConfig.contentVisibility ? 'auto' : 'visible',
+          contain: qualityConfig.contentVisibility ? 'content' : 'none',
+          willChange: isHovered && hover ? 'transform' : 'auto',
+        }}
+        whileHover={hover ? {
+          boxShadow: "0 25px 50px -12px rgba(0, 255, 255, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1)"
+        } : undefined}
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+        onClick={onClick}
       >
+        {/* Inner glow effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/[0.02] via-transparent to-primary/[0.01] pointer-events-none" />
+        
+        {/* Border gradient overlay */}
+        <div 
+          className="absolute inset-0 rounded-2xl pointer-events-none"
+          style={{
+            background: "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%)",
+            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            padding: "1px"
+          }}
+        />
+        
         {children}
-      </div>
+      </motion.div>
     );
   }
 );
 
 GlassCard.displayName = "GlassCard";
+
+export { GlassCard };

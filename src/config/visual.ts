@@ -3,6 +3,9 @@ export interface QualityConfig {
   reduceMotion: boolean;
   simplifiedAnimations: boolean;
   animationDuration: number;
+  useBackdropBlur: boolean;
+  shadowLayers: number;
+  glowIntensity: number;
 }
 
 export function getQualityConfig(): QualityConfig {
@@ -21,5 +24,8 @@ export function getQualityConfig(): QualityConfig {
     reduceMotion: prefersReducedMotion || false,
     simplifiedAnimations: prefersReducedMotion || isLowEndDevice || false,
     animationDuration: baseAnimationDuration,
+    useBackdropBlur: !isLowEndDevice,
+    shadowLayers: isLowEndDevice ? 1 : prefersReducedMotion ? 2 : 3,
+    glowIntensity: isLowEndDevice ? 0.3 : prefersReducedMotion ? 0.6 : 1.0,
   };
 }

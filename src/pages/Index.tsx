@@ -1,3 +1,11 @@
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import ChallengeSolution from "@/components/ChallengeSolution";
+import Features from "@/components/Features";
+import UseCases from "@/components/UseCases";
+import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -55,13 +63,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <h1 className="mb-4 text-hero font-bold text-gradient-primary">Neura AI</h1>
-          <p className="text-xl text-muted-foreground">AI That Gives You Answers Without Interrupting the Flow</p>
-          <p className="mt-4 text-sm text-muted-foreground">Ready for component import...</p>
+      <Header />
+      <main>
+        <Hero />
+        <ChallengeSolution />
+        <Features />
+        <UseCases />
+        <div id="final-cta">
+          <FinalCTA />
         </div>
-      </div>
+      </main>
+      <Footer />
+      <StickyMobileCTA />
     </div>
   );
 };

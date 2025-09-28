@@ -262,6 +262,14 @@
   .bg-gradient-aurora {
     background: var(--gradient-aurora);
   }
+
+  /* Brand Aurora Colors for Backgrounds */
+  --brand-aurora-1: 180 100% 50%; /* Cyan */
+  --brand-aurora-2: 240 100% 50%; /* Blue */
+  --brand-aurora-3: 280 100% 50%; /* Purple */
+  
+  /* Background Subtle */
+  --background-subtle: 240 10% 3.9%;
 }
 
 /* Keyframes for animations */

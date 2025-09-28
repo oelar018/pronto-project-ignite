@@ -46,9 +46,8 @@ const Header = () => {
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
             <Button 
-              variant="default" 
+              variant="hero" 
               size="lg"
-              className="bg-primary hover:bg-primary/90"
               onClick={() => {
                 document.getElementById('waitlist-form')?.scrollIntoView({ 
                   behavior: 'smooth' 
@@ -100,9 +99,9 @@ const Header = () => {
               </a>
               <div className="pt-4">
                 <Button 
-                  variant="default" 
+                  variant="hero" 
                   size="lg"
-                  className="w-full bg-primary hover:bg-primary/90"
+                  className="w-full"
                   onClick={() => {
                     setIsMenuOpen(false);
                     document.getElementById('waitlist-form')?.scrollIntoView({ 

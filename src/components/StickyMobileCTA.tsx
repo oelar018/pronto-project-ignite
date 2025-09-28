@@ -43,10 +43,10 @@ const StickyMobileCTA = () => {
             <p className="text-xs text-muted-foreground">Join the waitlist for early access</p>
           </div>
           <Button 
-            variant="default" 
+            variant="hero" 
             size="sm" 
             onClick={scrollToWaitlistForm}
-            className="flex-shrink-0 bg-primary hover:bg-primary/90"
+            className="flex-shrink-0"
           >
             Join Now
             <ArrowRight className="w-3 h-3 ml-1" />

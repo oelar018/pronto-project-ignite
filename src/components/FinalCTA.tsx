@@ -220,10 +220,10 @@ const FinalCTA = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    variant="default" 
+                    variant="hero" 
                     size="lg" 
                     disabled={isLoading}
-                    className="w-full bg-primary hover:bg-primary/90"
+                    className="w-full"
                   >
                     {isLoading ? (
                       <>

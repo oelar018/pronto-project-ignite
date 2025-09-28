@@ -42,9 +42,9 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
-              variant="default" 
-              size="lg" 
-              className="group bg-primary hover:bg-primary/90"
+              variant="hero" 
+              size="xl" 
+              className="group"
               onClick={() => {
                 document.getElementById('waitlist-form')?.scrollIntoView({ 
                   behavior: 'smooth' 
@@ -55,8 +55,8 @@ const Hero = () => {
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Button>
             <Button 
-              variant="outline" 
-              size="lg"
+              variant="outline-hero" 
+              size="xl"
               onClick={() => {
                 document.getElementById('challenge-solution')?.scrollIntoView({ 
                   behavior: 'smooth' 

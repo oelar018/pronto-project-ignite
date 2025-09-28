@@ -47,7 +47,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button 
               variant="hero" 
-              size="lg"
+              size="default"
               onClick={() => {
                 document.getElementById('waitlist-form')?.scrollIntoView({ 
                   behavior: 'smooth' 

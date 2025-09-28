@@ -17,6 +17,7 @@
     
     --secondary: 0 0% 9%; /* neutral-900 */
     --secondary-foreground: 0 0% 80%; /* Light gray */
+    --secondary-hover: 0 0% 12%; /* Darker secondary on hover */
     
     --accent: 187 100% 65%; /* Cyan accent */
     --accent-foreground: 0 0% 0%;
@@ -47,7 +48,8 @@
     
     /* Background gradients for glass morphism and aurora effects */
     --gradient-aurora: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(187 100% 65% / 0.05) 50%, hsl(0 0% 5%) 100%);
-    --bg-gradient-aurora: var(--gradient-aurora);
+    
+    /* Dark Theme Shadows with Cyan Glow */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
     --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
@@ -131,6 +133,10 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-inter);
     line-height: 1.6;
+  }
+  
+  .font-inter {
+    font-family: var(--font-inter);
   }
   
   /* Accessibility improvements */

@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Button 
             variant="hero" 
-            size="xl" 
+            size="lg" 
             className="group"
             onClick={() => {
               document.getElementById('waitlist-form')?.scrollIntoView({ 
@@ -58,8 +58,8 @@ const Hero = () => {
             <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </Button>
           <Button 
-            variant="outline-hero" 
-            size="xl"
+            variant="ghost" 
+            size="lg"
             onClick={() => setShowVideoModal(true)}
           >
             Watch a 30s preview

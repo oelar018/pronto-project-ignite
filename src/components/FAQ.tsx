@@ -54,11 +54,13 @@ export const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-24 bg-[#0A0A0A]">
       <div className="container mx-auto px-6">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Frequently asked questions"
-          subtitle="Everything you need to know about Neura AI"
-        />
+        <header>
+          <SectionHeading
+            eyebrow="FAQ"
+            title="Frequently asked questions"
+            subtitle="Everything you need to know about Neura AI"
+          />
+        </header>
         
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">

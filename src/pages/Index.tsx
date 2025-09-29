@@ -65,17 +65,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground dark">
       <Header />
-      <main>
+      <main role="main">
         <Hero />
         <ChallengeSolution />
         <Features />
         <UseCases />
         <FAQ />
-        <div className="bg-gradient-aurora">
+        <section aria-label="Join waitlist" className="bg-gradient-aurora">
           <div className="bg-background/95 backdrop-blur-sm border border-border/20 rounded-2xl mx-4 md:mx-8">
             <FinalCTA />
           </div>
-        </div>
+        </section>
       </main>
       <Footer />
       <StickyMobileCTA />

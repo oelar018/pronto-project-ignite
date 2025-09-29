@@ -9,7 +9,7 @@ const Features = () => {
         <div className="max-w-6xl mx-auto">
           
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <header className="text-center mb-16">
             <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">
               Features
             </Badge>
@@ -19,7 +19,7 @@ const Features = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Choose your preferred way to receive AI-powered insights during conversations.
             </p>
-          </div>
+          </header>
 
           {/* Main Features */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -110,15 +110,15 @@ const Features = () => {
           </div>
 
           {/* Advanced Capabilities */}
-          <div className="bg-gradient-hero rounded-3xl p-8 md:p-12 mb-16">
-            <div className="text-center mb-12">
+          <article className="bg-gradient-hero rounded-3xl p-8 md:p-12 mb-16">
+            <header className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                 Advanced Professional Capabilities
               </h3>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">
                 Enterprise-grade features designed for professional excellence
               </p>
-            </div>
+            </header>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
@@ -161,7 +161,7 @@ const Features = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </article>
 
           {/* Technical Excellence */}
           <div className="grid md:grid-cols-3 gap-6">

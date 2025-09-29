@@ -9,7 +9,7 @@ const ChallengeSolution = () => {
         <div className="max-w-6xl mx-auto">
           
           {/* Challenge Section */}
-          <div className="text-center mb-16">
+          <header className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               The Problem Every Professional Faces
             </h2>
@@ -17,7 +17,7 @@ const ChallengeSolution = () => {
               Professionals can't access the right information in live conversations without breaking flow. 
               Context is scattered across email, calendar, files, and the web.
             </p>
-          </div>
+          </header>
 
           {/* Interactive Problem Stats */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -173,7 +173,7 @@ const ChallengeSolution = () => {
           </div>
 
           {/* Solution Section */}
-          <div className="text-center mb-16">
+          <header className="text-center mb-16">
             <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">
               The Neura AI Solution
             </Badge>
@@ -184,7 +184,7 @@ const ChallengeSolution = () => {
               AI-powered suggestions appear precisely when you need them, keeping you in the flow. 
               Works even with your phone asleep in your pocket.
             </p>
-          </div>
+          </header>
 
           {/* Solution Visualization */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -254,11 +254,11 @@ const ChallengeSolution = () => {
           </div>
 
           {/* How It Works - Simplified */}
-          <div className="bg-gradient-hero rounded-3xl p-8 md:p-12">
-            <div className="text-center mb-12">
+          <article className="bg-gradient-hero rounded-3xl p-8 md:p-12">
+            <header className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">How It Works</h3>
               <p className="text-muted-foreground text-lg">Three simple steps to transform your conversations</p>
-            </div>
+            </header>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -291,7 +291,7 @@ const ChallengeSolution = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>

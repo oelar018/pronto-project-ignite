@@ -1,6 +1,7 @@
 // Lazy loading exports for optimized bundle splitting
 export { default as LazyHexHeroNeura } from "./LazyHexHeroNeura";
 export { default as LazyHexGridNeura } from "./LazyHexGridNeura";
+export { default as LazyHexSculptP5 } from "./LazyHexSculptP5";
 
 // Chart components
 export {

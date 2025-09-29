@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Shield, Users, Mic, Eye } from "lucide-react";
 import { useState } from "react";
-import HexSculptP5 from "@/components/HexSculptP5";
+import { LazyHexSculptP5 } from "@/components/lazy";
 import { VideoModal } from "@/components/VideoModal";
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
     <section className="relative min-h-screen bg-background flex items-center overflow-hidden">
       {/* Advanced hex background */}
       <div className="absolute inset-0 opacity-30">
-        <HexSculptP5 className="w-full h-full" />
+        <LazyHexSculptP5 className="w-full h-full" />
       </div>
 
       {/* Foreground content */}

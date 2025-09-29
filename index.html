@@ -30,22 +30,74 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Neura AI",
-      "description": "Professional AI assistant that delivers just-in-time intelligence without breaking conversation flow",
-      "url": "https://neura-ai.com",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/PreOrder",
-        "price": "TBD",
-        "priceCurrency": "USD"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Neura AI"
-      }
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Neura AI",
+          "description": "Professional AI assistant that delivers just-in-time intelligence without breaking conversation flow. Visual Mode and Voice Mode for seamless professional interactions.",
+          "url": "https://neura-ai.com",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, iOS, Android",
+          "featureList": [
+            "Visual Mode - On-screen suggestions",
+            "Voice Mode - Whispered insights",
+            "Real-time conversation analysis",
+            "Enterprise-grade security",
+            "Memory network for team collaboration",
+            "Zero latency responses"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "price": "TBD",
+            "priceCurrency": "USD"
+          },
+          "creator": {
+            "@type": "Organization",
+            "name": "Neura AI",
+            "url": "https://neura-ai.com"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Neura AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Neura AI is a professional AI assistant that delivers just-in-time intelligence during conversations without breaking your flow. It offers Visual Mode for on-screen suggestions and Voice Mode for discrete audio guidance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Visual Mode work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Visual Mode provides real-time conversation analysis with non-intrusive visual cues on your screen, perfect for video calls and meetings."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Neura AI secure for business use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Neura AI features enterprise-grade security with built-in privacy controls, consent management, and full compliance for professional environments."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Neura AI",
+          "url": "https://neura-ai.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://neura-ai.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
     }
     </script>
   </head>

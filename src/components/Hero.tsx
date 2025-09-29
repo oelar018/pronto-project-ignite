@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Shield, Users, Mic, Eye } from "lucide-react";
 import { useState } from "react";
-import { LazyHexSculptP5 } from "@/components/lazy";
+import { LazyHexHeroNeura } from "@/components/lazy";
 import { VideoModal } from "@/components/VideoModal";
 
 const Hero = () => {
@@ -10,10 +10,21 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen bg-background flex items-center overflow-hidden">
-      {/* Advanced hex background */}
-      <div className="absolute inset-0 opacity-30">
-        <LazyHexSculptP5 className="w-full h-full" />
+      {/* Advanced hex background with Three.js shaders */}
+      <div className="absolute inset-0 opacity-40">
+        <LazyHexHeroNeura 
+          rings={12}
+          dotSize={5}
+          glowStrength={1}
+          idleSpeed={0.15}
+          parallax={0.35}
+          rippleSpeed={0.7}
+          className="w-full h-full"
+        />
       </div>
+      
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
 
       {/* Foreground content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">

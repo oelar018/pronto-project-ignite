@@ -24,45 +24,45 @@ const SidebarSkeleton = () => (
   </div>
 );
 
-// Create individual lazy components
+// Create individual lazy components - import from the new modular structure
 const LazySidebarComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarRoot").then(module => ({ 
     default: module.Sidebar 
   }))
 );
 
 const LazySidebarProviderComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarRoot").then(module => ({ 
     default: module.SidebarProvider 
   }))
 );
 
 const LazySidebarTriggerComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarToggle").then(module => ({ 
     default: module.SidebarTrigger 
   }))
 );
 
 const LazySidebarContentComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarRoot").then(module => ({ 
     default: module.SidebarContent 
   }))
 );
 
 const LazySidebarMenuComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarItem").then(module => ({ 
     default: module.SidebarMenu 
   }))
 );
 
 const LazySidebarMenuItemComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarItem").then(module => ({ 
     default: module.SidebarMenuItem 
   }))
 );
 
 const LazySidebarMenuButtonComponent = React.lazy(() => 
-  import("@/components/ui/sidebar").then(module => ({ 
+  import("@/components/ui/sidebar/SidebarItem").then(module => ({ 
     default: module.SidebarMenuButton 
   }))
 );
@@ -117,7 +117,7 @@ export const useSidebar = () => {
   const [sidebarModule, setSidebarModule] = React.useState<any>(null);
   
   React.useEffect(() => {
-    import("@/components/ui/sidebar").then(module => {
+    import("@/components/ui/sidebar/SidebarRoot").then(module => {
       setSidebarModule(module);
     });
   }, []);

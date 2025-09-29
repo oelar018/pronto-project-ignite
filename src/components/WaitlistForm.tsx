@@ -6,17 +6,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { sendToDiscord } from '@/utils/discord';
-
-interface FormData {
-  email: string;
-  name: string;
-  useCase: string;
-  marketingOptIn: boolean;
-}
+import { waitlistSchema, validateFormData, sanitizeInput, type WaitlistFormData } from '@/lib/formValidation';
 
 export const WaitlistForm: React.FC = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<WaitlistFormData>({
     email: '',
     name: '',
     useCase: '',
@@ -24,6 +18,7 @@ export const WaitlistForm: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
   const useCaseOptions = [
     { value: 'work-meetings', label: 'Work Meetings' },
@@ -34,26 +29,21 @@ export const WaitlistForm: React.FC = () => {
     { value: 'other', label: 'Other' },
   ];
 
-  const validateEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.email.trim()) {
+    // Clear previous errors
+    setFieldErrors({});
+    
+    // Validate form data
+    const validation = validateFormData(waitlistSchema, formData);
+    
+    if (!validation.success) {
+      // Handle validation errors
+      setFieldErrors('errors' in validation ? validation.errors : {});
       toast({
-        title: "Email required",
-        description: "Please enter your email address.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!validateEmail(formData.email)) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address.",
+        title: "Please check your input",
+        description: "Please correct the errors and try again.",
         variant: "destructive",
       });
       return;
@@ -62,6 +52,9 @@ export const WaitlistForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
+      // Use validated and sanitized data
+      const safeData = validation.data;
+      
       // Try to submit to API, fallback to local storage for development
       try {
         const response = await fetch('/api/waitlist', {
@@ -70,7 +63,7 @@ export const WaitlistForm: React.FC = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            ...formData,
+            ...safeData,
             timestamp: new Date().toISOString(),
           }),
         });
@@ -79,29 +72,28 @@ export const WaitlistForm: React.FC = () => {
           throw new Error('API Error');
         }
 
-        // Send to Discord webhook if configured
+        // Send to Discord webhook if configured with sanitized data
         await sendToDiscord({ 
-          name: formData.name, 
-          email: formData.email, 
-          use_case: formData.useCase 
+          name: sanitizeInput(safeData.name || ''), 
+          email: sanitizeInput(safeData.email), 
+          use_case: sanitizeInput(safeData.useCase || '') 
         });
       } catch {
-        // Fallback to local storage for development
+        // Fallback to local storage for development with sanitized data
         const existingEntries = JSON.parse(localStorage.getItem('neuraWaitlist') || '[]');
         const newEntry = {
-          ...formData,
+          ...safeData,
           timestamp: new Date().toISOString(),
           id: crypto.randomUUID(),
         };
         
         // Check for duplicate email
-        if (existingEntries.some((entry: any) => entry.email === formData.email)) {
+        if (existingEntries.some((entry: any) => entry.email === safeData.email)) {
           throw new Error('Email already registered');
         }
         
         existingEntries.push(newEntry);
         localStorage.setItem('neuraWaitlist', JSON.stringify(existingEntries));
-        console.log('Waitlist entry saved locally:', newEntry);
       }
 
       setIsSuccess(true);
@@ -205,11 +197,17 @@ export const WaitlistForm: React.FC = () => {
           id="email"
           type="email"
           value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          onChange={(e) => setFormData({ ...formData, email: sanitizeInput(e.target.value) })}
           placeholder="your.email@example.com"
-          className="bg-card border-border focus:border-primary"
+          className={`bg-card border-border focus:border-primary ${
+            fieldErrors.email ? 'border-destructive focus:border-destructive' : ''
+          }`}
           required
+          maxLength={255}
         />
+        {fieldErrors.email && (
+          <p className="text-sm text-destructive mt-1">{fieldErrors.email}</p>
+        )}
       </div>
 
       <div className="space-y-2">
@@ -220,10 +218,16 @@ export const WaitlistForm: React.FC = () => {
           id="name"
           type="text"
           value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          onChange={(e) => setFormData({ ...formData, name: sanitizeInput(e.target.value) })}
           placeholder="Your name"
-          className="bg-card border-border focus:border-primary"
+          className={`bg-card border-border focus:border-primary ${
+            fieldErrors.name ? 'border-destructive focus:border-destructive' : ''
+          }`}
+          maxLength={100}
         />
+        {fieldErrors.name && (
+          <p className="text-sm text-destructive mt-1">{fieldErrors.name}</p>
+        )}
       </div>
 
       <div className="space-y-2">
@@ -234,7 +238,9 @@ export const WaitlistForm: React.FC = () => {
           value={formData.useCase}
           onValueChange={(value) => setFormData({ ...formData, useCase: value })}
         >
-          <SelectTrigger className="bg-card border-border focus:border-primary">
+          <SelectTrigger className={`bg-card border-border focus:border-primary ${
+            fieldErrors.useCase ? 'border-destructive focus:border-destructive' : ''
+          }`}>
             <SelectValue placeholder="Select your use case" />
           </SelectTrigger>
           <SelectContent className="bg-popover border-border">
@@ -245,6 +251,9 @@ export const WaitlistForm: React.FC = () => {
             ))}
           </SelectContent>
         </Select>
+        {fieldErrors.useCase && (
+          <p className="text-sm text-destructive mt-1">{fieldErrors.useCase}</p>
+        )}
       </div>
 
       <div className="flex items-center space-x-2">

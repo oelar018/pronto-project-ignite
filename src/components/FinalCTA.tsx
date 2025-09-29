@@ -5,42 +5,34 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, ArrowRight, Sparkles, Shield } from "lucide-react";
+import { finalCTASchema, validateFormData, sanitizeInput, safeEncodeURIComponent, type FinalCTAFormData } from "@/lib/formValidation";
 
 const FinalCTA = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FinalCTAFormData>({
     name: "",
     email: "",
     purpose: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.email) {
+    // Clear previous errors
+    setFieldErrors({});
+    
+    // Validate form data
+    const validation = validateFormData(finalCTASchema, formData);
+    
+    if (!validation.success) {
+      // Handle validation errors
+      setFieldErrors('errors' in validation ? validation.errors : {});
       toast({
-        title: "Email required",
-        description: "Please enter your email address to join the waitlist.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    if (!formData.purpose.trim()) {
-      toast({
-        title: "Purpose required",
-        description: "Please tell us how you plan to use Neura AI.",
+        title: "Please check your input",
+        description: "Please correct the errors and try again.",
         variant: "destructive"
       });
       return;
@@ -49,7 +41,10 @@ const FinalCTA = () => {
     setIsLoading(true);
     
     try {
-      // Send to Discord webhook
+      // Use validated and sanitized data
+      const safeData = validation.data;
+      
+      // Send to Discord webhook with sanitized data
       const discordPayload = {
         embeds: [{
           title: "🚀 New Neura AI Waitlist Signup",
@@ -57,17 +52,17 @@ const FinalCTA = () => {
           fields: [
             {
               name: "Name",
-              value: formData.name || "Not provided",
+              value: sanitizeInput(safeData.name || "Not provided"),
               inline: true
             },
             {
               name: "Email",
-              value: formData.email,
+              value: sanitizeInput(safeData.email),
               inline: true
             },
             {
               name: "Purpose",
-              value: formData.purpose,
+              value: sanitizeInput(safeData.purpose),
               inline: false
             }
           ],
@@ -84,7 +79,7 @@ const FinalCTA = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send to Discord");
+        throw new Error(`Discord webhook failed: ${response.status}`);
       }
 
       setIsSubmitted(true);
@@ -191,32 +186,56 @@ const FinalCTA = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-4">
-                    <Input
-                      type="text"
-                      placeholder="Your name (optional)"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="h-12 px-4 bg-background/50 border-border/50 focus:border-primary"
-                      disabled={isLoading}
-                    />
-                    <Input
-                      type="email"
-                      placeholder="Enter your professional email *"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="h-12 px-4 bg-background/50 border-border/50 focus:border-primary"
-                      disabled={isLoading}
-                      required
-                    />
-                    <Input
-                      type="text"
-                      placeholder="How do you plan to use Neura AI? *"
-                      value={formData.purpose}
-                      onChange={(e) => setFormData({...formData, purpose: e.target.value})}
-                      className="h-12 px-4 bg-background/50 border-border/50 focus:border-primary"
-                      disabled={isLoading}
-                      required
-                    />
+                    <div>
+                      <Input
+                        type="text"
+                        placeholder="Your name (optional)"
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: sanitizeInput(e.target.value)})}
+                        className={`h-12 px-4 bg-background/50 border-border/50 focus:border-primary ${
+                          fieldErrors.name ? 'border-destructive focus:border-destructive' : ''
+                        }`}
+                        disabled={isLoading}
+                        maxLength={100}
+                      />
+                      {fieldErrors.name && (
+                        <p className="text-sm text-destructive mt-1">{fieldErrors.name}</p>
+                      )}
+                    </div>
+                    <div>
+                      <Input
+                        type="email"
+                        placeholder="Enter your professional email *"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: sanitizeInput(e.target.value)})}
+                        className={`h-12 px-4 bg-background/50 border-border/50 focus:border-primary ${
+                          fieldErrors.email ? 'border-destructive focus:border-destructive' : ''
+                        }`}
+                        disabled={isLoading}
+                        required
+                        maxLength={255}
+                      />
+                      {fieldErrors.email && (
+                        <p className="text-sm text-destructive mt-1">{fieldErrors.email}</p>
+                      )}
+                    </div>
+                    <div>
+                      <Input
+                        type="text"
+                        placeholder="How do you plan to use Neura AI? *"
+                        value={formData.purpose}
+                        onChange={(e) => setFormData({...formData, purpose: sanitizeInput(e.target.value)})}
+                        className={`h-12 px-4 bg-background/50 border-border/50 focus:border-primary ${
+                          fieldErrors.purpose ? 'border-destructive focus:border-destructive' : ''
+                        }`}
+                        disabled={isLoading}
+                        required
+                        maxLength={500}
+                      />
+                      {fieldErrors.purpose && (
+                        <p className="text-sm text-destructive mt-1">{fieldErrors.purpose}</p>
+                      )}
+                    </div>
                   </div>
                   <Button 
                     type="submit" 

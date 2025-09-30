@@ -49,7 +49,7 @@ const Hero = () => {
           </Badge>
         </div>
 
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight mb-10 animate-fade-in-up leading-[1.1]" style={{animationDelay: "0.2s"}}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-10 animate-fade-in-up leading-[1.1]" style={{animationDelay: "0.2s"}}>
           <span className="inline-block bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
             AI That Gives You
           </span>

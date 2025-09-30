@@ -6,55 +6,57 @@
 
 @layer base {
   :root {
-    /* Omar's Dark Theme - Very dark backgrounds with cyan accents */
-    --background: 0 0% 4%; /* #0A0A0A equivalent */
+    /* Enhanced Dark Theme with Vibrant Accents */
+    --background: 0 0% 4%; /* #0A0A0A */
     --foreground: 0 0% 100%; /* White text */
     
-    /* Cyan-based Brand Palette */
-    --primary: 187 100% 65%; /* Cyan-300 equivalent */
+    /* Vibrant Multi-color Brand Palette */
+    --primary: 187 100% 60%; /* Cyan */
     --primary-foreground: 0 0% 0%; /* Black text on cyan */
-    --primary-glow: 187 100% 80%; /* Lighter cyan glow */
+    --primary-glow: 187 100% 75%; /* Brighter cyan glow */
     
-    --secondary: 0 0% 9%; /* neutral-900 */
-    --secondary-foreground: 0 0% 80%; /* Light gray */
-    --secondary-hover: 0 0% 12%; /* Darker secondary on hover */
+    --secondary: 261 55% 60%; /* Vivid Purple */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 261 55% 70%;
     
-    --accent: 187 100% 65%; /* Cyan accent */
+    --accent: 280 70% 65%; /* Magenta/Purple */
     --accent-foreground: 0 0% 0%;
     
-    --muted: 0 0% 9%; /* neutral-900 */
-    --muted-foreground: 0 0% 60%; /* neutral-400 */
+    --muted: 0 0% 12%; /* Slightly lighter muted */
+    --muted-foreground: 0 0% 65%; /* Better contrast */
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 100% / 0.1; /* white/10 */
-    --input: 0 0% 9%; /* neutral-900 */
-    --ring: 187 100% 65%;
+    --border: 0 0% 100% / 0.15; /* Slightly more visible */
+    --input: 0 0% 9%;
+    --ring: 187 100% 60%;
     
-    --card: 0 0% 4%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 100%;
     
-    --popover: 0 0% 4%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
     
     --radius: 1rem;
     
-    /* Omar's Dark Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(187 100% 65%), hsl(187 100% 80%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 6%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%), hsl(0 0% 6%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 5%));
+    /* Enhanced Multi-color Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(187 100% 60%) 0%, hsl(261 55% 60%) 50%, hsl(280 70% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(261 30% 8%) 50%, hsl(187 40% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 5%) 0%, hsl(261 25% 9%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 7%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(280 70% 65%) 0%, hsl(187 100% 60%) 100%);
     
-    /* Background gradients for glass morphism and aurora effects */
-    --gradient-aurora: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(187 100% 65% / 0.05) 50%, hsl(0 0% 5%) 100%);
+    /* Vibrant Aurora Background */
+    --gradient-aurora: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(187 100% 65% / 0.1) 30%, hsl(280 70% 65% / 0.1) 70%, hsl(0 0% 5%) 100%);
     
-    /* Dark Theme Shadows with Cyan Glow */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.5), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 30px hsl(187 100% 65% / 0.3);
+    /* Enhanced Shadows with Multi-color Glow */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.5), 0 2px 4px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -2px hsl(0 0% 0% / 0.4);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.6), 0 10px 10px -5px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(187 100% 60% / 0.35), 0 0 20px hsl(280 70% 65% / 0.2);
+    --shadow-accent: 0 0 30px hsl(280 70% 65% / 0.4);
     
     /* Professional Typography Scale */
     --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -75,39 +77,39 @@
   }
 
   .dark {
-    /* Dark mode is now the default, but keep for compatibility */
+    /* Enhanced dark mode with vibrant colors */
     --background: 0 0% 4%;
     --foreground: 0 0% 100%;
     
-    --primary: 187 100% 65%;
+    --primary: 187 100% 60%;
     --primary-foreground: 0 0% 0%;
-    --primary-glow: 187 100% 80%;
+    --primary-glow: 187 100% 75%;
     
-    --secondary: 0 0% 9%;
-    --secondary-foreground: 0 0% 80%;
+    --secondary: 261 55% 60%;
+    --secondary-foreground: 0 0% 100%;
     
-    --accent: 187 100% 65%;
+    --accent: 280 70% 65%;
     --accent-foreground: 0 0% 0%;
     
-    --muted: 0 0% 9%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
     
     --destructive: 0 62.8% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 100% / 0.1;
+    --border: 0 0% 100% / 0.15;
     --input: 0 0% 9%;
-    --ring: 187 100% 65%;
+    --ring: 187 100% 60%;
     
-    --card: 0 0% 4%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 100%;
     
-    --popover: 0 0% 4%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
     
-    /* Keep the same dark gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 6%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    /* Enhanced gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(261 30% 8%) 50%, hsl(187 40% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 5%) 0%, hsl(261 25% 9%) 100%);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -252,7 +254,7 @@
   
   /* Animation utilities */
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
   
   .animate-fade-in-up {
@@ -263,18 +265,26 @@
     animation: scale-in 0.4s ease-out;
   }
   
+  .animate-shimmer {
+    animation: shimmer 3s linear infinite;
+  }
+  
   /* Hover animations */
   .hover-lift {
     transition: var(--transition-smooth);
   }
   
   .hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
   }
   
   .hover-glow:hover {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
   }
 }
 
@@ -294,6 +304,17 @@
   
   .bg-gradient-subtle {
     background: var(--gradient-subtle);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   /* Glass morphism noise effect */
@@ -332,7 +353,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
@@ -355,6 +376,15 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
   }
 }
 

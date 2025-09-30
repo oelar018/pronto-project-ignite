@@ -266,7 +266,7 @@
   }
   
   .animate-shimmer {
-    animation: shimmer 4s ease-in-out infinite;
+    animation: shimmer 6s ease-in-out infinite;
   }
   
   /* Hover animations */

@@ -60,9 +60,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-2xl md:text-3xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{animationDelay: "0.4s"}}>
-          Get <span className="text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text font-bold text-3xl md:text-4xl">just-in-time intelligence</span> that appears precisely when you need it. 
-          <br />
-          <span className="text-pink-400 font-semibold">Works even with your phone asleep in your pocket.</span>
+          Get just-in-time intelligence that appears precisely when you need it. Works even with your phone asleep in your pocket.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 animate-fade-in-up" style={{animationDelay: "0.6s"}}>

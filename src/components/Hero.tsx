@@ -55,7 +55,7 @@ const Hero = () => {
           </span>
           <br />
           <span className="inline-block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_50px_rgba(168,85,247,0.8)]">
-            Answers Without Breaking Flow
+            Answers Without Breaking the Flow of your Conversations
           </span>
         </h1>
         

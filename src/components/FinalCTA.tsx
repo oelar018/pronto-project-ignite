@@ -165,9 +165,9 @@ const FinalCTA = () => {
           </div>
 
           {/* Main CTA Card */}
-          <Card className="relative bg-gradient-to-br from-purple-950/50 via-pink-950/30 to-cyan-950/50 backdrop-blur-xl border-3 border-purple-400/40 p-10 md:p-16 shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 animate-scale-in rounded-3xl" style={{animationDelay: "0.3s"}}>
+          <Card className="relative bg-gradient-to-br from-purple-950/50 via-pink-950/30 to-cyan-950/50 backdrop-blur-xl border-2 border-purple-400/50 p-10 md:p-16 shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 animate-scale-in rounded-3xl" style={{animationDelay: "0.3s"}}>
             {/* Glowing border effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-30 blur-2xl rounded-3xl"></div>
+            <div className="absolute -inset-[2px] bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-30 blur-2xl rounded-3xl -z-10"></div>
             
             <div className="relative grid lg:grid-cols-2 gap-12 items-center">
               <div>

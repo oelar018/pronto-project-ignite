@@ -11,16 +11,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 group">
-            <div className="relative">
-              <img 
-                src="/logo.png" 
-                alt="Neura AI - Professional AI Assistant Logo" 
-                className="w-10 h-10 md:w-12 md:h-12 group-hover:scale-110 transition-transform duration-300"
-                width="48"
-                height="48"
-              />
-              <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-            </div>
+          <img 
+            src="/logo.png" 
+            alt="Neura AI - Professional AI Assistant Logo" 
+            className="w-10 h-10 md:w-12 md:h-12 group-hover:scale-110 transition-transform duration-300"
+            width="48"
+            height="48"
+          />
             <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Neura AI
             </span>

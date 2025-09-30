@@ -4,20 +4,24 @@ import { Mic, Eye, Shield, Zap, Users, Brain } from "lucide-react";
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="relative py-16 md:py-24 bg-black overflow-hidden">
+      {/* Vibrant background glow */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[150px]" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           
           {/* Section Header */}
-          <header className="text-center mb-16">
-            <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">
+          <header className="text-center mb-20">
+            <Badge variant="outline" className="mb-8 px-6 py-3 text-lg font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
               Features
             </Badge>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white via-cyan-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(168,85,247,0.5)]">
               Two Modes. Endless Possibilities.
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Choose your preferred way to receive AI-powered insights during conversations.
+            <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
+              Choose your preferred way to receive <span className="text-cyan-400 font-bold">AI-powered insights</span> during conversations.
             </p>
           </header>
 

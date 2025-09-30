@@ -9,84 +9,86 @@ const Hero = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
 
   return (
-    <section className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
+      {/* Multiple vibrant animated glow orbs */}
+      <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-cyan-500/40 rounded-full blur-[150px] animate-float" />
+      <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-500/40 rounded-full blur-[130px] animate-float" style={{animationDelay: "1.5s"}} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-pink-500/30 rounded-full blur-[160px] animate-float" style={{animationDelay: "3s"}} />
+      
       {/* Animated hex background with Three.js shaders */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 opacity-60">
         <LazyHexHeroNeura 
-          rings={15}
-          dotSize={6}
-          glowStrength={1.5}
-          idleSpeed={0.2}
-          parallax={0.5}
-          rippleSpeed={0.8}
+          rings={18}
+          dotSize={8}
+          glowStrength={2.5}
+          idleSpeed={0.3}
+          parallax={0.6}
+          rippleSpeed={1.2}
           className="w-full h-full"
         />
       </div>
       
       {/* Gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background/70" />
-      
-      {/* Animated glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[100px] animate-float" style={{animationDelay: "2s"}} />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
 
       {/* Foreground content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center">
-        {/* Trust Badges - Enhanced */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10 animate-fade-in-up">
-          <Badge variant="secondary" className="flex items-center gap-2 px-5 py-2.5 text-sm bg-primary/10 border-primary/30 hover:bg-primary/20 hover:scale-105 transition-all duration-300 shadow-glow">
-            <Users className="w-4 h-4 text-primary" />
-            <span className="text-primary font-medium">Built for Professionals</span>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center">
+        {/* Trust Badges - BOLD */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up">
+          <Badge variant="secondary" className="flex items-center gap-2 px-6 py-3 text-base bg-gradient-to-r from-cyan-500/20 to-cyan-400/20 border-2 border-cyan-400/50 hover:border-cyan-400 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] backdrop-blur-md">
+            <Users className="w-5 h-5 text-cyan-400" />
+            <span className="text-cyan-300 font-bold">Built for Professionals</span>
           </Badge>
-          <Badge variant="secondary" className="flex items-center gap-2 px-5 py-2.5 text-sm bg-accent/10 border-accent/30 hover:bg-accent/20 hover:scale-105 transition-all duration-300">
-            <Shield className="w-4 h-4 text-accent" />
-            <span className="text-accent font-medium">Enterprise Secure</span>
+          <Badge variant="secondary" className="flex items-center gap-2 px-6 py-3 text-base bg-gradient-to-r from-purple-500/20 to-purple-400/20 border-2 border-purple-400/50 hover:border-purple-400 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] backdrop-blur-md">
+            <Shield className="w-5 h-5 text-purple-400" />
+            <span className="text-purple-300 font-bold">Enterprise Secure</span>
           </Badge>
-          <Badge variant="secondary" className="flex items-center gap-2 px-5 py-2.5 text-sm bg-primary/10 border-primary/30 hover:bg-primary/20 hover:scale-105 transition-all duration-300 shadow-glow">
-            <CheckCircle className="w-4 h-4 text-primary" />
-            <span className="text-primary font-medium">Privacy First</span>
+          <Badge variant="secondary" className="flex items-center gap-2 px-6 py-3 text-base bg-gradient-to-r from-pink-500/20 to-pink-400/20 border-2 border-pink-400/50 hover:border-pink-400 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.4)] hover:shadow-[0_0_50px_rgba(236,72,153,0.6)] backdrop-blur-md">
+            <CheckCircle className="w-5 h-5 text-pink-400" />
+            <span className="text-pink-300 font-bold">Privacy First</span>
           </Badge>
         </div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 animate-fade-in-up leading-tight" style={{animationDelay: "0.2s"}}>
-          <span className="inline-block bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight mb-10 animate-fade-in-up leading-[1.1]" style={{animationDelay: "0.2s"}}>
+          <span className="inline-block bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
             AI That Gives You
           </span>
           <br />
-          <span className="inline-block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto]">
+          <span className="inline-block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_50px_rgba(168,85,247,0.8)]">
             Answers Without Breaking Flow
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-14 leading-relaxed max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.4s"}}>
-          Get <span className="text-primary font-semibold">just-in-time intelligence</span> that appears precisely when you need it. 
-          Works even with your phone asleep in your pocket.
+        <p className="text-2xl md:text-3xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{animationDelay: "0.4s"}}>
+          Get <span className="text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text font-bold text-3xl md:text-4xl">just-in-time intelligence</span> that appears precisely when you need it. 
+          <br />
+          <span className="text-pink-400 font-semibold">Works even with your phone asleep in your pocket.</span>
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-5 justify-center mb-20 animate-fade-in-up" style={{animationDelay: "0.6s"}}>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 animate-fade-in-up" style={{animationDelay: "0.6s"}}>
           <Button 
             variant="hero" 
             size="lg" 
-            className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 h-auto"
+            className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 shadow-[0_0_40px_rgba(168,85,247,0.6)] hover:shadow-[0_0_60px_rgba(168,85,247,0.9)] transition-all duration-300 text-xl px-12 py-8 h-auto font-black border-2 border-white/20 hover:scale-110 hover:border-white/40"
             onClick={() => {
               document.getElementById('waitlist-form')?.scrollIntoView({ 
                 behavior: 'smooth' 
               });
             }}
           >
-            <span className="relative z-10 flex items-center font-semibold">
+            <span className="relative z-10 flex items-center text-white drop-shadow-lg">
               Join the Waitlist
-              <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
+              <span className="ml-3 group-hover:translate-x-3 transition-transform duration-300 text-2xl">→</span>
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Button>
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 text-lg px-8 py-6 h-auto backdrop-blur-sm bg-background/50"
+            className="border-3 border-cyan-400/70 hover:border-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 transition-all duration-300 text-xl px-12 py-8 h-auto backdrop-blur-md font-bold text-cyan-300 hover:text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] hover:scale-105"
             onClick={() => setShowVideoModal(true)}
           >
-            <span className="font-medium">Watch 30s Preview</span>
+            <span className="font-bold">Watch 30s Preview</span>
           </Button>
         </div>
 

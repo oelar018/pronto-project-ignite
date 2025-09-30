@@ -134,53 +134,68 @@ const FinalCTA = () => {
   }
 
   return (
-    <section id="waitlist-form" className="py-24 md:py-32 bg-gradient-hero">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="waitlist-form" className="relative py-24 md:py-32 bg-black overflow-hidden">
+      {/* Massive vibrant glows */}
+      <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-gradient-to-br from-cyan-500/30 to-purple-500/30 rounded-full blur-[200px]" />
+      <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-pink-500/30 to-purple-500/30 rounded-full blur-[180px]" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">
+          <div className="text-center mb-20 animate-fade-in-up">
+            <Badge variant="outline" className="mb-8 px-8 py-4 text-xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text border-3 border-purple-400/70 shadow-[0_0_40px_rgba(168,85,247,0.5)] backdrop-blur-md">
               Join the Future
             </Badge>
-            <h2 className="text-display font-bold text-balance mb-6">
-              Stay in the flow.{" "}
-              <span className="text-gradient-primary">Never miss a beat</span>{" "}
-              in conversation.
+            <h2 className="text-6xl md:text-8xl font-black text-balance mb-10 leading-tight">
+              <span className="bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(34,211,238,0.6)]">
+                Stay in the flow.
+              </span>{" "}
+              <br />
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(168,85,247,0.8)]">
+                Never miss a beat
+              </span>{" "}
+              <br />
+              <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent">
+                in conversation.
+              </span>
             </h2>
-            <p className="text-xl text-muted-foreground text-balance max-w-3xl mx-auto leading-relaxed">
-              Be among the first to experience AI that enhances your professional conversations 
+            <p className="text-2xl text-gray-300 text-balance max-w-4xl mx-auto leading-relaxed font-medium">
+              Be among the first to experience <span className="text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text font-bold">AI that enhances</span> your professional conversations 
               without interrupting your natural flow.
             </p>
           </div>
 
           {/* Main CTA Card */}
-          <Card className="bg-gradient-card p-8 md:p-12 shadow-brand-lg hover:shadow-glow transition-all duration-500 animate-scale-in" style={{animationDelay: "0.3s"}}>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Card className="relative bg-gradient-to-br from-purple-950/50 via-pink-950/30 to-cyan-950/50 backdrop-blur-xl border-3 border-purple-400/40 p-10 md:p-16 shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 animate-scale-in rounded-3xl" style={{animationDelay: "0.3s"}}>
+            {/* Glowing border effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-30 blur-2xl rounded-3xl"></div>
+            
+            <div className="relative grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-title font-bold mb-6">
+                <h3 className="text-4xl font-black mb-8 bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
                   Join the Waitlist
                 </h3>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Get early access to Neura AI and be part of shaping the future of professional conversations.
+                <p className="text-xl text-gray-300 mb-10 leading-relaxed font-medium">
+                  Get <span className="text-cyan-400 font-bold">early access</span> to Neura AI and be part of shaping the future of professional conversations.
                 </p>
                 
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-primary/10">
-                      <CheckCircle className="w-4 h-4 text-primary" />
+                <div className="space-y-5 mb-10">
+                  <div className="flex items-center gap-4 p-4 bg-cyan-500/10 border-2 border-cyan-400/30 rounded-xl backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+                    <div className="p-2 rounded-full bg-cyan-400/20">
+                      <CheckCircle className="w-5 h-5 text-cyan-400" />
                     </div>
-                    <span className="text-muted-foreground">Priority access when we launch</span>
+                    <span className="text-gray-200 font-medium">Priority access when we launch</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-primary/10">
-                      <Sparkles className="w-4 h-4 text-primary" />
+                  <div className="flex items-center gap-4 p-4 bg-purple-500/10 border-2 border-purple-400/30 rounded-xl backdrop-blur-sm hover:border-purple-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+                    <div className="p-2 rounded-full bg-purple-400/20">
+                      <Sparkles className="w-5 h-5 text-purple-400" />
                     </div>
-                    <span className="text-muted-foreground">Exclusive updates on development progress</span>
+                    <span className="text-gray-200 font-medium">Exclusive updates on development progress</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="p-1 rounded-full bg-primary/10">
-                      <Shield className="w-4 h-4 text-primary" />
+                  <div className="flex items-center gap-4 p-4 bg-pink-500/10 border-2 border-pink-400/30 rounded-xl backdrop-blur-sm hover:border-pink-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(236,72,153,0.2)]">
+                    <div className="p-2 rounded-full bg-pink-400/20">
+                      <Shield className="w-5 h-5 text-pink-400" />
                     </div>
-                    <span className="text-muted-foreground">Special pricing for early adopters</span>
+                    <span className="text-gray-200 font-medium">Special pricing for early adopters</span>
                   </div>
                 </div>
 
@@ -242,17 +257,17 @@ const FinalCTA = () => {
                     variant="hero" 
                     size="lg" 
                     disabled={isLoading}
-                    className="w-full"
+                    className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 shadow-[0_0_40px_rgba(168,85,247,0.6)] hover:shadow-[0_0_60px_rgba(168,85,247,0.9)] border-2 border-white/20 font-black text-lg hover:scale-105"
                   >
                     {isLoading ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
-                        Joining...
+                        <div className="w-5 h-5 border-3 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                        <span className="font-bold">Joining...</span>
                       </>
                     ) : (
                       <>
-                        Join Waitlist
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <span className="font-black">Join Waitlist Now</span>
+                        <ArrowRight className="w-5 h-5 ml-2" />
                       </>
                     )}
                   </Button>
@@ -263,28 +278,28 @@ const FinalCTA = () => {
               </div>
 
               <div className="relative">
-                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/20">
+                <div className="bg-gradient-to-br from-cyan-950/40 to-purple-950/40 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/30 shadow-[0_0_30px_rgba(168,85,247,0.3)]">
                   <div className="space-y-6">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
-                        <Sparkles className="w-8 h-8 text-white" />
+                      <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(168,85,247,0.6)]">
+                        <Sparkles className="w-10 h-10 text-white" />
                       </div>
-                      <h4 className="font-semibold mb-2">Coming Soon</h4>
-                      <p className="text-sm text-muted-foreground">Expected launch in Q2 2024</p>
+                      <h4 className="text-xl font-black mb-3 text-cyan-300">Coming Soon</h4>
+                      <p className="text-base text-purple-300 font-medium">Expected launch in Q2 2024</p>
                     </div>
                     
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between py-2 px-3 bg-background/30 rounded-lg">
-                        <span className="text-sm">Beta Testing</span>
-                        <Badge variant="secondary" className="text-xs">Q1 2024</Badge>
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between py-3 px-4 bg-cyan-500/10 border border-cyan-400/30 rounded-xl">
+                        <span className="text-base font-medium text-gray-200">Beta Testing</span>
+                        <Badge variant="secondary" className="text-sm bg-cyan-500/20 text-cyan-300 border-cyan-400/40">Q1 2024</Badge>
                       </div>
-                      <div className="flex items-center justify-between py-2 px-3 bg-background/30 rounded-lg">
-                        <span className="text-sm">Early Access</span>
-                        <Badge variant="outline" className="text-xs border-primary/30 text-primary">Q2 2024</Badge>
+                      <div className="flex items-center justify-between py-3 px-4 bg-purple-500/10 border-2 border-purple-400/40 rounded-xl shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                        <span className="text-base font-bold text-purple-300">Early Access</span>
+                        <Badge variant="outline" className="text-sm border-2 border-purple-400 text-purple-300 bg-purple-500/20 font-bold">Q2 2024</Badge>
                       </div>
-                      <div className="flex items-center justify-between py-2 px-3 bg-background/30 rounded-lg">
-                        <span className="text-sm">Public Launch</span>
-                        <Badge variant="outline" className="text-xs">Q3 2024</Badge>
+                      <div className="flex items-center justify-between py-3 px-4 bg-pink-500/10 border border-pink-400/30 rounded-xl">
+                        <span className="text-base font-medium text-gray-200">Public Launch</span>
+                        <Badge variant="outline" className="text-sm border-pink-400/40 text-pink-300">Q3 2024</Badge>
                       </div>
                     </div>
                   </div>
@@ -294,18 +309,18 @@ const FinalCTA = () => {
           </Card>
 
           {/* Additional Trust Signals */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="animate-fade-in-up" style={{animationDelay: "0.6s"}}>
-              <div className="text-2xl font-bold text-primary mb-2">500+</div>
-              <p className="text-muted-foreground">Professionals already on the waitlist</p>
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div className="animate-fade-in-up p-8 rounded-2xl bg-gradient-to-br from-cyan-950/40 to-cyan-900/20 border-2 border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.2)]" style={{animationDelay: "0.6s"}}>
+              <div className="text-5xl font-black bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)]">500+</div>
+              <p className="text-gray-300 font-medium text-lg">Professionals already on the waitlist</p>
             </div>
-            <div className="animate-fade-in-up" style={{animationDelay: "0.8s"}}>
-              <div className="text-2xl font-bold text-primary mb-2">Fortune 500</div>
-              <p className="text-muted-foreground">Companies showing interest</p>
+            <div className="animate-fade-in-up p-8 rounded-2xl bg-gradient-to-br from-purple-950/40 to-purple-900/20 border-2 border-purple-400/30 backdrop-blur-sm hover:border-purple-400/60 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.2)]" style={{animationDelay: "0.8s"}}>
+              <div className="text-5xl font-black bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]">Fortune 500</div>
+              <p className="text-gray-300 font-medium text-lg">Companies showing interest</p>
             </div>
-            <div className="animate-fade-in-up" style={{animationDelay: "1s"}}>
-              <div className="text-2xl font-bold text-primary mb-2">AI-First</div>
-              <p className="text-muted-foreground">Built for the modern workplace</p>
+            <div className="animate-fade-in-up p-8 rounded-2xl bg-gradient-to-br from-pink-950/40 to-pink-900/20 border-2 border-pink-400/30 backdrop-blur-sm hover:border-pink-400/60 transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.2)]" style={{animationDelay: "1s"}}>
+              <div className="text-5xl font-black bg-gradient-to-r from-pink-400 to-pink-300 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(236,72,153,0.5)]">AI-First</div>
+              <p className="text-gray-300 font-medium text-lg">Built for the modern workplace</p>
             </div>
           </div>
         </div>

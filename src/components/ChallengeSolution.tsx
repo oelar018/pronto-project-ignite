@@ -4,18 +4,22 @@ import { MessageSquare, Brain, Zap, ArrowRight, CheckCircle, AlertCircle, Mail, 
 
 const ChallengeSolution = () => {
   return (
-    <section id="challenge-solution" className="py-16 md:py-24 bg-gradient-subtle">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="challenge-solution" className="relative py-16 md:py-24 bg-gradient-to-b from-black via-purple-950/20 to-black overflow-hidden">
+      {/* Vibrant animated background */}
+      <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[120px] animate-float" />
+      <div className="absolute bottom-20 left-10 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[140px] animate-float" style={{animationDelay: "2s"}} />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           
           {/* Challenge Section */}
-          <header className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <header className="text-center mb-20">
+            <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
               The Problem Every Professional Faces
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Professionals can't access the right information in live conversations without breaking flow. 
-              Context is scattered across email, calendar, files, and the web.
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
+              Professionals can't access the right information in live conversations without <span className="text-red-400 font-bold">breaking flow</span>. 
+              Context is scattered across <span className="text-orange-400 font-semibold">email, calendar, files, and the web</span>.
             </p>
           </header>
 

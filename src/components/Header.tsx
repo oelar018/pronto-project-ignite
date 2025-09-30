@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-primary/10 shadow-[0_4px_20px_rgba(0,0,0,0.8)] will-change-transform transform-gpu" role="banner" style={{backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)'}}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.9)] transform translate-z-0" role="banner" style={{transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)'}}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}

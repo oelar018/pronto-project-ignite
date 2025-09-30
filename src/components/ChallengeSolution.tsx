@@ -82,88 +82,74 @@ const ChallengeSolution = () => {
               </div>
             </div>
 
-            {/* Interactive Scattered Information Visualization */}
+            {/* Funnel Clog Visualization */}
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative h-80 w-full max-w-md">
-                {/* Connecting lines to center */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
-                  {/* Line to top-left (Emails) */}
-                  <line 
-                    x1="50%" y1="50%" 
-                    x2="25%" y2="20%" 
-                    stroke="hsl(var(--destructive))" 
-                    strokeWidth="2" 
-                    strokeDasharray="4,4"
-                    opacity="0.4"
+              <div className="relative h-96 w-full max-w-md">
+                {/* Funnel shape */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 400 400">
+                  {/* Funnel outline - wide at top, narrow at bottom */}
+                  <path
+                    d="M 80 60 L 320 60 L 240 280 L 160 280 Z"
+                    fill="rgba(239, 68, 68, 0.1)"
+                    stroke="rgba(239, 68, 68, 0.4)"
+                    strokeWidth="3"
+                    strokeDasharray="8,4"
                     className="animate-pulse"
                   />
-                  {/* Line to top-right (Documents) */}
-                  <line 
-                    x1="50%" y1="50%" 
-                    x2="75%" y2="25%" 
-                    stroke="hsl(var(--destructive))" 
-                    strokeWidth="2" 
-                    strokeDasharray="4,4"
-                    opacity="0.4"
-                    className="animate-pulse"
-                    style={{animationDelay: "0.5s"}}
-                  />
-                  {/* Line to bottom-left (Calendar) */}
-                  <line 
-                    x1="50%" y1="50%" 
-                    x2="25%" y2="80%" 
-                    stroke="hsl(var(--destructive))" 
-                    strokeWidth="2" 
-                    strokeDasharray="4,4"
-                    opacity="0.4"
-                    className="animate-pulse"
-                    style={{animationDelay: "1s"}}
-                  />
-                  {/* Line to bottom-right (Web) */}
-                  <line 
-                    x1="50%" y1="50%" 
-                    x2="75%" y2="75%" 
-                    stroke="hsl(var(--destructive))" 
-                    strokeWidth="2" 
-                    strokeDasharray="4,4"
-                    opacity="0.4"
-                    className="animate-pulse"
-                    style={{animationDelay: "1.5s"}}
-                  />
+                  
+                  {/* Blockage/clog lines at funnel entrance */}
+                  <line x1="80" y1="60" x2="320" y2="60" stroke="rgba(239, 68, 68, 0.6)" strokeWidth="4" />
+                  <line x1="100" y1="80" x2="300" y2="80" stroke="rgba(239, 68, 68, 0.5)" strokeWidth="3" />
+                  <line x1="120" y1="100" x2="280" y2="100" stroke="rgba(239, 68, 68, 0.4)" strokeWidth="2" />
+                  
+                  {/* X marks showing blockage */}
+                  <text x="200" y="200" fontSize="48" fill="rgba(239, 68, 68, 0.3)" textAnchor="middle" fontWeight="bold">✕</text>
+                  <text x="180" y="240" fontSize="36" fill="rgba(239, 68, 68, 0.2)" textAnchor="middle" fontWeight="bold">✕</text>
+                  <text x="220" y="240" fontSize="36" fill="rgba(239, 68, 68, 0.2)" textAnchor="middle" fontWeight="bold">✕</text>
                 </svg>
 
-                {/* Central meeting bubble */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary/30 z-10">
-                  <span className="text-sm font-medium text-primary">Meeting</span>
+                {/* Information sources clogging the funnel entrance */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full flex justify-center gap-3 z-10">
+                  <div className="relative">
+                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-red-950/80 backdrop-blur-sm border-2 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.4)] hover:scale-110 transition-transform duration-300">
+                      <Mail className="w-7 h-7 text-red-400 mb-1" />
+                      <span className="text-xs font-bold text-red-300 text-center">Emails</span>
+                    </Card>
+                    {/* Stacking effect */}
+                    <div className="absolute inset-0 bg-red-500/20 blur-md rounded-lg -z-10"></div>
+                  </div>
+
+                  <div className="relative mt-4">
+                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-orange-950/80 backdrop-blur-sm border-2 border-orange-500/60 shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:scale-110 transition-transform duration-300">
+                      <FileText className="w-7 h-7 text-orange-400 mb-1" />
+                      <span className="text-xs font-bold text-orange-300 text-center">Docs</span>
+                    </Card>
+                    <div className="absolute inset-0 bg-orange-500/20 blur-md rounded-lg -z-10"></div>
+                  </div>
+
+                  <div className="relative">
+                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-yellow-950/80 backdrop-blur-sm border-2 border-yellow-500/60 shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:scale-110 transition-transform duration-300">
+                      <Calendar className="w-7 h-7 text-yellow-400 mb-1" />
+                      <span className="text-xs font-bold text-yellow-300 text-center">Calendar</span>
+                    </Card>
+                    <div className="absolute inset-0 bg-yellow-500/20 blur-md rounded-lg -z-10"></div>
+                  </div>
+
+                  <div className="relative mt-4">
+                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-red-950/80 backdrop-blur-sm border-2 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.4)] hover:scale-110 transition-transform duration-300">
+                      <Globe className="w-7 h-7 text-red-400 mb-1" />
+                      <span className="text-xs font-bold text-red-300 text-center">Web</span>
+                    </Card>
+                    <div className="absolute inset-0 bg-red-500/20 blur-md rounded-lg -z-10"></div>
+                  </div>
                 </div>
 
-                {/* Scattered information tiles - uniform size and positioned */}
-                <div className="absolute top-4 left-4 animate-float">
-                  <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-card/80 backdrop-blur-sm border border-destructive/20 shadow-lg hover-lift">
-                    <Mail className="w-6 h-6 text-destructive mb-1" />
-                    <span className="text-xs font-medium text-center">Emails</span>
-                  </Card>
-                </div>
-
-                <div className="absolute top-8 right-4 animate-float" style={{animationDelay: "0.5s"}}>
-                  <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-card/80 backdrop-blur-sm border border-destructive/20 shadow-lg hover-lift">
-                    <FileText className="w-6 h-6 text-destructive mb-1" />
-                    <span className="text-xs font-medium text-center">Docs</span>
-                  </Card>
-                </div>
-
-                <div className="absolute bottom-12 left-4 animate-float" style={{animationDelay: "1s"}}>
-                  <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-card/80 backdrop-blur-sm border border-destructive/20 shadow-lg hover-lift">
-                    <Calendar className="w-6 h-6 text-destructive mb-1" />
-                    <span className="text-xs font-medium text-center">Calendar</span>
-                  </Card>
-                </div>
-
-                <div className="absolute bottom-8 right-4 animate-float" style={{animationDelay: "1.5s"}}>
-                  <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-card/80 backdrop-blur-sm border border-destructive/20 shadow-lg hover-lift">
-                    <Globe className="w-6 h-6 text-destructive mb-1" />
-                    <span className="text-xs font-medium text-center">Web</span>
-                  </Card>
+                {/* Clogged indicator label */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
+                  <div className="bg-red-950/90 backdrop-blur-sm border-2 border-red-500/60 rounded-xl px-6 py-3 shadow-[0_0_30px_rgba(239,68,68,0.5)]">
+                    <p className="text-red-300 font-black text-lg text-center">❌ CLOGGED</p>
+                    <p className="text-red-400 font-medium text-xs text-center mt-1">Can't flow through</p>
+                  </div>
                 </div>
               </div>
             </div>

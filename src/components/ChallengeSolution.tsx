@@ -175,7 +175,7 @@ const ChallengeSolution = () => {
               The Neura AI Solution
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-              Zero-Prompt Intelligence That Keeps You in Flow
+              No Typing. No Prompting. Just-In-Time-Intelligence
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               AI-powered suggestions appear precisely when you need them, keeping you in the flow. 

@@ -62,74 +62,74 @@ const ChallengeSolution = () => {
 
               {/* Stage 2 - Missing Context */}
               <div className="group relative">
-                <div className="bg-gradient-to-br from-violet-950/50 to-violet-900/20 border-2 border-violet-500/30 rounded-3xl p-10 hover:border-violet-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-purple-950/50 to-purple-900/20 border-2 border-purple-500/30 rounded-3xl p-10 hover:border-purple-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
                   {/* Background glow effect */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-violet-500/20 rounded-full blur-3xl" />
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
                     {/* Scattered documents layout - clearly separated */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
                       {/* Background scattered items */}
-                      <div className="absolute top-0 left-0 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform -rotate-12 blur-[0.5px]">
-                        <Mail className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      <div className="absolute top-0 left-0 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform -rotate-12 blur-[0.5px]">
+                        <Mail className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute top-0 right-0 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform rotate-12 blur-[0.5px]">
-                        <FileText className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      <div className="absolute top-0 right-0 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform rotate-12 blur-[0.5px]">
+                        <FileText className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute bottom-0 left-2 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform rotate-6 blur-[0.5px]">
-                        <Calendar className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      <div className="absolute bottom-0 left-2 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform rotate-6 blur-[0.5px]">
+                        <Calendar className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute bottom-0 right-2 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform -rotate-6 blur-[0.5px]">
-                        <Globe className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      <div className="absolute bottom-0 right-2 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform -rotate-6 blur-[0.5px]">
+                        <Globe className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
                       </div>
                       {/* Central search icon */}
-                      <div className="relative z-10 w-14 h-14 rounded-full bg-violet-500/30 border-2 border-violet-400 flex items-center justify-center">
-                        <Zap className="w-7 h-7 text-violet-300" strokeWidth={2} />
+                      <div className="relative z-10 w-14 h-14 rounded-full bg-purple-500/30 border-2 border-purple-400 flex items-center justify-center">
+                        <Zap className="w-7 h-7 text-purple-300" strokeWidth={2} />
                       </div>
                     </div>
                   </div>
                   
-                  <h4 className="text-xl font-bold mb-6 text-violet-300">Missing Context</h4>
+                  <h4 className="text-xl font-bold mb-6 text-purple-300">Missing Context</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Information scattered across emails, files, and calendar</p>
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-violet-500/20 to-indigo-500/20 rounded-full">
-                  <ArrowRight className="w-5 h-5 text-indigo-300" strokeWidth={2.5} />
+                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-purple-500/20 to-orange-500/20 rounded-full">
+                  <ArrowRight className="w-5 h-5 text-orange-300" strokeWidth={2.5} />
                 </div>
               </div>
 
               {/* Stage 3 - Breaking the Flow */}
               <div className="group relative">
-                <div className="bg-gradient-to-br from-indigo-950/50 to-indigo-900/20 border-2 border-indigo-500/30 rounded-3xl p-10 hover:border-indigo-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-orange-950/50 to-orange-900/20 border-2 border-orange-500/30 rounded-3xl p-10 hover:border-orange-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
                   {/* Background glow effect */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl" />
                   
-              <div className="relative mb-8 mt-4">
-                {/* Flow line breaking apart */}
-                <div className="relative w-28 h-28 flex items-center justify-center">
-                  {/* Left side - solid continuous flow */}
-                  <div className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-1.5 bg-gradient-to-r from-indigo-300 to-indigo-400 rounded-full" />
-                  
-                  {/* Center - break/gap */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
-                    <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" />
-                    <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+                  <div className="relative mb-8 mt-4">
+                    {/* Flow line breaking apart */}
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                      {/* Left side - solid continuous flow */}
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-1.5 bg-gradient-to-r from-orange-300 to-orange-400 rounded-full" />
+                      
+                      {/* Center - break/gap */}
+                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
+                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" />
+                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+                      </div>
+                      
+                      {/* Right side - fragmented broken pieces */}
+                      <div className="absolute right-4 top-[40%] w-6 h-1 bg-orange-400/60 rounded-full" />
+                      <div className="absolute right-6 top-1/2 w-4 h-0.5 bg-orange-400/40 rounded-full" />
+                      <div className="absolute right-4 top-[60%] w-5 h-0.5 bg-orange-400/50 rounded-full" />
+                    </div>
                   </div>
                   
-                  {/* Right side - fragmented broken pieces */}
-                  <div className="absolute right-4 top-[40%] w-6 h-1 bg-indigo-400/60 rounded-full" />
-                  <div className="absolute right-6 top-1/2 w-4 h-0.5 bg-indigo-400/40 rounded-full" />
-                  <div className="absolute right-4 top-[60%] w-5 h-0.5 bg-indigo-400/50 rounded-full" />
-                </div>
-              </div>
-                  
-                  <h4 className="text-xl font-bold mb-6 text-indigo-300">Breaking Flow</h4>
+                  <h4 className="text-xl font-bold mb-6 text-orange-300">Breaking Flow</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Tab-switching disrupts focus and conversation momentum</p>
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-indigo-500/20 to-red-500/20 rounded-full">
+                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full">
                   <ArrowRight className="w-5 h-5 text-red-300" strokeWidth={2.5} />
                 </div>
               </div>

@@ -24,10 +24,6 @@ const ChallengeSolution = () => {
           </header>
           {/* Problem Flow - 4 Stages */}
           <div className="relative max-w-7xl mx-auto mb-20">
-            {/* Connecting Flow Line */}
-            <div className="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500/30 via-violet-500/30 via-indigo-500/30 to-red-500/30 hidden lg:block" 
-                 style={{top: '8.5rem'}} />
-            
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 relative">
               {/* Stage 1 - In the Conversation */}
               <div className="group relative">

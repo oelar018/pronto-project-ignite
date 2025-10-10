@@ -27,7 +27,7 @@ const Hero = () => {
 
       {/* Foreground content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-16 items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-40 lg:mt-20 mb-10 animate-fade-in-up leading-[1.1]" style={{
@@ -87,7 +87,7 @@ const Hero = () => {
             <img 
               src={convogptCover} 
               alt="ConvoGPT Interface Preview" 
-              className="w-full max-w-md opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500"
+              className="w-full max-w-[340px] opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105"
             />
           </div>
         </div>

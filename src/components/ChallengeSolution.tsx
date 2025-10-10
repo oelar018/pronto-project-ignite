@@ -39,15 +39,13 @@ const ChallengeSolution = () => {
                     {/* Main conversation bubbles with motion lines on both sides */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
                       {/* Motion lines BEFORE (left side) */}
-                      <div className="absolute -left-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
-                      <div className="absolute -left-3 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
-                      <div className="absolute -left-2 top-2/3 w-5 h-0.5 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '0.1s'}} />
+                      <div className="absolute -left-4 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
+                      <div className="absolute -left-5 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+                      <div className="absolute -left-4 top-2/3 w-5 h-0.5 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '0.1s'}} />
                       
                       {/* Chat bubbles */}
                       <MessageSquare className="w-16 h-16 text-cyan-400 relative z-10" strokeWidth={1.5} />
                       <MessageSquare className="w-14 h-14 text-cyan-300 absolute top-3 left-3 opacity-40" strokeWidth={1.5} />
-                      {/* Active indicator */}
-                      <div className="absolute top-0 right-0 w-5 h-5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
                       
                       {/* Motion lines AFTER (right side) */}
                       <div className="absolute -right-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />

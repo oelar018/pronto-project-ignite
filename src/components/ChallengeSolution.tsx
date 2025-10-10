@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MessageSquare, Brain, Zap, ArrowRight, CheckCircle, AlertCircle, Mail, Calendar, FileText, Globe, HelpCircle } from "lucide-react";
+import ScreenshotCarousel from "@/components/ScreenshotCarousel";
 
 const ChallengeSolution = () => {
   return (
@@ -181,6 +182,9 @@ const ChallengeSolution = () => {
               Neura AI cuts through conversational noise and tells you exactly what to say—drawing from current and past discussions, work documents, emails, and meetings
             </p>
           </header>
+
+          {/* Screenshot Carousel */}
+          <ScreenshotCarousel />
 
           {/* Solution Visualization */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">

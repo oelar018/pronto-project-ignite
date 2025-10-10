@@ -50,7 +50,7 @@ const UseCases = () => {
           
           {/* Section Header */}
           <header className="text-center mb-16">
-            <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">
+            <Badge variant="outline" className="mb-8 px-6 py-3 text-lg font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
               Use Cases
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">

@@ -64,24 +64,23 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Scattered documents layout - clearly separated */}
-                    <div className="relative w-28 h-28 flex items-center justify-center">
-                      {/* Background scattered items */}
-                      <div className="absolute top-0 left-0 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform -rotate-12 blur-[0.5px]">
-                        <Mail className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
+                    {/* Grid of document icons - 2x2 formation */}
+                    <div className="grid grid-cols-2 gap-3 w-28">
+                      {/* Top left - Mail */}
+                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                        <Mail className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute top-0 right-0 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform rotate-12 blur-[0.5px]">
-                        <FileText className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
+                      {/* Top right - FileText */}
+                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute bottom-0 left-2 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform rotate-6 blur-[0.5px]">
-                        <Calendar className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
+                      {/* Bottom left - Calendar */}
+                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                        <Calendar className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute bottom-0 right-2 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform -rotate-6 blur-[0.5px]">
-                        <Globe className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
-                      </div>
-                      {/* Central search icon */}
-                      <div className="relative z-10 w-14 h-14 rounded-full bg-pink-500/30 border-2 border-pink-400 flex items-center justify-center">
-                        <HelpCircle className="w-7 h-7 text-pink-300" strokeWidth={2} />
+                      {/* Bottom right - Globe */}
+                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                        <Globe className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
                       </div>
                     </div>
                   </div>

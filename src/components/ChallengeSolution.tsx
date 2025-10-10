@@ -106,30 +106,22 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Chaotic squiggly lines representing broken flow */}
+                    {/* Horizontal line getting disrupted */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
-                      {/* Squiggly/chaotic lines radiating out */}
-                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 112 112">
-                        {/* Top squiggle */}
-                        <path d="M 56 20 Q 50 25, 56 30 Q 62 35, 56 40" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.8"/>
-                        {/* Top-right squiggle */}
-                        <path d="M 75 25 Q 80 28, 85 25 Q 90 22, 95 25" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.7"/>
-                        {/* Right squiggle */}
-                        <path d="M 85 56 Q 88 50, 93 56 Q 98 62, 93 68" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.8"/>
-                        {/* Bottom-right squiggle */}
-                        <path d="M 75 85 Q 78 90, 83 85 Q 88 80, 93 85" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.7"/>
-                        {/* Bottom squiggle */}
-                        <path d="M 56 90 Q 50 85, 56 80 Q 62 75, 56 70" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.8"/>
-                        {/* Bottom-left squiggle */}
-                        <path d="M 35 85 Q 30 88, 25 83 Q 20 78, 15 83" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.7"/>
-                        {/* Left squiggle */}
-                        <path d="M 20 56 Q 17 50, 12 56 Q 7 62, 12 68" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.8"/>
-                        {/* Top-left squiggle */}
-                        <path d="M 35 25 Q 32 20, 27 25 Q 22 30, 17 25" stroke="#fb923c" strokeWidth="2" fill="none" opacity="0.7"/>
-                      </svg>
+                      {/* Left side of line */}
+                      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-1 bg-orange-400 rounded-full"></div>
                       
-                      {/* Center dot */}
-                      <div className="relative z-10 w-4 h-4 rounded-full bg-orange-400 animate-pulse"></div>
+                      {/* Disruption in center */}
+                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
+                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse"></div>
+                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                      </div>
+                      
+                      {/* Right side of line - broken into pieces */}
+                      <div className="absolute right-4 top-[45%] w-6 h-0.5 bg-orange-400/60 rounded-full"></div>
+                      <div className="absolute right-2 top-1/2 w-4 h-0.5 bg-orange-400/40 rounded-full"></div>
+                      <div className="absolute right-5 top-[55%] w-5 h-0.5 bg-orange-400/50 rounded-full"></div>
                     </div>
                   </div>
                   

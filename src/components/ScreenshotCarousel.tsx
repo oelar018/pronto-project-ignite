@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import screenshot1 from "@/assets/screenshot-1.png";
 import voiceCover from "@/assets/voice-cover.png";
+import triggersCover from "@/assets/triggers-cover.png";
 
 const ScreenshotCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -27,6 +28,13 @@ const ScreenshotCarousel = () => {
       title: "Answers, Streamed to Your Thoughts.",
       description:
         "voice mode listens in real time, processing every word and delivering precise, context-aware insights directly to you; no screens, no typing, just pure cognitive flow",
+    },
+    {
+      id: 3,
+      image: triggersCover,
+      title: "Your Words. Your Triggers.",
+      description:
+        "Define your own wake words—simple, natural cues that instantly activate Neura when you need a thought, fact, or response.",
     },
   ];
 

@@ -84,7 +84,7 @@ const ChallengeSolution = () => {
                       </div>
                       {/* Central search icon */}
                       <div className="relative z-10 w-14 h-14 rounded-full bg-pink-500/30 border-2 border-pink-400 flex items-center justify-center">
-                        <Zap className="w-7 h-7 text-pink-300" strokeWidth={2} />
+                        <HelpCircle className="w-7 h-7 text-pink-300" strokeWidth={2} />
                       </div>
                     </div>
                   </div>

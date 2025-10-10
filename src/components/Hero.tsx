@@ -81,7 +81,7 @@ const Hero = () => {
           </div>
 
           {/* Right side - Image */}
-          <div className="hidden lg:flex justify-center items-center mt-20 animate-fade-in-up" style={{
+          <div className="hidden lg:flex justify-center items-center mt-28 animate-fade-in-up" style={{
         animationDelay: "0.8s"
       }}>
             <img 

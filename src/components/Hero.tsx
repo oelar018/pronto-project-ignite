@@ -82,23 +82,21 @@ const Hero = () => {
           </div>
 
           {/* Right side - Images */}
-          <div className="hidden lg:flex justify-center items-center mt-28 animate-fade-in-up relative" style={{
+          <div className="hidden lg:flex justify-center items-center gap-4 mt-28 animate-fade-in-up" style={{
         animationDelay: "0.8s"
       }}>
-            <div className="relative w-full max-w-[400px]">
-              {/* Background image - Voice */}
-              <img 
-                src={voiceCover} 
-                alt="Voice Mode Preview" 
-                className="absolute top-8 -right-6 w-[85%] opacity-80 drop-shadow-[0_0_60px_rgba(34,211,238,0.3)] transition-all duration-500 z-0"
-              />
-              {/* Foreground image - ConvoGPT */}
-              <img 
-                src={convogptCover} 
-                alt="ConvoGPT Interface Preview" 
-                className="relative w-full opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105 z-10"
-              />
-            </div>
+            {/* Foreground image - ConvoGPT */}
+            <img 
+              src={convogptCover} 
+              alt="ConvoGPT Interface Preview" 
+              className="w-[340px] opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105"
+            />
+            {/* Background image - Voice (slightly smaller) */}
+            <img 
+              src={voiceCover} 
+              alt="Voice Mode Preview" 
+              className="w-[280px] opacity-80 drop-shadow-[0_0_60px_rgba(34,211,238,0.3)] transition-all duration-500"
+            />
           </div>
         </div>
 

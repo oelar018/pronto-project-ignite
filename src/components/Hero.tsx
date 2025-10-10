@@ -39,18 +39,18 @@ const Hero = () => {
         </p>
 
         {/* Trust Badges - Subtle tags */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 animate-fade-in-up" style={{
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{
         animationDelay: "0.5s"
       }}>
-          <Badge variant="secondary" className="flex items-center gap-1.5 px-3 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+          <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
             <Users className="w-3 h-3 text-white/50" />
             <span className="text-white/50 font-normal">Built for Professionals</span>
           </Badge>
-          <Badge variant="secondary" className="flex items-center gap-1.5 px-3 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+          <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
             <Shield className="w-3 h-3 text-white/50" />
             <span className="text-white/50 font-normal">Enterprise Secure</span>
           </Badge>
-          <Badge variant="secondary" className="flex items-center gap-1.5 px-3 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+          <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
             <CheckCircle className="w-3 h-3 text-white/50" />
             <span className="text-white/50 font-normal">Privacy First</span>
           </Badge>

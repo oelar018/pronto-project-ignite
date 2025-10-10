@@ -68,7 +68,7 @@ const ScreenshotCarousel = () => {
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="w-full h-auto drop-shadow-[0_0_40px_rgba(6,182,212,0.4)]"
+                      className="w-full h-auto"
                     />
                   </div>
                 </div>

@@ -20,14 +20,14 @@ const ScreenshotCarousel = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto py-8">
-      <Carousel className="w-full" opts={{ align: "start", loop: true }}>
+      <Carousel className="w-full relative" opts={{ align: "start", loop: true }}>
         <CarouselContent>
           {slides.map((slide) => (
             <CarouselItem key={slide.id}>
               <div className="grid md:grid-cols-2 gap-12 items-start p-8">
                 {/* Image Section */}
                 <div className="flex justify-center items-center">
-                  <div className="relative w-full max-w-xs">
+                  <div className="relative w-full max-w-[280px]">
                     <img
                       src={slide.image}
                       alt={slide.title}
@@ -49,8 +49,8 @@ const ScreenshotCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+        <CarouselPrevious className="left-4 h-12 w-12 bg-gradient-to-r from-purple-500 to-pink-500 border-0 hover:from-purple-600 hover:to-pink-600 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all" />
+        <CarouselNext className="right-4 h-12 w-12 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 hover:from-cyan-600 hover:to-blue-600 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all" />
       </Carousel>
     </div>
   );

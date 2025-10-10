@@ -22,23 +22,6 @@ const ChallengeSolution = () => {
               Context is scattered across <span className="text-orange-400 font-semibold">email, calendar, files, and the web</span>.
             </p>
           </header>
-
-          {/* Interactive Problem Stats */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="p-6 text-center hover-lift hover:shadow-glow transition-all duration-500 bg-destructive/5 border-destructive/20">
-              <div className="text-4xl font-bold text-destructive mb-2 animate-scale-in">67%</div>
-              <p className="text-muted-foreground">of professionals feel unprepared in important conversations</p>
-            </Card>
-            <Card className="p-6 text-center hover-lift hover:shadow-glow transition-all duration-500 bg-destructive/5 border-destructive/20">
-              <div className="text-4xl font-bold text-destructive mb-2 animate-scale-in" style={{animationDelay: "0.2s"}}>3.2min</div>
-              <p className="text-muted-foreground">average time lost searching for information during meetings</p>
-            </Card>
-            <Card className="p-6 text-center hover-lift hover:shadow-glow transition-all duration-500 bg-destructive/5 border-destructive/20">
-              <div className="text-4xl font-bold text-destructive mb-2 animate-scale-in" style={{animationDelay: "0.4s"}}>45%</div>
-              <p className="text-muted-foreground">of missed opportunities due to lack of immediate context</p>
-            </Card>
-          </div>
-
           {/* Problem Visualization - Interactive */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="order-2 lg:order-1">

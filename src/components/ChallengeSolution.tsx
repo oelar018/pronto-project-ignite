@@ -178,8 +178,7 @@ const ChallengeSolution = () => {
               No Typing. No Prompting. Just-In-Time-Intelligence with Full Context of Your Work.
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              AI-powered suggestions appear precisely when you need them, keeping you in the flow. 
-              Works even with your phone asleep in your pocket.
+              Neura AI cuts through conversational noise and tells you exactly what to say—drawing from current and past discussions, work documents, emails, and meetings
             </p>
           </header>
 

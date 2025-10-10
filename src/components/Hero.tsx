@@ -32,7 +32,7 @@ const Hero = () => {
           <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)]">AI That Tells You What to Say in Conversations</span>
         </h1>
         
-        <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{
+        <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{
         animationDelay: "0.4s"
       }}>
           Augment your mind in real time to stay effortlessly in sync with every conversation. AI that understands your past discussions, documents, and emails so you always know what to say, how to say it, and the facts to back it up.

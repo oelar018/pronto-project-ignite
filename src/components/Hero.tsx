@@ -35,7 +35,7 @@ const Hero = () => {
         <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{
         animationDelay: "0.4s"
       }}>
-          Get just-in-time intelligence that appears precisely when you need it. Works even with your phone asleep in your pocket.
+          Augment your mind in real time to stay effortlessly in sync with every conversation. AI that understands your past discussions, documents, and emails so you always know what to say, how to say it, and the facts to back it up.
         </p>
 
         {/* Trust Badges - Subtle tags */}

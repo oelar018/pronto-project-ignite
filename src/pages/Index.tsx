@@ -70,12 +70,12 @@ const Index = () => {
         <ChallengeSolution />
         <Features />
         <UseCases />
-        <FAQ />
         <section aria-label="Join waitlist" className="bg-gradient-aurora">
           <div className="bg-background/95 backdrop-blur-sm border border-border/20 rounded-2xl mx-4 md:mx-8">
             <FinalCTA />
           </div>
         </section>
+        <FAQ />
       </main>
       <Footer />
       <StickyMobileCTA />

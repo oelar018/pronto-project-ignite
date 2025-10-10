@@ -307,22 +307,6 @@ const FinalCTA = () => {
               </div>
             </div>
           </Card>
-
-          {/* Additional Trust Signals */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-            <div className="animate-fade-in-up p-8 rounded-2xl bg-gradient-to-br from-cyan-950/40 to-cyan-900/20 border-2 border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.2)]" style={{animationDelay: "0.6s"}}>
-              <div className="text-5xl font-black bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)]">500+</div>
-              <p className="text-gray-300 font-medium text-lg">Professionals already on the waitlist</p>
-            </div>
-            <div className="animate-fade-in-up p-8 rounded-2xl bg-gradient-to-br from-purple-950/40 to-purple-900/20 border-2 border-purple-400/30 backdrop-blur-sm hover:border-purple-400/60 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.2)]" style={{animationDelay: "0.8s"}}>
-              <div className="text-5xl font-black bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]">Fortune 500</div>
-              <p className="text-gray-300 font-medium text-lg">Companies showing interest</p>
-            </div>
-            <div className="animate-fade-in-up p-8 rounded-2xl bg-gradient-to-br from-pink-950/40 to-pink-900/20 border-2 border-pink-400/30 backdrop-blur-sm hover:border-pink-400/60 transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.2)]" style={{animationDelay: "1s"}}>
-              <div className="text-5xl font-black bg-gradient-to-r from-pink-400 to-pink-300 bg-clip-text text-transparent mb-4 drop-shadow-[0_0_20px_rgba(236,72,153,0.5)]">AI-First</div>
-              <p className="text-gray-300 font-medium text-lg">Built for the modern workplace</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

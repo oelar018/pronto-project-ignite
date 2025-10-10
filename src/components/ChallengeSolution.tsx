@@ -178,8 +178,8 @@ const ChallengeSolution = () => {
             <h2 className="text-4xl md:text-6xl font-black mb-8 pb-2 leading-relaxed bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(6,182,212,0.6)] animate-fade-in">
               No Typing. No Prompting. Just-In-Time-Intelligence with Full Context of Your Work.
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Neura AI cuts through conversational noise and tells you exactly what to say—drawing from current and past discussions, work documents, emails, and meetings
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
+              Neura AI cuts through conversational noise and tells you <span className="text-cyan-400 font-bold">exactly what to say</span>—drawing from current and past discussions, <span className="text-blue-400 font-semibold">work documents, emails, and meetings</span>
             </p>
           </header>
 

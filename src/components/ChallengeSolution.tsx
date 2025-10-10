@@ -106,21 +106,27 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Flow line breaking apart */}
+                    {/* Breaking/Shattering effect */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
-                      {/* Left side - solid continuous flow */}
-                      <div className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-1.5 bg-gradient-to-r from-orange-300 to-orange-400 rounded-full" />
+                      {/* Center crack/break line */}
+                      <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-red-500/50 -translate-x-1/2" />
+                      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-red-500/20 blur-sm -translate-x-1/2" />
                       
-                      {/* Center - break/gap */}
-                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
-                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" />
-                        <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+                      {/* Left broken piece */}
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 border-2 border-orange-400 bg-orange-500/10 rounded transform -rotate-12 -translate-x-2">
+                        <Zap className="w-6 h-6 text-orange-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" strokeWidth={2} />
                       </div>
                       
-                      {/* Right side - fragmented broken pieces */}
-                      <div className="absolute right-4 top-[40%] w-6 h-1 bg-orange-400/60 rounded-full" />
-                      <div className="absolute right-6 top-1/2 w-4 h-0.5 bg-orange-400/40 rounded-full" />
-                      <div className="absolute right-4 top-[60%] w-5 h-0.5 bg-orange-400/50 rounded-full" />
+                      {/* Right broken piece */}
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 border-2 border-orange-400 bg-orange-500/10 rounded transform rotate-12 translate-x-2">
+                        <Zap className="w-6 h-6 text-orange-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" strokeWidth={2} />
+                      </div>
+                      
+                      {/* Scattered fragments */}
+                      <div className="absolute top-2 left-12 w-1.5 h-1.5 bg-red-400/60 rounded-full" />
+                      <div className="absolute top-4 right-14 w-1 h-1 bg-red-400/40 rounded-full" />
+                      <div className="absolute bottom-3 left-14 w-1 h-1 bg-red-400/50 rounded-full" />
+                      <div className="absolute bottom-4 right-12 w-1.5 h-1.5 bg-red-400/60 rounded-full" />
                     </div>
                   </div>
                   

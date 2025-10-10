@@ -19,7 +19,7 @@ const ScreenshotCarousel = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto py-16">
+    <div className="w-full max-w-7xl mx-auto py-8">
       <Carousel className="w-full" opts={{ align: "start", loop: true }}>
         <CarouselContent>
           {slides.map((slide) => (

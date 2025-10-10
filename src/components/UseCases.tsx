@@ -57,7 +57,7 @@ const UseCases = () => {
               Transform Every Professional Interaction
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              See how Neura AI empowers professionals across different scenarios with just-in-time intelligence.
+              See how Neura AI empowers professionals across different scenarios.
             </p>
           </header>
 

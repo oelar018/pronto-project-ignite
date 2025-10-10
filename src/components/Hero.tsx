@@ -5,6 +5,7 @@ import { useState } from "react";
 import { LazyHexHeroNeura } from "@/components/lazy";
 import { VideoModal } from "@/components/VideoModal";
 import convogptCover from "@/assets/convogpt-cover.png";
+import voiceCover from "@/assets/voice-cover.png";
 const Hero = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   return <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
@@ -80,15 +81,24 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Image */}
-          <div className="hidden lg:flex justify-center items-center mt-28 animate-fade-in-up" style={{
+          {/* Right side - Images */}
+          <div className="hidden lg:flex justify-center items-center mt-28 animate-fade-in-up relative" style={{
         animationDelay: "0.8s"
       }}>
-            <img 
-              src={convogptCover} 
-              alt="ConvoGPT Interface Preview" 
-              className="w-full max-w-[340px] opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105"
-            />
+            <div className="relative w-full max-w-[400px]">
+              {/* Background image - Voice */}
+              <img 
+                src={voiceCover} 
+                alt="Voice Mode Preview" 
+                className="absolute top-8 -right-6 w-[85%] opacity-80 drop-shadow-[0_0_60px_rgba(34,211,238,0.3)] transition-all duration-500 z-0"
+              />
+              {/* Foreground image - ConvoGPT */}
+              <img 
+                src={convogptCover} 
+                alt="ConvoGPT Interface Preview" 
+                className="relative w-full opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105 z-10"
+              />
+            </div>
           </div>
         </div>
 

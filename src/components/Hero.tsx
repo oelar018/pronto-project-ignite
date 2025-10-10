@@ -50,10 +50,6 @@ const Hero = () => {
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-10 animate-fade-in-up leading-[1.1]" style={{animationDelay: "0.2s"}}>
-          <span className="inline-block bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
-            AI That Gives You
-          </span>
-          <br />
           <span className="inline-block bg-gradient-to-r from-cyan-400 via-purple-200 to-pink-400 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_50px_rgba(168,85,247,0.8)]">
             AI That Tells You What to Say in Conversations
           </span>

@@ -17,7 +17,7 @@ const Features = () => {
 Powered by the Future.
           </h2>
             <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
-              Choose your preferred way to receive <span className="text-cyan-400 font-bold">AI-powered insights</span> during conversations.
+              Enterprise grade features, designed for professional excellence
             </p>
           </header>
 

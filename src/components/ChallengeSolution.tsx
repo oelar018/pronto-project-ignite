@@ -169,13 +169,6 @@ const ChallengeSolution = () => {
             </div>
           </div>
 
-          {/* Transition Arrow */}
-          <div className="flex justify-center mb-20">
-            <div className="p-4 bg-primary/10 rounded-full">
-              <ArrowRight className="w-8 h-8 text-primary" />
-            </div>
-          </div>
-
           {/* Solution Section */}
           <header className="text-center mb-16">
             <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">

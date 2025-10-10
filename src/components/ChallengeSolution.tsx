@@ -153,13 +153,6 @@ const ChallengeSolution = () => {
                       {/* Faded conversation bubbles in background */}
                       <MessageSquare className="w-10 h-10 text-red-400 opacity-15 absolute -top-2 -left-2" strokeWidth={1.5} />
                       <MessageSquare className="w-10 h-10 text-red-400 opacity-15 absolute -bottom-2 -right-2" strokeWidth={1.5} />
-                      
-                      {/* Dots indicating lost message */}
-                      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-red-400/50 animate-pulse" />
-                        <div className="w-2 h-2 rounded-full bg-red-400/50 animate-pulse" style={{animationDelay: '0.2s'}} />
-                        <div className="w-2 h-2 rounded-full bg-red-400/50 animate-pulse" style={{animationDelay: '0.4s'}} />
-                      </div>
                     </div>
                   </div>
                   

@@ -91,7 +91,7 @@ const ScreenshotCarousel = () => {
       </Carousel>
       
       {/* Dot Navigation */}
-      <div className="flex justify-center gap-3 mt-6">
+      <div className="flex justify-center gap-3 mt-3">
         {slides.map((_, index) => (
           <button
             key={index}

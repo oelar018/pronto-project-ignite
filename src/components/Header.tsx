@@ -66,7 +66,7 @@ const Header = () => {
                 href="#features" 
                 className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
-                Technology
+                Features
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
               <a 
@@ -143,7 +143,7 @@ const Header = () => {
                 className="text-muted-foreground hover:text-primary transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Technology
+                Features
               </a>
               <a 
                 href="#use-cases"

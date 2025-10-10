@@ -93,29 +93,29 @@ const Hero = () => {
         </div>
 
         {/* Product Modes Preview - Enhanced */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-24">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24">
           {/* Visual Mode */}
-          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-8 border-2 border-primary/20 hover:border-primary/40 hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in-up" style={{
+          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-6 border-2 border-primary/20 hover:border-primary/40 hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in-up flex flex-col" style={{
           animationDelay: "0.8s"
         }}>
             <div className="absolute -top-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all duration-500" />
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300">
-                <Eye className="w-7 h-7 text-primary" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300">
+                <Eye className="w-6 h-6 text-primary" />
               </div>
               <div className="text-left">
-                <h3 className="text-xl font-bold text-foreground">Visual Mode</h3>
-                <p className="text-sm text-primary">On-screen suggestions</p>
+                <h3 className="text-lg font-bold text-foreground">Visual Mode</h3>
+                <p className="text-xs text-primary">On-screen suggestions</p>
               </div>
             </div>
             
-            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-5 text-left border border-primary/10">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 bg-primary rounded-full animate-pulse shadow-glow"></div>
-                  <span className="text-sm font-semibold text-primary">Live Analysis</span>
+            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-4 text-left border border-primary/10 flex-grow">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-glow"></div>
+                  <span className="text-xs font-semibold text-primary">Live Analysis</span>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   Receive just-in-time intelligence directly to the Neura app with contextual insights that help you navigate any conversation with confidence.
                 </p>
               </div>
@@ -123,27 +123,27 @@ const Hero = () => {
           </div>
 
           {/* Audio Mode */}
-          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-8 border-2 border-accent/20 hover:border-accent/40 hover-lift hover:shadow-accent transition-all duration-500 animate-fade-in-up" style={{
+          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-6 border-2 border-accent/20 hover:border-accent/40 hover-lift hover:shadow-accent transition-all duration-500 animate-fade-in-up flex flex-col" style={{
           animationDelay: "1s"
         }}>
             <div className="absolute -top-2 -right-2 w-20 h-20 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 group-hover:from-accent/30 group-hover:to-accent/20 transition-all duration-300">
-                <Mic className="w-7 h-7 text-accent" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 group-hover:from-accent/30 group-hover:to-accent/20 transition-all duration-300">
+                <Mic className="w-6 h-6 text-accent" />
               </div>
               <div className="text-left">
-                <h3 className="text-xl font-bold text-foreground">Audio Mode</h3>
-                <p className="text-sm text-accent">Whispered insights</p>
+                <h3 className="text-lg font-bold text-foreground">Audio Mode</h3>
+                <p className="text-xs text-accent">Whispered insights</p>
               </div>
             </div>
             
-            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-5 text-left border border-accent/10">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 bg-accent rounded-full animate-pulse shadow-accent"></div>
-                  <span className="text-sm font-semibold text-accent">Discrete Delivery</span>
+            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-4 text-left border border-accent/10 flex-grow">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-accent"></div>
+                  <span className="text-xs font-semibold text-accent">Discrete Delivery</span>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   Subtle audio cues delivered directly to your earbuds - completely invisible to others
                 </p>
               </div>
@@ -151,27 +151,27 @@ const Hero = () => {
           </div>
 
           {/* Group Mode */}
-          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-8 border-2 border-cyan-500/20 hover:border-cyan-500/40 hover-lift hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-500 animate-fade-in-up" style={{
+          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-6 border-2 border-cyan-500/20 hover:border-cyan-500/40 hover-lift hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-500 animate-fade-in-up flex flex-col" style={{
           animationDelay: "1.2s"
         }}>
             <div className="absolute -top-2 -right-2 w-20 h-20 bg-cyan-500/20 rounded-full blur-2xl group-hover:bg-cyan-500/30 transition-all duration-500" />
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 group-hover:from-cyan-500/30 group-hover:to-cyan-500/20 transition-all duration-300">
-                <UsersRound className="w-7 h-7 text-cyan-400" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 group-hover:from-cyan-500/30 group-hover:to-cyan-500/20 transition-all duration-300">
+                <UsersRound className="w-6 h-6 text-cyan-400" />
               </div>
               <div className="text-left">
-                <h3 className="text-xl font-bold text-foreground">Group Mode</h3>
-                <p className="text-sm text-cyan-400">Meeting intelligence</p>
+                <h3 className="text-lg font-bold text-foreground">Group Mode</h3>
+                <p className="text-xs text-cyan-400">Meeting intelligence</p>
               </div>
             </div>
             
-            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-5 text-left border border-cyan-500/10">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.6)]"></div>
-                  <span className="text-sm font-semibold text-cyan-400">Team Sync</span>
+            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-4 text-left border border-cyan-500/10 flex-grow">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.6)]"></div>
+                  <span className="text-xs font-semibold text-cyan-400">Team Sync</span>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   Keep group meetings on track with real-time insights, action items, and key discussion points shared across all participants.
                 </p>
               </div>

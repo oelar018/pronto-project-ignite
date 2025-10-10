@@ -106,34 +106,21 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
                   
               <div className="relative mb-8 mt-4">
-                {/* Flow being broken: continuous path splits into chaos */}
+                {/* Simple flow line breaking apart */}
                 <div className="relative w-28 h-28 flex items-center justify-center">
-                  {/* Smooth flow line entering from left */}
-                  <div className="absolute left-2 top-8 w-12 h-1 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full" />
+                  {/* Smooth flow line from left */}
+                  <div className="absolute left-0 top-1/2 w-10 h-1 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full" />
                   
-                  {/* Center: focus breaking point with multiple tabs */}
-                  <div className="relative z-10">
-                    {/* Single focused window transitioning to multiple tabs */}
-                    <div className="w-14 h-16 bg-indigo-500/70 border-2 border-indigo-400 rounded-lg relative">
-                      <div className="w-full h-3 bg-indigo-400/50 rounded-t-lg" />
-                    </div>
+                  {/* Break point in center */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    {/* Fracture effect */}
+                    <div className="w-3 h-3 border-2 border-indigo-400 rotate-45" />
                   </div>
                   
-                  {/* Fragmented paths emerging - showing broken flow */}
-                  <div className="absolute right-2 top-4 w-10 h-0.5 bg-indigo-400/50 rounded-full transform rotate-12" />
-                  <div className="absolute right-3 top-8 w-8 h-0.5 bg-indigo-400/40 rounded-full" />
-                  <div className="absolute right-2 top-12 w-10 h-0.5 bg-indigo-400/50 rounded-full transform -rotate-12" />
-                  
-                  {/* Multiple scattered tab icons showing distraction */}
-                  <div className="absolute -top-1 right-6 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-md transform rotate-12">
-                    <div className="w-full h-2 bg-indigo-400/30 rounded-t-md" />
-                  </div>
-                  <div className="absolute -bottom-1 right-8 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-md transform -rotate-15">
-                    <div className="w-full h-2 bg-indigo-400/30 rounded-t-md" />
-                  </div>
-                  <div className="absolute top-6 -right-2 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-md transform rotate-6">
-                    <div className="w-full h-2 bg-indigo-400/30 rounded-t-md" />
-                  </div>
+                  {/* Broken/scattered flow lines going right */}
+                  <div className="absolute right-0 top-[35%] w-10 h-0.5 bg-gradient-to-l from-indigo-400/70 to-indigo-500/30 rounded-full transform translate-x-0" />
+                  <div className="absolute right-0 top-1/2 w-8 h-0.5 bg-gradient-to-l from-indigo-400/50 to-indigo-500/20 rounded-full" />
+                  <div className="absolute right-0 top-[65%] w-10 h-0.5 bg-gradient-to-l from-indigo-400/70 to-indigo-500/30 rounded-full" />
                 </div>
               </div>
                   

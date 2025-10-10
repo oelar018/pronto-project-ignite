@@ -55,7 +55,7 @@ const ChallengeSolution = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-10 z-20">
+                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-16 z-20">
                   <ArrowRight className="w-6 h-6 text-pink-400" strokeWidth={2.5} />
                 </div>
               </div>
@@ -94,7 +94,7 @@ const ChallengeSolution = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-10 z-20">
+                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-16 z-20">
                   <ArrowRight className="w-6 h-6 text-orange-400" strokeWidth={2.5} />
                 </div>
               </div>
@@ -129,7 +129,7 @@ const ChallengeSolution = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-10 z-20">
+                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-16 z-20">
                   <ArrowRight className="w-6 h-6 text-red-400" strokeWidth={2.5} />
                 </div>
               </div>

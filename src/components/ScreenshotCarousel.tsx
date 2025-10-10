@@ -48,14 +48,14 @@ const ScreenshotCarousel = () => {
   );
 
   return (
-    <div className="w-full max-w-7xl mx-auto py-4">
-      <Carousel className="w-full relative" opts={{ align: "start", loop: true }} setApi={setApi}>
+    <div className="w-full max-w-7xl mx-auto pt-0 pb-4">
+      <Carousel className="w-full relative overflow-visible" opts={{ align: "start", loop: true }} setApi={setApi}>
         <CarouselContent>
           {slides.map((slide) => (
             <CarouselItem key={slide.id}>
-              <div className="grid md:grid-cols-2 gap-12 items-start p-8">
+              <div className="grid md:grid-cols-2 gap-12 items-start px-8 py-4">
                 {/* Image Section */}
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center py-8">
                   <div className="relative w-full max-w-[280px]">
                     <img
                       src={slide.image}

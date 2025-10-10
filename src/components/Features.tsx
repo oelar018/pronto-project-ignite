@@ -1,10 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mic, Eye, Shield, Zap, Users, Brain } from "lucide-react";
-
 const Features = () => {
-  return (
-    <section id="features" className="relative py-16 md:py-24 bg-black overflow-hidden">
+  return <section id="features" className="relative py-16 md:py-24 bg-black overflow-hidden">
       {/* Vibrant background glow */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[150px]" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[150px]" />
@@ -14,12 +12,10 @@ const Features = () => {
           
           {/* Section Header */}
           <header className="text-center mb-20">
-            <Badge variant="outline" className="mb-8 px-6 py-3 text-lg font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-              Features
-            </Badge>
-            <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white via-cyan-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(168,85,247,0.5)]">
-              Two Modes. Endless Possibilities.
-            </h2>
+            <Badge variant="outline" className="mb-8 px-6 py-3 text-lg font-bold text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">Technology</Badge>
+            <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white via-cyan-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(168,85,247,0.5)]">Inspired by the Singularity.
+Powered by the Future.
+          </h2>
             <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
               Choose your preferred way to receive <span className="text-cyan-400 font-bold">AI-powered insights</span> during conversations.
             </p>
@@ -201,8 +197,6 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Features;

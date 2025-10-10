@@ -8,6 +8,7 @@ import {
   CarouselApi,
 } from "@/components/ui/carousel";
 import screenshot1 from "@/assets/screenshot-1.png";
+import voiceCover from "@/assets/voice-cover.png";
 
 const ScreenshotCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -19,6 +20,13 @@ const ScreenshotCarousel = () => {
       title: "Intuitively Simple. Exceptionally Precise.",
       description:
         "Users only tap Suggest and Neura AI scans the entire conversation and tells you exactly what to say, where responses are streamed in digestible chunks.",
+    },
+    {
+      id: 2,
+      image: voiceCover,
+      title: "Answers, Streamed to Your Thoughts.",
+      description:
+        "voice mode listens in real time, processing every word and delivering precise, context-aware insights directly to you; no screens, no typing, just pure cognitive flow",
     },
   ];
 

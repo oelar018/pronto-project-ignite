@@ -95,50 +95,6 @@ const UseCases = () => {
               </Card>
             ))}
           </div>
-
-          {/* Advanced Scenarios */}
-          <div className="bg-gradient-hero rounded-3xl p-8 md:p-12">
-            <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-                Advanced Professional Scenarios
-              </h3>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Neura AI adapts to complex business situations with contextual intelligence
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="p-4 rounded-xl bg-white/10 w-fit mx-auto mb-6">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-white">Multi-stakeholder Alignment</h4>
-                <p className="text-white/80 text-sm">
-                  When multiple team members use Neura AI, meetings stay perfectly aligned with shared context and accurate information.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="p-4 rounded-xl bg-white/10 w-fit mx-auto mb-6">
-                  <Calendar className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-white">Cross-meeting Context</h4>
-                <p className="text-white/80 text-sm">
-                  Recalls insights from past meetings you didn't attend (with permissions) to create comprehensive understanding.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="p-4 rounded-xl bg-white/10 w-fit mx-auto mb-6">
-                  <MessageSquare className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold mb-3 text-white">Post-meeting Coaching</h4>
-                <p className="text-white/80 text-sm">
-                  Automatic analysis of what went well, what was missed, and how to improve for continuous professional development.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

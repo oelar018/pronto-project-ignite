@@ -106,21 +106,21 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
                   
               <div className="relative mb-8 mt-4">
-                {/* Simple flow line breaking apart */}
+                {/* Flow line breaking apart */}
                 <div className="relative w-28 h-28 flex items-center justify-center">
-                  {/* Smooth flow line from left */}
-                  <div className="absolute left-0 top-1/2 w-10 h-1 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full" />
+                  {/* Left side - solid continuous flow */}
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-1.5 bg-gradient-to-r from-indigo-300 to-indigo-400 rounded-full" />
                   
-                  {/* Break point in center */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    {/* Fracture effect */}
-                    <div className="w-3 h-3 border-2 border-indigo-400 rotate-45" />
+                  {/* Center - break/gap */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
+                    <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" />
+                    <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
                   </div>
                   
-                  {/* Broken/scattered flow lines going right */}
-                  <div className="absolute right-0 top-[35%] w-10 h-0.5 bg-gradient-to-l from-indigo-400/70 to-indigo-500/30 rounded-full transform translate-x-0" />
-                  <div className="absolute right-0 top-1/2 w-8 h-0.5 bg-gradient-to-l from-indigo-400/50 to-indigo-500/20 rounded-full" />
-                  <div className="absolute right-0 top-[65%] w-10 h-0.5 bg-gradient-to-l from-indigo-400/70 to-indigo-500/30 rounded-full" />
+                  {/* Right side - fragmented broken pieces */}
+                  <div className="absolute right-4 top-[40%] w-6 h-1 bg-indigo-400/60 rounded-full" />
+                  <div className="absolute right-6 top-1/2 w-4 h-0.5 bg-indigo-400/40 rounded-full" />
+                  <div className="absolute right-4 top-[60%] w-5 h-0.5 bg-indigo-400/50 rounded-full" />
                 </div>
               </div>
                   

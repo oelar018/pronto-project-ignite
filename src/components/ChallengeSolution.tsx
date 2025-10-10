@@ -62,39 +62,39 @@ const ChallengeSolution = () => {
 
               {/* Stage 2 - Missing Context */}
               <div className="group relative">
-                <div className="bg-gradient-to-br from-purple-950/50 to-purple-900/20 border-2 border-purple-500/30 rounded-3xl p-10 hover:border-purple-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-pink-950/50 to-pink-900/20 border-2 border-pink-500/30 rounded-3xl p-10 hover:border-pink-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(236,72,153,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
                   {/* Background glow effect */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl" />
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
                     {/* Scattered documents layout - clearly separated */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
                       {/* Background scattered items */}
-                      <div className="absolute top-0 left-0 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform -rotate-12 blur-[0.5px]">
-                        <Mail className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
+                      <div className="absolute top-0 left-0 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform -rotate-12 blur-[0.5px]">
+                        <Mail className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute top-0 right-0 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform rotate-12 blur-[0.5px]">
-                        <FileText className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
+                      <div className="absolute top-0 right-0 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform rotate-12 blur-[0.5px]">
+                        <FileText className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute bottom-0 left-2 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform rotate-6 blur-[0.5px]">
-                        <Calendar className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
+                      <div className="absolute bottom-0 left-2 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform rotate-6 blur-[0.5px]">
+                        <Calendar className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
                       </div>
-                      <div className="absolute bottom-0 right-2 w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center transform -rotate-6 blur-[0.5px]">
-                        <Globe className="w-6 h-6 text-purple-400/60" strokeWidth={1.5} />
+                      <div className="absolute bottom-0 right-2 w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center transform -rotate-6 blur-[0.5px]">
+                        <Globe className="w-6 h-6 text-pink-400/60" strokeWidth={1.5} />
                       </div>
                       {/* Central search icon */}
-                      <div className="relative z-10 w-14 h-14 rounded-full bg-purple-500/30 border-2 border-purple-400 flex items-center justify-center">
-                        <Zap className="w-7 h-7 text-purple-300" strokeWidth={2} />
+                      <div className="relative z-10 w-14 h-14 rounded-full bg-pink-500/30 border-2 border-pink-400 flex items-center justify-center">
+                        <Zap className="w-7 h-7 text-pink-300" strokeWidth={2} />
                       </div>
                     </div>
                   </div>
                   
-                  <h4 className="text-xl font-bold mb-6 text-purple-300">Missing Context</h4>
+                  <h4 className="text-xl font-bold mb-6 text-pink-300">Missing Context</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Information scattered across emails, files, and calendar</p>
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-purple-500/20 to-orange-500/20 rounded-full">
+                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full">
                   <ArrowRight className="w-5 h-5 text-orange-300" strokeWidth={2.5} />
                 </div>
               </div>

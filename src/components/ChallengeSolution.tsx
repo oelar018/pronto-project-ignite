@@ -25,82 +25,162 @@ const ChallengeSolution = () => {
           {/* Problem Flow - 4 Stages */}
           <div className="relative max-w-7xl mx-auto mb-20">
             {/* Connecting Flow Line */}
-            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500/20 via-violet-500/40 to-indigo-500/20 hidden lg:block" />
+            <div className="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500/30 via-violet-500/30 via-indigo-500/30 to-red-500/30 hidden lg:block" 
+                 style={{top: '8.5rem'}} />
             
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 relative">
               {/* Stage 1 - In the Conversation */}
               <div className="group relative">
-                <div className="bg-gradient-card border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] h-full flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300">
-                    <div className="relative">
-                      <MessageSquare className="w-10 h-10 text-cyan-400" strokeWidth={1.5} />
-                      <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-cyan-500 animate-pulse" />
+                <div className="bg-gradient-to-br from-cyan-950/50 to-cyan-900/20 border-2 border-cyan-500/30 rounded-3xl p-10 hover:border-cyan-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                  {/* Background glow effect */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl" />
+                  
+                  <div className="relative mb-8 mt-4">
+                    {/* Main conversation bubbles */}
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                      <MessageSquare className="w-16 h-16 text-cyan-400 relative z-10" strokeWidth={1.5} />
+                      <MessageSquare className="w-14 h-14 text-cyan-300 absolute top-3 left-3 opacity-40" strokeWidth={1.5} />
+                      {/* Active indicator */}
+                      <div className="absolute top-0 right-0 w-5 h-5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
+                      {/* Motion lines */}
+                      <div className="absolute -right-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
+                      <div className="absolute -right-3 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
                     </div>
                   </div>
-                  <h4 className="text-lg font-bold mb-3 text-cyan-300">You're in a fast-moving conversation</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Tough questions come at you unexpectedly, and you're thinking on your feet.</p>
+                  
+                  {/* Progress indicator */}
+                  <div className="w-full h-1.5 bg-cyan-500/20 rounded-full mb-6 overflow-hidden">
+                    <div className="h-full w-full bg-cyan-400 rounded-full animate-pulse" />
+                  </div>
+                  
+                  <h4 className="text-xl font-bold mb-3 text-cyan-300">In the Conversation</h4>
+                  <p className="text-sm text-gray-300 leading-relaxed">Fast-paced dialogue, unexpected questions demanding quick thinking</p>
                 </div>
+                
                 {/* Arrow */}
-                <div className="hidden lg:block absolute top-24 -right-3 z-10">
-                  <ArrowRight className="w-6 h-6 text-violet-400/60 animate-pulse" />
+                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-violet-500/20 rounded-full">
+                  <ArrowRight className="w-5 h-5 text-violet-300" strokeWidth={2.5} />
                 </div>
               </div>
 
               {/* Stage 2 - Missing Context */}
               <div className="group relative">
-                <div className="bg-gradient-card border border-violet-500/20 rounded-2xl p-8 hover:border-violet-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] h-full flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all duration-300">
-                    <div className="relative">
-                      <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                        <Mail className="w-6 h-6 text-violet-400 absolute -top-2 -left-2" strokeWidth={1.5} />
-                        <FileText className="w-5 h-5 text-violet-400 absolute top-2 left-2" strokeWidth={1.5} />
-                        <Calendar className="w-5 h-5 text-violet-400 absolute -top-1 left-3" strokeWidth={1.5} />
+                <div className="bg-gradient-to-br from-violet-950/50 to-violet-900/20 border-2 border-violet-500/30 rounded-3xl p-10 hover:border-violet-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                  {/* Background glow effect */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-violet-500/20 rounded-full blur-3xl" />
+                  
+                  <div className="relative mb-8 mt-4">
+                    {/* Scattered documents layout - clearly separated */}
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                      {/* Background scattered items */}
+                      <div className="absolute top-0 left-0 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform -rotate-12 blur-[0.5px]">
+                        <Mail className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
                       </div>
-                      <Zap className="w-10 h-10 text-violet-400 relative z-10" strokeWidth={1.5} />
+                      <div className="absolute top-0 right-0 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform rotate-12 blur-[0.5px]">
+                        <FileText className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      </div>
+                      <div className="absolute bottom-0 left-2 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform rotate-6 blur-[0.5px]">
+                        <Calendar className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      </div>
+                      <div className="absolute bottom-0 right-2 w-12 h-12 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center transform -rotate-6 blur-[0.5px]">
+                        <Globe className="w-6 h-6 text-violet-400/60" strokeWidth={1.5} />
+                      </div>
+                      {/* Central search icon */}
+                      <div className="relative z-10 w-14 h-14 rounded-full bg-violet-500/30 border-2 border-violet-400 flex items-center justify-center">
+                        <Zap className="w-7 h-7 text-violet-300" strokeWidth={2} />
+                      </div>
                     </div>
                   </div>
-                  <h4 className="text-lg font-bold mb-3 text-violet-300">The answer exists—but not where you are</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">It's buried in past emails, documents, or meeting notes you can't access in time.</p>
+                  
+                  {/* Progress indicator - partially filled */}
+                  <div className="w-full h-1.5 bg-violet-500/20 rounded-full mb-6 overflow-hidden">
+                    <div className="h-full w-3/4 bg-violet-400 rounded-full" />
+                  </div>
+                  
+                  <h4 className="text-xl font-bold mb-3 text-violet-300">Missing Context</h4>
+                  <p className="text-sm text-gray-300 leading-relaxed">Information scattered across emails, files, and calendar</p>
                 </div>
+                
                 {/* Arrow */}
-                <div className="hidden lg:block absolute top-24 -right-3 z-10">
-                  <ArrowRight className="w-6 h-6 text-indigo-400/60 animate-pulse" style={{animationDelay: '0.3s'}} />
+                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-violet-500/20 to-indigo-500/20 rounded-full">
+                  <ArrowRight className="w-5 h-5 text-indigo-300" strokeWidth={2.5} />
                 </div>
               </div>
 
               {/* Stage 3 - Breaking the Flow */}
               <div className="group relative">
-                <div className="bg-gradient-card border border-indigo-500/20 rounded-2xl p-8 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] h-full flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all duration-300">
-                    <div className="relative">
-                      <Brain className="w-10 h-10 text-indigo-400" strokeWidth={1.5} />
-                      <div className="absolute -top-2 -right-2 w-4 h-4 border-2 border-indigo-400 rounded-full animate-spin" style={{animationDuration: '3s'}} />
-                      <div className="absolute top-0 right-0 w-3 h-3 border-2 border-indigo-500 rounded-full animate-spin" style={{animationDuration: '2s', animationDirection: 'reverse'}} />
+                <div className="bg-gradient-to-br from-indigo-950/50 to-indigo-900/20 border-2 border-indigo-500/30 rounded-3xl p-10 hover:border-indigo-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                  {/* Background glow effect */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
+                  
+                  <div className="relative mb-8 mt-4">
+                    {/* Brain with disruption indicators */}
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                      <Brain className="w-16 h-16 text-indigo-400" strokeWidth={1.5} />
+                      {/* Multiple browser tabs/windows overlapping */}
+                      <div className="absolute -top-2 -left-2 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-lg transform -rotate-12" />
+                      <div className="absolute -top-1 left-1 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-lg" />
+                      <div className="absolute top-0 left-4 w-8 h-10 bg-indigo-500/40 border border-indigo-400/60 rounded-t-lg transform rotate-12" />
+                      {/* Spinning confusion indicators */}
+                      <div className="absolute -top-3 -right-3 w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+                      <div className="absolute -bottom-3 -left-3 w-5 h-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" style={{animationDuration: '2s', animationDirection: 'reverse'}} />
                     </div>
                   </div>
-                  <h4 className="text-lg font-bold mb-3 text-indigo-300">You break the flow trying to find it</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Switching tabs and searching kills momentum, and you lose track of the discussion.</p>
+                  
+                  {/* Progress indicator - half filled, flickering */}
+                  <div className="w-full h-1.5 bg-indigo-500/20 rounded-full mb-6 overflow-hidden">
+                    <div className="h-full w-1/2 bg-indigo-400 rounded-full animate-pulse" />
+                  </div>
+                  
+                  <h4 className="text-xl font-bold mb-3 text-indigo-300">Breaking Flow</h4>
+                  <p className="text-sm text-gray-300 leading-relaxed">Tab-switching disrupts focus and conversation momentum</p>
                 </div>
+                
                 {/* Arrow */}
-                <div className="hidden lg:block absolute top-24 -right-3 z-10">
-                  <ArrowRight className="w-6 h-6 text-red-400/60 animate-pulse" style={{animationDelay: '0.6s'}} />
+                <div className="hidden lg:flex absolute top-32 -right-4 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-indigo-500/20 to-red-500/20 rounded-full">
+                  <ArrowRight className="w-5 h-5 text-red-300" strokeWidth={2.5} />
                 </div>
               </div>
 
               {/* Stage 4 - Losing the Moment */}
               <div className="group relative">
-                <div className="bg-gradient-card border border-red-500/20 rounded-2xl p-8 hover:border-red-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] h-full flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300">
-                    <div className="relative">
-                      <MessageSquare className="w-10 h-10 text-red-400 opacity-40" strokeWidth={1.5} />
+                <div className="bg-gradient-to-br from-red-950/50 to-red-900/20 border-2 border-red-500/30 rounded-3xl p-10 hover:border-red-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)] h-full flex flex-col items-center text-center relative overflow-hidden">
+                  {/* Background glow effect */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-red-500/20 rounded-full blur-3xl" />
+                  
+                  <div className="relative mb-8 mt-4">
+                    {/* Fading conversation with alert */}
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                      {/* Faded conversation bubble */}
+                      <MessageSquare className="w-16 h-16 text-red-400 opacity-25" strokeWidth={1.5} />
+                      {/* Clock running out */}
+                      <div className="absolute top-0 right-0">
+                        <div className="w-10 h-10 rounded-full border-3 border-red-400/30 flex items-center justify-center">
+                          <div className="w-8 h-8 rounded-full border-2 border-red-400 border-t-transparent animate-spin" style={{animationDuration: '1s'}} />
+                        </div>
+                      </div>
+                      {/* Central alert icon */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-12 h-12 border-2 border-red-500/30 rounded-full" />
-                        <AlertCircle className="w-6 h-6 text-red-500 absolute" strokeWidth={2} />
+                        <div className="w-14 h-14 rounded-full bg-red-500/20 flex items-center justify-center animate-pulse">
+                          <AlertCircle className="w-10 h-10 text-red-400" strokeWidth={2.5} />
+                        </div>
+                      </div>
+                      {/* Dots indicating lost message */}
+                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/40 animate-pulse" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/40 animate-pulse" style={{animationDelay: '0.2s'}} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/40 animate-pulse" style={{animationDelay: '0.4s'}} />
                       </div>
                     </div>
                   </div>
-                  <h4 className="text-lg font-bold mb-3 text-red-300">The moment passes — and accuracy suffers</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">You respond late, lose confidence, or miss the chance to contribute effectively.</p>
+                  
+                  {/* Progress indicator - nearly empty */}
+                  <div className="w-full h-1.5 bg-red-500/20 rounded-full mb-6 overflow-hidden">
+                    <div className="h-full w-1/4 bg-red-400 rounded-full opacity-50" />
+                  </div>
+                  
+                  <h4 className="text-xl font-bold mb-3 text-red-300">Losing the Moment</h4>
+                  <p className="text-sm text-gray-300 leading-relaxed">Late response, lost confidence, missed opportunity</p>
                 </div>
               </div>
             </div>

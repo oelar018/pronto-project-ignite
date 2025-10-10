@@ -42,10 +42,10 @@ const Hero = () => {
           </Badge>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-10 animate-fade-in-up leading-[1.1]" style={{
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-24 mb-10 animate-fade-in-up leading-[1.1]" style={{
         animationDelay: "0.2s"
       }}>
-          <span className="inline-block bg-gradient-to-r from-cyan-400 via-purple-200 to-pink-400 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_50px_rgba(168,85,247,0.8)]">AI That Tells You What to Say in Conversations</span>
+          <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)] shadow-[0_0_50px_rgba(168,85,247,0.5)]">AI That Tells You What to Say in Conversations</span>
         </h1>
         
         <p className="text-2xl md:text-3xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{

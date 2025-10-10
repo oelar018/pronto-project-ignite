@@ -36,24 +36,27 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Main conversation bubbles */}
+                    {/* Main conversation bubbles with motion lines on both sides */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
+                      {/* Motion lines BEFORE (left side) */}
+                      <div className="absolute -left-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
+                      <div className="absolute -left-3 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+                      <div className="absolute -left-2 top-2/3 w-5 h-0.5 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '0.1s'}} />
+                      
+                      {/* Chat bubbles */}
                       <MessageSquare className="w-16 h-16 text-cyan-400 relative z-10" strokeWidth={1.5} />
                       <MessageSquare className="w-14 h-14 text-cyan-300 absolute top-3 left-3 opacity-40" strokeWidth={1.5} />
                       {/* Active indicator */}
                       <div className="absolute top-0 right-0 w-5 h-5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
-                      {/* Motion lines */}
+                      
+                      {/* Motion lines AFTER (right side) */}
                       <div className="absolute -right-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
                       <div className="absolute -right-3 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+                      <div className="absolute -right-2 top-2/3 w-5 h-0.5 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '0.1s'}} />
                     </div>
                   </div>
                   
-                  {/* Progress indicator */}
-                  <div className="w-full h-1.5 bg-cyan-500/20 rounded-full mb-6 overflow-hidden">
-                    <div className="h-full w-full bg-cyan-400 rounded-full animate-pulse" />
-                  </div>
-                  
-                  <h4 className="text-xl font-bold mb-3 text-cyan-300">In the Conversation</h4>
+                  <h4 className="text-xl font-bold mb-6 text-cyan-300">In the Conversation</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Fast-paced dialogue, unexpected questions demanding quick thinking</p>
                 </div>
                 
@@ -92,12 +95,7 @@ const ChallengeSolution = () => {
                     </div>
                   </div>
                   
-                  {/* Progress indicator - partially filled */}
-                  <div className="w-full h-1.5 bg-violet-500/20 rounded-full mb-6 overflow-hidden">
-                    <div className="h-full w-3/4 bg-violet-400 rounded-full" />
-                  </div>
-                  
-                  <h4 className="text-xl font-bold mb-3 text-violet-300">Missing Context</h4>
+                  <h4 className="text-xl font-bold mb-6 text-violet-300">Missing Context</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Information scattered across emails, files, and calendar</p>
                 </div>
                 
@@ -114,25 +112,32 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Brain with disruption indicators */}
+                    {/* Brain with browser tabs breaking flow */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
-                      <Brain className="w-16 h-16 text-indigo-400" strokeWidth={1.5} />
-                      {/* Multiple browser tabs/windows overlapping */}
-                      <div className="absolute -top-2 -left-2 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-lg transform -rotate-12" />
-                      <div className="absolute -top-1 left-1 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-lg" />
-                      <div className="absolute top-0 left-4 w-8 h-10 bg-indigo-500/40 border border-indigo-400/60 rounded-t-lg transform rotate-12" />
-                      {/* Spinning confusion indicators */}
-                      <div className="absolute -top-3 -right-3 w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
-                      <div className="absolute -bottom-3 -left-3 w-5 h-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" style={{animationDuration: '2s', animationDirection: 'reverse'}} />
+                      {/* Central brain */}
+                      <Brain className="w-16 h-16 text-indigo-400 relative z-10" strokeWidth={1.5} />
+                      
+                      {/* Multiple browser tabs/windows scattered around - showing distraction */}
+                      <div className="absolute -top-3 left-8 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform -rotate-12 flex items-center justify-center">
+                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
+                      </div>
+                      <div className="absolute -top-2 right-6 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform rotate-15 flex items-center justify-center">
+                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
+                      </div>
+                      <div className="absolute -bottom-3 left-6 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform rotate-6 flex items-center justify-center">
+                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
+                      </div>
+                      <div className="absolute -bottom-2 right-8 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform -rotate-15 flex items-center justify-center">
+                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
+                      </div>
+                      
+                      {/* Disruption indicators - zigzag lines */}
+                      <div className="absolute -left-4 top-1/2 w-8 h-0.5 bg-indigo-400/50 transform -rotate-45" />
+                      <div className="absolute -right-4 top-1/2 w-8 h-0.5 bg-indigo-400/50 transform rotate-45" />
                     </div>
                   </div>
                   
-                  {/* Progress indicator - half filled, flickering */}
-                  <div className="w-full h-1.5 bg-indigo-500/20 rounded-full mb-6 overflow-hidden">
-                    <div className="h-full w-1/2 bg-indigo-400 rounded-full animate-pulse" />
-                  </div>
-                  
-                  <h4 className="text-xl font-bold mb-3 text-indigo-300">Breaking Flow</h4>
+                  <h4 className="text-xl font-bold mb-6 text-indigo-300">Breaking Flow</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Tab-switching disrupts focus and conversation momentum</p>
                 </div>
                 
@@ -149,37 +154,27 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-red-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Fading conversation with alert */}
+                    {/* Alert with fading conversation */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
-                      {/* Faded conversation bubble */}
-                      <MessageSquare className="w-16 h-16 text-red-400 opacity-25" strokeWidth={1.5} />
-                      {/* Clock running out */}
-                      <div className="absolute top-0 right-0">
-                        <div className="w-10 h-10 rounded-full border-3 border-red-400/30 flex items-center justify-center">
-                          <div className="w-8 h-8 rounded-full border-2 border-red-400 border-t-transparent animate-spin" style={{animationDuration: '1s'}} />
-                        </div>
-                      </div>
                       {/* Central alert icon */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-14 h-14 rounded-full bg-red-500/20 flex items-center justify-center animate-pulse">
-                          <AlertCircle className="w-10 h-10 text-red-400" strokeWidth={2.5} />
-                        </div>
+                      <div className="relative z-10 w-20 h-20 rounded-full bg-red-500/20 border-2 border-red-400/40 flex items-center justify-center animate-pulse">
+                        <AlertCircle className="w-16 h-16 text-red-400" strokeWidth={2} />
                       </div>
+                      
+                      {/* Faded conversation bubbles in background */}
+                      <MessageSquare className="w-10 h-10 text-red-400 opacity-15 absolute -top-2 -left-2" strokeWidth={1.5} />
+                      <MessageSquare className="w-10 h-10 text-red-400 opacity-15 absolute -bottom-2 -right-2" strokeWidth={1.5} />
+                      
                       {/* Dots indicating lost message */}
-                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/40 animate-pulse" />
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/40 animate-pulse" style={{animationDelay: '0.2s'}} />
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-400/40 animate-pulse" style={{animationDelay: '0.4s'}} />
+                      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-red-400/50 animate-pulse" />
+                        <div className="w-2 h-2 rounded-full bg-red-400/50 animate-pulse" style={{animationDelay: '0.2s'}} />
+                        <div className="w-2 h-2 rounded-full bg-red-400/50 animate-pulse" style={{animationDelay: '0.4s'}} />
                       </div>
                     </div>
                   </div>
                   
-                  {/* Progress indicator - nearly empty */}
-                  <div className="w-full h-1.5 bg-red-500/20 rounded-full mb-6 overflow-hidden">
-                    <div className="h-full w-1/4 bg-red-400 rounded-full opacity-50" />
-                  </div>
-                  
-                  <h4 className="text-xl font-bold mb-3 text-red-300">Losing the Moment</h4>
+                  <h4 className="text-xl font-bold mb-6 text-red-300">Losing the Moment</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Late response, lost confidence, missed opportunity</p>
                 </div>
               </div>

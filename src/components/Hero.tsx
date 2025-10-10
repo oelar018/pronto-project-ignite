@@ -5,7 +5,6 @@ import { useState } from "react";
 import { LazyHexHeroNeura } from "@/components/lazy";
 import { VideoModal } from "@/components/VideoModal";
 import convogptCover from "@/assets/convogpt-cover.png";
-import voiceCover from "@/assets/voice-cover.png";
 const Hero = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   return <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
@@ -81,21 +80,14 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Images */}
-          <div className="hidden lg:flex justify-center items-center gap-4 mt-28 animate-fade-in-up" style={{
+          {/* Right side - Image */}
+          <div className="hidden lg:flex justify-center items-center mt-28 animate-fade-in-up" style={{
         animationDelay: "0.8s"
       }}>
-            {/* Foreground image - ConvoGPT */}
             <img 
               src={convogptCover} 
               alt="ConvoGPT Interface Preview" 
               className="w-[340px] opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105"
-            />
-            {/* Background image - Voice (slightly smaller) */}
-            <img 
-              src={voiceCover} 
-              alt="Voice Mode Preview" 
-              className="w-[280px] opacity-80 drop-shadow-[0_0_60px_rgba(34,211,238,0.3)] transition-all duration-500"
             />
           </div>
         </div>

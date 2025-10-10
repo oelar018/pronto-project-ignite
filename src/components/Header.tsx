@@ -32,7 +32,7 @@ const Header = () => {
             <img 
               src={neuraLogo} 
               alt="Neura AI - Professional AI Assistant Logo" 
-              className="w-7 h-7 md:w-8 md:h-8 opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+              className="w-7 h-7 md:w-8 md:h-8 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
               width="32"
               height="32"
             />

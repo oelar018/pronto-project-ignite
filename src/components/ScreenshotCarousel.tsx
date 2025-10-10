@@ -24,7 +24,7 @@ const ScreenshotCarousel = () => {
         <CarouselContent>
           {slides.map((slide) => (
             <CarouselItem key={slide.id}>
-              <div className="grid md:grid-cols-2 gap-8 items-start px-4 md:px-8 py-4">
+              <div className="grid md:grid-cols-2 gap-16 items-start px-4 md:px-8 py-4">
                 {/* Image Section */}
                 <div className="flex justify-center md:justify-end items-center">
                   <div className="relative w-full max-w-[280px]">

@@ -93,7 +93,7 @@ const Hero = () => {
         </div>
 
         {/* Product Modes Preview - Enhanced */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl w-full mt-24">
           {/* Visual Mode */}
           <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-6 border-2 border-primary/20 hover:border-primary/40 hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in-up flex flex-col" style={{
           animationDelay: "0.8s"

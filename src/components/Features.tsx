@@ -27,14 +27,6 @@ Powered by the Future.
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-cyan-500/5" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,211,238,0.1),transparent_50%),radial-gradient(circle_at_70%_50%,rgba(168,85,247,0.1),transparent_50%)]" />
             
-            <header className="text-center mb-12 relative z-10">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-300 bg-clip-text text-transparent">
-                Advanced Professional Capabilities
-              </h3>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Enterprise-grade features designed for professional excellence
-              </p>
-            </header>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
               {/* Advanced NLP Engine */}

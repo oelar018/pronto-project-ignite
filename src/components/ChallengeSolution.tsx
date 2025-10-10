@@ -171,45 +171,6 @@ const ChallengeSolution = () => {
           {/* Screenshot Carousel */}
           <ScreenshotCarousel />
 
-          {/* How It Works - Simplified */}
-          <article className="bg-gradient-hero rounded-3xl p-8 md:p-12">
-            <header className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">How It Works</h3>
-              <p className="text-muted-foreground text-lg">Three simple steps to transform your conversations</p>
-            </header>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold">
-                  1
-                </div>
-                <h4 className="text-lg font-semibold mb-3">Listen & Understand</h4>
-                <p className="text-muted-foreground text-sm">
-                  AI analyzes conversation context in real-time without interruption
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold">
-                  2
-                </div>
-                <h4 className="text-lg font-semibold mb-3">Connect Information</h4>
-                <p className="text-muted-foreground text-sm">
-                  Instantly connects topics to relevant data from all your sources
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold">
-                  3
-                </div>
-                <h4 className="text-lg font-semibold mb-3">Deliver Insights</h4>
-                <p className="text-muted-foreground text-sm">
-                  Provides timely suggestions through visual or audio guidance
-                </p>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>

@@ -27,7 +27,7 @@ const Hero = () => {
 
       {/* Foreground content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-16 items-start">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-48 lg:mt-32 mb-10 animate-fade-in-up leading-[1.1]" style={{
@@ -81,7 +81,7 @@ const Hero = () => {
           </div>
 
           {/* Right side - Image */}
-          <div className="hidden lg:flex justify-center items-center animate-fade-in-up" style={{
+          <div className="hidden lg:flex justify-center items-center mt-56 animate-fade-in-up" style={{
         animationDelay: "0.8s"
       }}>
             <img 

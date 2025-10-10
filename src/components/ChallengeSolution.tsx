@@ -111,31 +111,39 @@ const ChallengeSolution = () => {
                   {/* Background glow effect */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
                   
-                  <div className="relative mb-8 mt-4">
-                    {/* Brain with browser tabs breaking flow */}
-                    <div className="relative w-28 h-28 flex items-center justify-center">
-                      {/* Central brain */}
-                      <Brain className="w-16 h-16 text-indigo-400 relative z-10" strokeWidth={1.5} />
-                      
-                      {/* Multiple browser tabs/windows scattered around - showing distraction */}
-                      <div className="absolute -top-3 left-8 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform -rotate-12 flex items-center justify-center">
-                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
-                      </div>
-                      <div className="absolute -top-2 right-6 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform rotate-15 flex items-center justify-center">
-                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
-                      </div>
-                      <div className="absolute -bottom-3 left-6 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform rotate-6 flex items-center justify-center">
-                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
-                      </div>
-                      <div className="absolute -bottom-2 right-8 w-10 h-12 bg-indigo-500/40 border-2 border-indigo-400/60 rounded-t-lg transform -rotate-15 flex items-center justify-center">
-                        <div className="w-full h-2 bg-indigo-400/30 rounded-t-lg absolute top-0"></div>
-                      </div>
-                      
-                      {/* Disruption indicators - zigzag lines */}
-                      <div className="absolute -left-4 top-1/2 w-8 h-0.5 bg-indigo-400/50 transform -rotate-45" />
-                      <div className="absolute -right-4 top-1/2 w-8 h-0.5 bg-indigo-400/50 transform rotate-45" />
+              <div className="relative mb-8 mt-4">
+                {/* Conversation flow being broken by browser tabs */}
+                <div className="relative w-28 h-28 flex items-center justify-center">
+                  {/* Flowing conversation line - broken in the middle */}
+                  <div className="absolute left-0 top-1/2 w-8 h-1 bg-gradient-to-r from-indigo-400 to-indigo-400/0 rounded-full" />
+                  <div className="absolute right-0 top-1/2 w-8 h-1 bg-gradient-to-l from-indigo-400 to-indigo-400/0 rounded-full" />
+                  
+                  {/* Central conversation bubble fading/disrupted */}
+                  <MessageSquare className="w-12 h-12 text-indigo-400/40 relative z-0" strokeWidth={1.5} />
+                  
+                  {/* Browser tabs interrupting - positioned to "break" the flow */}
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-14 bg-indigo-500/50 border-2 border-indigo-400/70 rounded-t-lg transform -rotate-6 z-10">
+                    <div className="w-full h-3 bg-indigo-400/40 rounded-t-lg flex items-center px-1 gap-0.5">
+                      <div className="w-1 h-1 rounded-full bg-indigo-300/60" />
+                      <div className="w-1 h-1 rounded-full bg-indigo-300/60" />
+                      <div className="w-1 h-1 rounded-full bg-indigo-300/60" />
                     </div>
                   </div>
+                  <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-14 bg-indigo-500/60 border-2 border-indigo-400/80 rounded-t-lg transform rotate-3 z-20">
+                    <div className="w-full h-3 bg-indigo-400/50 rounded-t-lg flex items-center px-1 gap-0.5">
+                      <div className="w-1 h-1 rounded-full bg-indigo-300/70" />
+                      <div className="w-1 h-1 rounded-full bg-indigo-300/70" />
+                      <div className="w-1 h-1 rounded-full bg-indigo-300/70" />
+                    </div>
+                  </div>
+                  
+                  {/* X or break indicators */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                    <div className="w-8 h-0.5 bg-red-400/60 rounded-full transform rotate-45" />
+                    <div className="w-8 h-0.5 bg-red-400/60 rounded-full transform -rotate-45 absolute top-0" />
+                  </div>
+                </div>
+              </div>
                   
                   <h4 className="text-xl font-bold mb-6 text-indigo-300">Breaking Flow</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">Tab-switching disrupts focus and conversation momentum</p>

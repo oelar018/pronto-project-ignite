@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, Brain, Zap, ArrowRight, CheckCircle, AlertCircle, Mail, Calendar, FileText, Globe, Link2Off } from "lucide-react";
+import { MessageSquare, Brain, Zap, ArrowRight, CheckCircle, AlertCircle, Mail, Calendar, FileText, Globe, HelpCircle } from "lucide-react";
 
 const ChallengeSolution = () => {
   return (
@@ -106,10 +106,10 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Simple broken link/disconnection icon */}
+                    {/* Confusion/Lost focus icon */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
-                      <div className="relative z-10 w-20 h-20 rounded-full bg-orange-500/20 border-2 border-orange-400/40 flex items-center justify-center">
-                        <Link2Off className="w-14 h-14 text-orange-400" strokeWidth={2} />
+                      <div className="relative z-10 w-20 h-20 rounded-full bg-orange-500/20 border-2 border-orange-400/40 flex items-center justify-center animate-pulse">
+                        <HelpCircle className="w-14 h-14 text-orange-400" strokeWidth={2} />
                       </div>
                     </div>
                   </div>

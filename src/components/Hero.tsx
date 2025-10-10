@@ -105,7 +105,7 @@ const Hero = () => {
               </div>
               <div className="text-left">
                 <h3 className="text-lg font-bold text-foreground">Visual Mode</h3>
-                <p className="text-xs text-primary">On-screen suggestions</p>
+                <p className="text-sm text-primary">On-screen suggestions</p>
               </div>
             </div>
             
@@ -113,9 +113,9 @@ const Hero = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-glow"></div>
-                  <span className="text-xs font-semibold text-primary">Live Analysis</span>
+                  <span className="text-sm font-semibold text-primary">Live Analysis</span>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Receive just-in-time intelligence directly to the Neura app with contextual insights that help you navigate any conversation with confidence.
                 </p>
               </div>
@@ -133,7 +133,7 @@ const Hero = () => {
               </div>
               <div className="text-left">
                 <h3 className="text-lg font-bold text-foreground">Audio Mode</h3>
-                <p className="text-xs text-accent">Whispered insights</p>
+                <p className="text-sm text-accent">Whispered insights</p>
               </div>
             </div>
             
@@ -141,9 +141,9 @@ const Hero = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-accent"></div>
-                  <span className="text-xs font-semibold text-accent">Discrete Delivery</span>
+                  <span className="text-sm font-semibold text-accent">Discrete Delivery</span>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   AI discreetly blends into your thoughts through your earbuds - completely invisible to others.
                 </p>
               </div>
@@ -161,7 +161,7 @@ const Hero = () => {
               </div>
               <div className="text-left">
                 <h3 className="text-lg font-bold text-foreground">Group Mode</h3>
-                <p className="text-xs text-cyan-400">Meeting intelligence</p>
+                <p className="text-sm text-cyan-400">Meeting intelligence</p>
               </div>
             </div>
             
@@ -169,9 +169,9 @@ const Hero = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.6)]"></div>
-                  <span className="text-xs font-semibold text-cyan-400">Team Sync</span>
+                  <span className="text-sm font-semibold text-cyan-400">Team Sync</span>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Keep group meetings on track with real-time insights, action items, and key discussion points shared across all participants.
                 </p>
               </div>

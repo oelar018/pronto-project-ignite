@@ -175,29 +175,8 @@ const FinalCTA = () => {
                   Join the Waitlist
                 </h3>
                 <p className="text-xl text-gray-300 mb-10 leading-relaxed font-medium">
-                  Get <span className="text-cyan-400 font-bold">early access</span> to Neura AI and be part of shaping the future of professional conversations.
+                  Get <span className="text-cyan-400 font-bold">early access</span> to Neura AI.
                 </p>
-                
-                <div className="space-y-5 mb-10">
-                  <div className="flex items-center gap-4 p-4 bg-cyan-500/10 border-2 border-cyan-400/30 rounded-xl backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
-                    <div className="p-2 rounded-full bg-cyan-400/20">
-                      <CheckCircle className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <span className="text-gray-200 font-medium">Priority access when we launch</span>
-                  </div>
-                  <div className="flex items-center gap-4 p-4 bg-purple-500/10 border-2 border-purple-400/30 rounded-xl backdrop-blur-sm hover:border-purple-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.2)]">
-                    <div className="p-2 rounded-full bg-purple-400/20">
-                      <Sparkles className="w-5 h-5 text-purple-400" />
-                    </div>
-                    <span className="text-gray-200 font-medium">Exclusive updates on development progress</span>
-                  </div>
-                  <div className="flex items-center gap-4 p-4 bg-pink-500/10 border-2 border-pink-400/30 rounded-xl backdrop-blur-sm hover:border-pink-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(236,72,153,0.2)]">
-                    <div className="p-2 rounded-full bg-pink-400/20">
-                      <Shield className="w-5 h-5 text-pink-400" />
-                    </div>
-                    <span className="text-gray-200 font-medium">Special pricing for early adopters</span>
-                  </div>
-                </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-4">
@@ -289,17 +268,23 @@ const FinalCTA = () => {
                     </div>
                     
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between py-3 px-4 bg-cyan-500/10 border border-cyan-400/30 rounded-xl">
-                        <span className="text-base font-medium text-gray-200">Beta Testing</span>
-                        <Badge variant="secondary" className="text-sm bg-cyan-500/20 text-cyan-300 border-cyan-400/40">Q1 2024</Badge>
+                      <div className="flex items-center gap-4 p-4 bg-cyan-500/10 border-2 border-cyan-400/30 rounded-xl backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-300">
+                        <div className="p-2 rounded-full bg-cyan-400/20">
+                          <CheckCircle className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <span className="text-gray-200 font-medium">Priority access when we launch</span>
                       </div>
-                      <div className="flex items-center justify-between py-3 px-4 bg-purple-500/10 border-2 border-purple-400/40 rounded-xl shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-                        <span className="text-base font-bold text-purple-300">Early Access</span>
-                        <Badge variant="outline" className="text-sm border-2 border-purple-400 text-purple-300 bg-purple-500/20 font-bold">Q2 2024</Badge>
+                      <div className="flex items-center gap-4 p-4 bg-purple-500/10 border-2 border-purple-400/30 rounded-xl backdrop-blur-sm hover:border-purple-400/60 transition-all duration-300">
+                        <div className="p-2 rounded-full bg-purple-400/20">
+                          <Sparkles className="w-5 h-5 text-purple-400" />
+                        </div>
+                        <span className="text-gray-200 font-medium">Exclusive updates on development progress</span>
                       </div>
-                      <div className="flex items-center justify-between py-3 px-4 bg-pink-500/10 border border-pink-400/30 rounded-xl">
-                        <span className="text-base font-medium text-gray-200">Public Launch</span>
-                        <Badge variant="outline" className="text-sm border-pink-400/40 text-pink-300">Q3 2024</Badge>
+                      <div className="flex items-center gap-4 p-4 bg-pink-500/10 border-2 border-pink-400/30 rounded-xl backdrop-blur-sm hover:border-pink-400/60 transition-all duration-300">
+                        <div className="p-2 rounded-full bg-pink-400/20">
+                          <Shield className="w-5 h-5 text-pink-400" />
+                        </div>
+                        <span className="text-gray-200 font-medium">Special pricing for early adopters</span>
                       </div>
                     </div>
                   </div>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Shield, Users, Mic, Eye } from "lucide-react";
+import { CheckCircle, Shield, Users, Mic, Eye, UsersRound } from "lucide-react";
 import { useState } from "react";
 import { LazyHexHeroNeura } from "@/components/lazy";
 import { VideoModal } from "@/components/VideoModal";
@@ -93,7 +93,7 @@ const Hero = () => {
         </div>
 
         {/* Product Modes Preview - Enhanced */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-24">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-24">
           {/* Visual Mode */}
           <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-8 border-2 border-primary/20 hover:border-primary/40 hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in-up" style={{
           animationDelay: "0.8s"
@@ -116,7 +116,7 @@ const Hero = () => {
                   <span className="text-sm font-semibold text-primary">Live Analysis</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  "Based on Q3 metrics, highlight our <span className="text-primary font-medium">23% growth</span> in enterprise accounts..."
+                  Receive just-in-time intelligence directly to the Neura app with contextual insights that help you navigate any conversation with confidence.
                 </p>
               </div>
             </div>
@@ -144,7 +144,35 @@ const Hero = () => {
                   <span className="text-sm font-semibold text-accent">Discrete Delivery</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Subtle audio cues delivered directly to your earbuds - <span className="text-accent font-medium">completely invisible</span> to others
+                  Subtle audio cues delivered directly to your earbuds - completely invisible to others
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Group Mode */}
+          <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-8 border-2 border-cyan-500/20 hover:border-cyan-500/40 hover-lift hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-500 animate-fade-in-up" style={{
+          animationDelay: "1.2s"
+        }}>
+            <div className="absolute -top-2 -right-2 w-20 h-20 bg-cyan-500/20 rounded-full blur-2xl group-hover:bg-cyan-500/30 transition-all duration-500" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 group-hover:from-cyan-500/30 group-hover:to-cyan-500/20 transition-all duration-300">
+                <UsersRound className="w-7 h-7 text-cyan-400" />
+              </div>
+              <div className="text-left">
+                <h3 className="text-xl font-bold text-foreground">Group Mode</h3>
+                <p className="text-sm text-cyan-400">Meeting intelligence</p>
+              </div>
+            </div>
+            
+            <div className="relative bg-background/40 backdrop-blur-md rounded-2xl p-5 text-left border border-cyan-500/10">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.6)]"></div>
+                  <span className="text-sm font-semibold text-cyan-400">Team Sync</span>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Keep group meetings on track with real-time insights, action items, and key discussion points shared across all participants.
                 </p>
               </div>
             </div>

@@ -33,7 +33,7 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-48 lg:mt-32 mb-10 animate-fade-in-up leading-[1.1]" style={{
         animationDelay: "0.2s"
       }}>
-              <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)]">AI That Tells You What to Say in Conversations</span>
+              <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)] tracking-wide">AI That Tells You What to Say in Conversations</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in-up font-medium" style={{

@@ -14,31 +14,31 @@ import {
 const UseCases = () => {
   const useCases = [
     {
-      icon: Briefcase,
-      title: "Board Meetings & Presentations",
-      description: "Never stumble on financial metrics or strategic details. Get instant access to quarterly reports, market data, and key performance indicators.",
-      example: "\"Revenue grew 23.5% in Q3, driven by enterprise segment expansion to 45% of total bookings.\"",
+      icon: Users,
+      title: "General Meetings",
+      description: "Never lose track of the discussion or key decisions. Neura keeps every participant aligned with accurate data, past context, and real-time insights as the conversation evolves.",
+      example: "\"Last quarter's retention rate held steady at 92%, so we can maintain the current renewal target.\"",
       color: "primary"
     },
     {
-      icon: Handshake,
-      title: "Client Negotiations",
-      description: "Access contract history, pricing discussions, and competitor intel instantly. Close deals with confidence and complete context.",
-      example: "\"Based on their recent Series B, they likely have budget flexibility for our enterprise tier.\"",
+      icon: Zap,
+      title: "Group Brainstorming",
+      description: "Capture every idea and build on them effortlessly. Neura tracks evolving themes, references past sessions, and surfaces related insights from your documents and messages.",
+      example: "\"This concept builds on the product feedback we gathered from the beta launch last month.\"",
       color: "accent"
     },
     {
-      icon: Users,
-      title: "Team Standups & Reviews",
-      description: "Stay on top of project status, individual contributions, and timeline adjustments without missing a beat.",
-      example: "\"Sarah's API integration is 2 days ahead of schedule, unblocking the mobile team for early testing.\"",
+      icon: Handshake,
+      title: "Negotiations",
+      description: "Walk into every discussion fully informed. Neura recalls prior terms, pricing history, and client sentiment so you can respond with precision and confidence.",
+      example: "\"They negotiated a 12% discount last cycle. Offering 10% keeps margins aligned while signaling goodwill.\"",
       color: "primary"
     },
     {
-      icon: Phone,
-      title: "Investor Relations",
-      description: "Handle investor calls with complete visibility into metrics, market comparisons, and growth trajectories.",
-      example: "\"Our CAC:LTV ratio improved to 1:4.2 this quarter, outperforming the industry average of 1:3.1.\"",
+      icon: TrendingUp,
+      title: "Sales Pitch",
+      description: "Turn information into impact. Neura instantly pulls relevant case studies, pricing insights, and client data to strengthen your pitch and close faster.",
+      example: "\"Based on their annual spend of $2.3 million, positioning our enterprise plan with a 15% performance bonus clause would likely secure the deal.\"",
       color: "accent"
     }
   ];

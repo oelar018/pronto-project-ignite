@@ -24,9 +24,9 @@ const ScreenshotCarousel = () => {
         <CarouselContent>
           {slides.map((slide) => (
             <CarouselItem key={slide.id}>
-              <div className="grid md:grid-cols-2 gap-16 items-start px-4 md:px-8 py-4">
+              <div className="grid md:grid-cols-2 gap-12 items-start p-8">
                 {/* Image Section */}
-                <div className="flex justify-center md:justify-end items-center">
+                <div className="flex justify-center items-center">
                   <div className="relative w-full max-w-[280px]">
                     <img
                       src={slide.image}
@@ -37,7 +37,7 @@ const ScreenshotCarousel = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex flex-col justify-start pt-0 md:pt-4 max-w-xl">
+                <div className="flex flex-col justify-start pt-0 md:pt-4">
                   <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight bg-gradient-to-r from-emerald-400 via-teal-400 to-sky-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(16,185,129,0.5)]">
                     {slide.title}
                   </h3>

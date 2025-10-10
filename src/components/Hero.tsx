@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Users, Mic, Eye } from "lucide-react";
 import { useState } from "react";
 import { LazyHexHeroNeura } from "@/components/lazy";
 import { VideoModal } from "@/components/VideoModal";
+import convogptCover from "@/assets/convogpt-cover.png";
 const Hero = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   return <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
@@ -25,58 +26,74 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
 
       {/* Foreground content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-40 mb-10 animate-fade-in-up leading-[1.1]" style={{
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-40 lg:mt-20 mb-10 animate-fade-in-up leading-[1.1]" style={{
         animationDelay: "0.2s"
       }}>
-          <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)]">AI That Tells You What to Say in Conversations</span>
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{
+              <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)]">AI That Tells You What to Say in Conversations</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in-up font-medium" style={{
         animationDelay: "0.4s"
       }}>
-          Augment your mind in real time to stay effortlessly in sync with every conversation. AI that understands your past discussions, documents, and emails so you always know what to say, how to say it, and the facts to back it up.
-        </p>
+              Augment your mind in real time to stay effortlessly in sync with every conversation. AI that understands your past discussions, documents, and emails so you always know what to say, how to say it, and the facts to back it up.
+            </p>
 
-        {/* Trust Badges - Subtle tags */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{
+            {/* Trust Badges - Subtle tags */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12 animate-fade-in-up" style={{
         animationDelay: "0.5s"
       }}>
-          <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
-            <Users className="w-3 h-3 text-white/50" />
-            <span className="text-white/50 font-normal">Built for Professionals</span>
-          </Badge>
-          <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
-            <Shield className="w-3 h-3 text-white/50" />
-            <span className="text-white/50 font-normal">Enterprise Secure</span>
-          </Badge>
-          <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
-            <CheckCircle className="w-3 h-3 text-white/50" />
-            <span className="text-white/50 font-normal">Privacy First</span>
-          </Badge>
-        </div>
+              <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
+                <Users className="w-3 h-3 text-white/50" />
+                <span className="text-white/50 font-normal">Built for Professionals</span>
+              </Badge>
+              <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
+                <Shield className="w-3 h-3 text-white/50" />
+                <span className="text-white/50 font-normal">Enterprise Secure</span>
+              </Badge>
+              <Badge variant="secondary" className="flex items-center justify-center gap-1.5 px-4 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-[180px]">
+                <CheckCircle className="w-3 h-3 text-white/50" />
+                <span className="text-white/50 font-normal">Privacy First</span>
+              </Badge>
+            </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 animate-fade-in-up" style={{
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-12 animate-fade-in-up" style={{
         animationDelay: "0.6s"
       }}>
-          <Button variant="hero" size="lg" className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 shadow-[0_0_40px_rgba(168,85,247,0.6)] hover:shadow-[0_0_60px_rgba(168,85,247,0.9)] transition-all duration-300 text-xl px-12 py-8 h-auto font-black border-2 border-white/20 hover:scale-110 hover:border-white/40" onClick={() => {
-          document.getElementById('waitlist-form')?.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }}>
-            <span className="relative z-10 flex items-center text-white drop-shadow-lg">
-              Join the Waitlist
-              <span className="ml-3 group-hover:translate-x-3 transition-transform duration-300 text-2xl">→</span>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </Button>
-          <Button variant="outline" size="lg" className="border-3 border-cyan-400/70 hover:border-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 transition-all duration-300 text-xl px-12 py-8 h-auto backdrop-blur-md font-bold text-cyan-300 hover:text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] hover:scale-105" onClick={() => setShowVideoModal(true)}>
-            <span className="font-bold">Watch 30s Preview</span>
-          </Button>
+              <Button variant="hero" size="lg" className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 shadow-[0_0_40px_rgba(168,85,247,0.6)] hover:shadow-[0_0_60px_rgba(168,85,247,0.9)] transition-all duration-300 text-xl px-12 py-8 h-auto font-black border-2 border-white/20 hover:scale-110 hover:border-white/40" onClick={() => {
+              document.getElementById('waitlist-form')?.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }}>
+                <span className="relative z-10 flex items-center text-white drop-shadow-lg">
+                  Join the Waitlist
+                  <span className="ml-3 group-hover:translate-x-3 transition-transform duration-300 text-2xl">→</span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-3 border-cyan-400/70 hover:border-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 transition-all duration-300 text-xl px-12 py-8 h-auto backdrop-blur-md font-bold text-cyan-300 hover:text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.3)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] hover:scale-105" onClick={() => setShowVideoModal(true)}>
+                <span className="font-bold">Watch 30s Preview</span>
+              </Button>
+            </div>
+          </div>
+
+          {/* Right side - Image */}
+          <div className="hidden lg:flex justify-center items-center animate-fade-in-up" style={{
+        animationDelay: "0.8s"
+      }}>
+            <img 
+              src={convogptCover} 
+              alt="ConvoGPT Interface Preview" 
+              className="w-full max-w-md opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500"
+            />
+          </div>
         </div>
 
         {/* Product Modes Preview - Enhanced */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-24">
           {/* Visual Mode */}
           <div className="group relative bg-gradient-card backdrop-blur-sm rounded-3xl p-8 border-2 border-primary/20 hover:border-primary/40 hover-lift hover:shadow-glow transition-all duration-500 animate-fade-in-up" style={{
           animationDelay: "0.8s"

@@ -64,11 +64,11 @@ const ScreenshotCarousel = () => {
               <div className="grid md:grid-cols-2 gap-12 items-start px-8 py-4">
                 {/* Image Section */}
                 <div className="flex justify-center items-center py-8">
-                  <div className="relative w-full max-w-[280px]">
+                  <div className="relative w-full max-w-[280px] h-[600px] flex items-center justify-center">
                     <img
                       src={slide.image}
                       alt={slide.title}
-                      className="w-full h-auto drop-shadow-[0_0_40px_rgba(6,182,212,0.4)]"
+                      className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(6,182,212,0.4)]"
                     />
                   </div>
                 </div>

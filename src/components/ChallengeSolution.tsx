@@ -175,7 +175,7 @@ const ChallengeSolution = () => {
               The Neura AI Solution
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Just-in-Time Intelligence
+              The Neura AI Delivers Insights without any Typing or Prompting Involved so you stay in the flow of Conversation
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               AI-powered suggestions appear precisely when you need them, keeping you in the flow. 

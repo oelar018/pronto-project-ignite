@@ -22,117 +22,85 @@ const ChallengeSolution = () => {
               Context is scattered across <span className="text-orange-400 font-semibold">email, calendar, files, and the web</span>.
             </p>
           </header>
-          {/* Problem Visualization - Interactive */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div className="order-2 lg:order-1">
-              <h3 className="text-2xl font-semibold mb-8">What Happens When Information Isn't Accessible</h3>
-              <div className="space-y-6">
-                <Card className="p-6 bg-gradient-card border border-destructive/20 hover-lift transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-destructive/10">
-                      <AlertCircle className="w-6 h-6 text-destructive" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Alt-Tabbing Kills Momentum</h4>
-                      <p className="text-muted-foreground">Switching between apps disrupts conversation flow and breaks professional presence.</p>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6 bg-gradient-card border border-destructive/20 hover-lift transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-destructive/10">
-                      <Zap className="w-6 h-6 text-destructive" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Guessing Hurts Outcomes</h4>
-                      <p className="text-muted-foreground">Without instant access to context, professionals miss opportunities and make suboptimal decisions.</p>
+          {/* Problem Flow - 4 Stages */}
+          <div className="relative max-w-7xl mx-auto mb-20">
+            {/* Connecting Flow Line */}
+            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500/20 via-violet-500/40 to-indigo-500/20 hidden lg:block" />
+            
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+              {/* Stage 1 - In the Conversation */}
+              <div className="group relative">
+                <div className="bg-gradient-card border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] h-full flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300">
+                    <div className="relative">
+                      <MessageSquare className="w-10 h-10 text-cyan-400" strokeWidth={1.5} />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-cyan-500 animate-pulse" />
                     </div>
                   </div>
-                </Card>
-
-                <Card className="p-6 bg-gradient-card border border-destructive/20 hover-lift transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-destructive/10">
-                      <MessageSquare className="w-6 h-6 text-destructive" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Context Fragmentation</h4>
-                      <p className="text-muted-foreground">Critical information exists in silos, making it impossible to get the full picture in real-time.</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
-
-            {/* Funnel Clog Visualization */}
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative h-96 w-full max-w-md">
-                {/* Funnel shape */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 400 400">
-                  {/* Funnel outline - wide at top, narrow at bottom */}
-                  <path
-                    d="M 80 60 L 320 60 L 240 280 L 160 280 Z"
-                    fill="rgba(239, 68, 68, 0.1)"
-                    stroke="rgba(239, 68, 68, 0.4)"
-                    strokeWidth="3"
-                    strokeDasharray="8,4"
-                    className="animate-pulse"
-                  />
-                  
-                  {/* Blockage/clog lines at funnel entrance */}
-                  <line x1="80" y1="60" x2="320" y2="60" stroke="rgba(239, 68, 68, 0.6)" strokeWidth="4" />
-                  <line x1="100" y1="80" x2="300" y2="80" stroke="rgba(239, 68, 68, 0.5)" strokeWidth="3" />
-                  <line x1="120" y1="100" x2="280" y2="100" stroke="rgba(239, 68, 68, 0.4)" strokeWidth="2" />
-                  
-                  {/* X marks showing blockage */}
-                  <text x="200" y="200" fontSize="48" fill="rgba(239, 68, 68, 0.3)" textAnchor="middle" fontWeight="bold">✕</text>
-                  <text x="180" y="240" fontSize="36" fill="rgba(239, 68, 68, 0.2)" textAnchor="middle" fontWeight="bold">✕</text>
-                  <text x="220" y="240" fontSize="36" fill="rgba(239, 68, 68, 0.2)" textAnchor="middle" fontWeight="bold">✕</text>
-                </svg>
-
-                {/* Information sources clogging the funnel entrance */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full flex justify-center gap-3 z-10">
-                  <div className="relative">
-                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-red-950/80 backdrop-blur-sm border-2 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.4)] hover:scale-110 transition-transform duration-300">
-                      <Mail className="w-7 h-7 text-red-400 mb-1" />
-                      <span className="text-xs font-bold text-red-300 text-center">Emails</span>
-                    </Card>
-                    {/* Stacking effect */}
-                    <div className="absolute inset-0 bg-red-500/20 blur-md rounded-lg -z-10"></div>
-                  </div>
-
-                  <div className="relative mt-4">
-                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-orange-950/80 backdrop-blur-sm border-2 border-orange-500/60 shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:scale-110 transition-transform duration-300">
-                      <FileText className="w-7 h-7 text-orange-400 mb-1" />
-                      <span className="text-xs font-bold text-orange-300 text-center">Docs</span>
-                    </Card>
-                    <div className="absolute inset-0 bg-orange-500/20 blur-md rounded-lg -z-10"></div>
-                  </div>
-
-                  <div className="relative">
-                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-yellow-950/80 backdrop-blur-sm border-2 border-yellow-500/60 shadow-[0_0_20px_rgba(234,179,8,0.4)] hover:scale-110 transition-transform duration-300">
-                      <Calendar className="w-7 h-7 text-yellow-400 mb-1" />
-                      <span className="text-xs font-bold text-yellow-300 text-center">Calendar</span>
-                    </Card>
-                    <div className="absolute inset-0 bg-yellow-500/20 blur-md rounded-lg -z-10"></div>
-                  </div>
-
-                  <div className="relative mt-4">
-                    <Card className="w-20 h-20 flex flex-col items-center justify-center p-2 bg-red-950/80 backdrop-blur-sm border-2 border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.4)] hover:scale-110 transition-transform duration-300">
-                      <Globe className="w-7 h-7 text-red-400 mb-1" />
-                      <span className="text-xs font-bold text-red-300 text-center">Web</span>
-                    </Card>
-                    <div className="absolute inset-0 bg-red-500/20 blur-md rounded-lg -z-10"></div>
-                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-cyan-300">You're in a fast-moving conversation</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Tough questions come at you unexpectedly, and you're thinking on your feet.</p>
                 </div>
+                {/* Arrow */}
+                <div className="hidden lg:block absolute top-24 -right-3 z-10">
+                  <ArrowRight className="w-6 h-6 text-violet-400/60 animate-pulse" />
+                </div>
+              </div>
 
-                {/* Clogged indicator label */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="bg-red-950/90 backdrop-blur-sm border-2 border-red-500/60 rounded-xl px-6 py-3 shadow-[0_0_30px_rgba(239,68,68,0.5)]">
-                    <p className="text-red-300 font-black text-lg text-center">❌ CLOGGED</p>
-                    <p className="text-red-400 font-medium text-xs text-center mt-1">Can't flow through</p>
+              {/* Stage 2 - Missing Context */}
+              <div className="group relative">
+                <div className="bg-gradient-card border border-violet-500/20 rounded-2xl p-8 hover:border-violet-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] h-full flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all duration-300">
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-30">
+                        <Mail className="w-6 h-6 text-violet-400 absolute -top-2 -left-2" strokeWidth={1.5} />
+                        <FileText className="w-5 h-5 text-violet-400 absolute top-2 left-2" strokeWidth={1.5} />
+                        <Calendar className="w-5 h-5 text-violet-400 absolute -top-1 left-3" strokeWidth={1.5} />
+                      </div>
+                      <Zap className="w-10 h-10 text-violet-400 relative z-10" strokeWidth={1.5} />
+                    </div>
                   </div>
+                  <h4 className="text-lg font-bold mb-3 text-violet-300">The answer exists—but not where you are</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">It's buried in past emails, documents, or meeting notes you can't access in time.</p>
+                </div>
+                {/* Arrow */}
+                <div className="hidden lg:block absolute top-24 -right-3 z-10">
+                  <ArrowRight className="w-6 h-6 text-indigo-400/60 animate-pulse" style={{animationDelay: '0.3s'}} />
+                </div>
+              </div>
+
+              {/* Stage 3 - Breaking the Flow */}
+              <div className="group relative">
+                <div className="bg-gradient-card border border-indigo-500/20 rounded-2xl p-8 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] h-full flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all duration-300">
+                    <div className="relative">
+                      <Brain className="w-10 h-10 text-indigo-400" strokeWidth={1.5} />
+                      <div className="absolute -top-2 -right-2 w-4 h-4 border-2 border-indigo-400 rounded-full animate-spin" style={{animationDuration: '3s'}} />
+                      <div className="absolute top-0 right-0 w-3 h-3 border-2 border-indigo-500 rounded-full animate-spin" style={{animationDuration: '2s', animationDirection: 'reverse'}} />
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-indigo-300">You break the flow trying to find it</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Switching tabs and searching kills momentum, and you lose track of the discussion.</p>
+                </div>
+                {/* Arrow */}
+                <div className="hidden lg:block absolute top-24 -right-3 z-10">
+                  <ArrowRight className="w-6 h-6 text-red-400/60 animate-pulse" style={{animationDelay: '0.6s'}} />
+                </div>
+              </div>
+
+              {/* Stage 4 - Losing the Moment */}
+              <div className="group relative">
+                <div className="bg-gradient-card border border-red-500/20 rounded-2xl p-8 hover:border-red-500/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] h-full flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300">
+                    <div className="relative">
+                      <MessageSquare className="w-10 h-10 text-red-400 opacity-40" strokeWidth={1.5} />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-12 h-12 border-2 border-red-500/30 rounded-full" />
+                        <AlertCircle className="w-6 h-6 text-red-500 absolute" strokeWidth={2} />
+                      </div>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-red-300">The moment passes — and accuracy suffers</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">You respond late, lose confidence, or miss the chance to contribute effectively.</p>
                 </div>
               </div>
             </div>

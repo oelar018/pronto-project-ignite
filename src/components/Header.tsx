@@ -1,80 +1,98 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.9)] transform translate-z-0" role="banner" style={{transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)'}}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform translate-z-0 ${
+        isScrolled 
+          ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)]' 
+          : 'bg-transparent border-b border-transparent'
+      }`}
+      role="banner" 
+      style={{transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)'}}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-3 group">
-          <img 
-            src="/logo.png" 
-            alt="Neura AI - Professional AI Assistant Logo" 
-            className="w-10 h-10 md:w-12 md:h-12 group-hover:scale-110 transition-transform duration-300"
-            width="48"
-            height="48"
-          />
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {/* Logo - Subtle */}
+          <div className="flex items-center space-x-2 group">
+            <img 
+              src="/logo.png" 
+              alt="Neura AI - Professional AI Assistant Logo" 
+              className="w-7 h-7 md:w-8 md:h-8 opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+              width="32"
+              height="32"
+            />
+            <span className="text-base md:text-lg font-medium text-white/50 group-hover:text-white/80 transition-colors duration-300">
               Neura AI
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-            <a 
-              href="#challenge-solution" 
-              className="relative text-muted-foreground hover:text-primary transition-colors font-medium group"
-            >
-              How It Works
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a 
-              href="#features" 
-              className="relative text-muted-foreground hover:text-primary transition-colors font-medium group"
-            >
-              Features
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a 
-              href="#use-cases" 
-              className="relative text-muted-foreground hover:text-primary transition-colors font-medium group"
-            >
-              Use Cases
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></span>
-            </a>
-          </nav>
+          {/* Desktop Navigation - Right aligned and subtle */}
+          <div className="hidden md:flex items-center gap-6 ml-auto">
+            <nav className="flex items-center gap-6" role="navigation" aria-label="Main navigation">
+              <a 
+                href="#challenge-solution" 
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
+              >
+                How It Works
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a 
+                href="#features" 
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
+              >
+                Features
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a 
+                href="#use-cases" 
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
+              >
+                Use Cases
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
+              </a>
+            </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
+            {/* CTA Button - Subtle */}
             <Button 
-              variant="hero" 
-              size="default"
+              variant="outline" 
+              size="sm"
+              className="border-white/20 bg-white/5 hover:bg-white/10 text-white/70 hover:text-white text-sm font-normal"
               onClick={() => {
                 document.getElementById('waitlist-form')?.scrollIntoView({ 
                   behavior: 'smooth' 
                 });
               }}
             >
-              Join the Waitlist
+              Join Waitlist
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Subtle */}
           <button
-            className="md:hidden p-2 rounded-xl hover:bg-primary/10 transition-all duration-300 border border-primary/20"
+            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-primary" />
+              <X className="w-5 h-5 text-white/60" />
             ) : (
-              <Menu className="w-6 h-6 text-primary" />
+              <Menu className="w-5 h-5 text-white/60" />
             )}
           </button>
         </div>

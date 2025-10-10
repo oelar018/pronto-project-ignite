@@ -45,17 +45,28 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-6 ml-auto">
             <nav className="flex items-center gap-6" role="navigation" aria-label="Main navigation">
               <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group cursor-pointer"
+              >
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a 
                 href="#challenge-solution" 
                 className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
-                How It Works
+                Solution
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
               <a 
                 href="#features" 
                 className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
-                Features
+                Technology
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
               <a 
@@ -63,6 +74,13 @@ const Header = () => {
                 className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
                 Use Cases
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a 
+                href="#faq" 
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
+              >
+                FAQs
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
             </nav>
@@ -103,18 +121,29 @@ const Header = () => {
           <div id="mobile-navigation" className="md:hidden py-6 border-t border-primary/20 bg-gradient-card backdrop-blur-lg animate-fade-in-up">
             <nav className="flex flex-col space-y-4" role="navigation" aria-label="Mobile navigation">
               <a 
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="text-muted-foreground hover:text-primary transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20"
+              >
+                Home
+              </a>
+              <a 
                 href="#challenge-solution"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20"
                 onClick={() => setIsMenuOpen(false)}
               >
-                How It Works
+                Solution
               </a>
               <a 
                 href="#features"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Features
+                Technology
               </a>
               <a 
                 href="#use-cases"
@@ -122,6 +151,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Use Cases
+              </a>
+              <a 
+                href="#faq"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQs
               </a>
               <div className="pt-4">
                 <Button 

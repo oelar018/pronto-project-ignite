@@ -26,33 +26,35 @@ const Hero = () => {
 
       {/* Foreground content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center">
-        {/* Trust Badges - BOLD */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up">
-          <Badge variant="secondary" className="flex items-center gap-2 px-6 py-3 text-base bg-gradient-to-r from-cyan-500/20 to-cyan-400/20 border-2 border-cyan-400/50 hover:border-cyan-400 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] backdrop-blur-md">
-            <Users className="w-5 h-5 text-cyan-400" />
-            <span className="text-cyan-300 font-bold">Built for Professionals</span>
-          </Badge>
-          <Badge variant="secondary" className="flex items-center gap-2 px-6 py-3 text-base bg-gradient-to-r from-purple-500/20 to-purple-400/20 border-2 border-purple-400/50 hover:border-purple-400 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] backdrop-blur-md">
-            <Shield className="w-5 h-5 text-purple-400" />
-            <span className="text-purple-300 font-bold">Enterprise Secure</span>
-          </Badge>
-          <Badge variant="secondary" className="flex items-center gap-2 px-6 py-3 text-base bg-gradient-to-r from-pink-500/20 to-pink-400/20 border-2 border-pink-400/50 hover:border-pink-400 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(236,72,153,0.4)] hover:shadow-[0_0_50px_rgba(236,72,153,0.6)] backdrop-blur-md">
-            <CheckCircle className="w-5 h-5 text-pink-400" />
-            <span className="text-pink-300 font-bold">Privacy First</span>
-          </Badge>
-        </div>
-
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-24 mb-10 animate-fade-in-up leading-[1.1]" style={{
         animationDelay: "0.2s"
       }}>
           <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)]">AI That Tells You What to Say in Conversations</span>
         </h1>
         
-        <p className="text-2xl md:text-3xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{
+        <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-medium" style={{
         animationDelay: "0.4s"
       }}>
           Get just-in-time intelligence that appears precisely when you need it. Works even with your phone asleep in your pocket.
         </p>
+
+        {/* Trust Badges - Subtle tags */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12 animate-fade-in-up" style={{
+        animationDelay: "0.5s"
+      }}>
+          <Badge variant="secondary" className="flex items-center gap-1.5 px-3 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+            <Users className="w-3 h-3 text-white/50" />
+            <span className="text-white/50 font-normal">Built for Professionals</span>
+          </Badge>
+          <Badge variant="secondary" className="flex items-center gap-1.5 px-3 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+            <Shield className="w-3 h-3 text-white/50" />
+            <span className="text-white/50 font-normal">Enterprise Secure</span>
+          </Badge>
+          <Badge variant="secondary" className="flex items-center gap-1.5 px-3 py-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+            <CheckCircle className="w-3 h-3 text-white/50" />
+            <span className="text-white/50 font-normal">Privacy First</span>
+          </Badge>
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 animate-fade-in-up" style={{
         animationDelay: "0.6s"

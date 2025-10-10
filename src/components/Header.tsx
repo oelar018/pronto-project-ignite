@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import neuraLogo from "@/assets/neura-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Header = () => {
           {/* Logo - Subtle */}
           <div className="flex items-center space-x-2 group">
             <img 
-              src="/logo.png" 
+              src={neuraLogo} 
               alt="Neura AI - Professional AI Assistant Logo" 
               className="w-7 h-7 md:w-8 md:h-8 opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
               width="32"

@@ -87,7 +87,7 @@ const Hero = () => {
             <img 
               src={convogptCover} 
               alt="ConvoGPT Interface Preview" 
-              className="w-[340px] opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105"
+              className="w-[400px] opacity-90 drop-shadow-[0_0_80px_rgba(168,85,247,0.4)] hover:opacity-100 hover:drop-shadow-[0_0_100px_rgba(168,85,247,0.6)] transition-all duration-500 hover:scale-105"
             />
           </div>
         </div>

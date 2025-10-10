@@ -171,7 +171,7 @@ const ChallengeSolution = () => {
 
           {/* Solution Section */}
           <header className="text-center mb-16">
-            <Badge variant="outline" className="mb-6 px-4 py-2 text-primary border-primary/30">
+            <Badge variant="outline" className="mb-6 px-6 py-3 text-lg text-primary border-primary/30 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-shadow">
               The Neura AI Solution
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">

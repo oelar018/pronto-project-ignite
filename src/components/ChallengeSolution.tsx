@@ -16,7 +16,7 @@ const ChallengeSolution = () => {
           {/* Challenge Section */}
           <header className="text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">
-              The Problem Every Professional Faces
+              Traditional Ways of Getting Information During Conversations Slows Everything Down
             </h2>
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
               Professionals can't access the right information in live conversations without <span className="text-red-400 font-bold">breaking flow</span>. 

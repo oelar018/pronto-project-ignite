@@ -55,8 +55,8 @@ const ChallengeSolution = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-6 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-pink-500/20 rounded-full">
-                  <ArrowRight className="w-5 h-5 text-pink-300" strokeWidth={2.5} />
+                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-10 z-20">
+                  <ArrowRight className="w-6 h-6 text-pink-400" strokeWidth={2.5} />
                 </div>
               </div>
 
@@ -94,8 +94,8 @@ const ChallengeSolution = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-6 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full">
-                  <ArrowRight className="w-5 h-5 text-orange-300" strokeWidth={2.5} />
+                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-10 z-20">
+                  <ArrowRight className="w-6 h-6 text-orange-400" strokeWidth={2.5} />
                 </div>
               </div>
 
@@ -129,8 +129,8 @@ const ChallengeSolution = () => {
                 </div>
                 
                 {/* Arrow */}
-                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-6 z-20 items-center justify-center w-8 h-8 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full">
-                  <ArrowRight className="w-5 h-5 text-red-300" strokeWidth={2.5} />
+                <div className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-10 z-20">
+                  <ArrowRight className="w-6 h-6 text-red-400" strokeWidth={2.5} />
                 </div>
               </div>
 

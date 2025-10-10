@@ -40,10 +40,6 @@ const ChallengeSolution = () => {
                       <div className="absolute -left-5 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
                       <div className="absolute -left-4 top-2/3 w-5 h-0.5 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '0.1s'}} />
                       
-                      {/* Chat bubbles */}
-                      <MessageSquare className="w-16 h-16 text-cyan-400 relative z-10" strokeWidth={1.5} />
-                      <MessageSquare className="w-14 h-14 text-cyan-300 absolute top-3 left-3 opacity-40" strokeWidth={1.5} />
-                      
                       {/* Motion lines AFTER (right side) */}
                       <div className="absolute -right-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
                       <div className="absolute -right-3 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
@@ -149,10 +145,6 @@ const ChallengeSolution = () => {
                       <div className="relative z-10 w-20 h-20 rounded-full bg-red-500/20 border-2 border-red-400/40 flex items-center justify-center animate-pulse">
                         <AlertCircle className="w-16 h-16 text-red-400" strokeWidth={2} />
                       </div>
-                      
-                      {/* Faded conversation bubbles in background */}
-                      <MessageSquare className="w-10 h-10 text-red-400 opacity-15 absolute -top-2 -left-2" strokeWidth={1.5} />
-                      <MessageSquare className="w-10 h-10 text-red-400 opacity-15 absolute -bottom-2 -right-2" strokeWidth={1.5} />
                     </div>
                   </div>
                   

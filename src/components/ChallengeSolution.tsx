@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, Brain, Zap, ArrowRight, CheckCircle, AlertCircle, Mail, Calendar, FileText, Globe } from "lucide-react";
+import { MessageSquare, Brain, Zap, ArrowRight, CheckCircle, AlertCircle, Mail, Calendar, FileText, Globe, Link2Off } from "lucide-react";
 
 const ChallengeSolution = () => {
   return (
@@ -106,27 +106,11 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Breaking/Shattering effect */}
+                    {/* Simple broken link/disconnection icon */}
                     <div className="relative w-28 h-28 flex items-center justify-center">
-                      {/* Center crack/break line */}
-                      <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-red-500/50 -translate-x-1/2" />
-                      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-red-500/20 blur-sm -translate-x-1/2" />
-                      
-                      {/* Left broken piece */}
-                      <div className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 border-2 border-orange-400 bg-orange-500/10 rounded transform -rotate-12 -translate-x-2">
-                        <Zap className="w-6 h-6 text-orange-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" strokeWidth={2} />
+                      <div className="relative z-10 w-20 h-20 rounded-full bg-orange-500/20 border-2 border-orange-400/40 flex items-center justify-center">
+                        <Link2Off className="w-14 h-14 text-orange-400" strokeWidth={2} />
                       </div>
-                      
-                      {/* Right broken piece */}
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 border-2 border-orange-400 bg-orange-500/10 rounded transform rotate-12 translate-x-2">
-                        <Zap className="w-6 h-6 text-orange-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" strokeWidth={2} />
-                      </div>
-                      
-                      {/* Scattered fragments */}
-                      <div className="absolute top-2 left-12 w-1.5 h-1.5 bg-red-400/60 rounded-full" />
-                      <div className="absolute top-4 right-14 w-1 h-1 bg-red-400/40 rounded-full" />
-                      <div className="absolute bottom-3 left-14 w-1 h-1 bg-red-400/50 rounded-full" />
-                      <div className="absolute bottom-4 right-12 w-1.5 h-1.5 bg-red-400/60 rounded-full" />
                     </div>
                   </div>
                   

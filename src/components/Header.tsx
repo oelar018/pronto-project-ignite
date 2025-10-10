@@ -45,21 +45,24 @@ const Header = () => {
             <nav className="flex items-center gap-6" role="navigation" aria-label="Main navigation">
               <a 
                 href="#challenge-solution" 
-                className="text-white/40 hover:text-white/80 hover:bg-white/5 transition-all text-sm font-normal px-3 py-1.5 rounded-md"
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
                 How It Works
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
               <a 
                 href="#features" 
-                className="text-white/40 hover:text-white/80 hover:bg-white/5 transition-all text-sm font-normal px-3 py-1.5 rounded-md"
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
                 Features
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
               <a 
                 href="#use-cases" 
-                className="text-white/40 hover:text-white/80 hover:bg-white/5 transition-all text-sm font-normal px-3 py-1.5 rounded-md"
+                className="relative text-white/40 hover:text-white/80 transition-colors text-sm font-normal group"
               >
                 Use Cases
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-white/60 group-hover:w-full transition-all duration-300"></span>
               </a>
             </nav>
 

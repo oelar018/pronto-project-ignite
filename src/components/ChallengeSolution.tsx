@@ -170,7 +170,7 @@ const ChallengeSolution = () => {
           </div>
 
           {/* Solution Section */}
-          <header className="text-center mb-16">
+          <header className="text-center mb-16 mt-24">
             <Badge variant="outline" className="mb-6 px-6 py-3 text-lg text-primary border-primary/30 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-shadow">
               The Neura AI Solution
             </Badge>

@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-16 items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-40 lg:mt-20 mb-10 animate-fade-in-up leading-[1.1]" style={{
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mt-48 lg:mt-32 mb-10 animate-fade-in-up leading-[1.1]" style={{
         animationDelay: "0.2s"
       }}>
               <span className="inline-block bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] drop-shadow-[0_0_60px_rgba(168,85,247,0.9)]">AI That Tells You What to Say in Conversations</span>

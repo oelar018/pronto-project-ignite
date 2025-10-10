@@ -110,35 +110,33 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
                   
               <div className="relative mb-8 mt-4">
-                {/* Conversation flow being broken by browser tabs */}
+                {/* Flow being broken: continuous path splits into chaos */}
                 <div className="relative w-28 h-28 flex items-center justify-center">
-                  {/* Flowing conversation line - broken in the middle */}
-                  <div className="absolute left-0 top-1/2 w-8 h-1 bg-gradient-to-r from-indigo-400 to-indigo-400/0 rounded-full" />
-                  <div className="absolute right-0 top-1/2 w-8 h-1 bg-gradient-to-l from-indigo-400 to-indigo-400/0 rounded-full" />
+                  {/* Smooth flow line entering from left */}
+                  <div className="absolute left-2 top-8 w-12 h-1 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full" />
                   
-                  {/* Central conversation bubble fading/disrupted */}
-                  <MessageSquare className="w-12 h-12 text-indigo-400/40 relative z-0" strokeWidth={1.5} />
-                  
-                  {/* Browser tabs interrupting - positioned to "break" the flow */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-14 bg-indigo-500/50 border-2 border-indigo-400/70 rounded-t-lg transform -rotate-6 z-10">
-                    <div className="w-full h-3 bg-indigo-400/40 rounded-t-lg flex items-center px-1 gap-0.5">
-                      <div className="w-1 h-1 rounded-full bg-indigo-300/60" />
-                      <div className="w-1 h-1 rounded-full bg-indigo-300/60" />
-                      <div className="w-1 h-1 rounded-full bg-indigo-300/60" />
-                    </div>
-                  </div>
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-14 bg-indigo-500/60 border-2 border-indigo-400/80 rounded-t-lg transform rotate-3 z-20">
-                    <div className="w-full h-3 bg-indigo-400/50 rounded-t-lg flex items-center px-1 gap-0.5">
-                      <div className="w-1 h-1 rounded-full bg-indigo-300/70" />
-                      <div className="w-1 h-1 rounded-full bg-indigo-300/70" />
-                      <div className="w-1 h-1 rounded-full bg-indigo-300/70" />
+                  {/* Center: focus breaking point with multiple tabs */}
+                  <div className="relative z-10">
+                    {/* Single focused window transitioning to multiple tabs */}
+                    <div className="w-14 h-16 bg-indigo-500/70 border-2 border-indigo-400 rounded-lg relative">
+                      <div className="w-full h-3 bg-indigo-400/50 rounded-t-lg" />
                     </div>
                   </div>
                   
-                  {/* X or break indicators */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-                    <div className="w-8 h-0.5 bg-red-400/60 rounded-full transform rotate-45" />
-                    <div className="w-8 h-0.5 bg-red-400/60 rounded-full transform -rotate-45 absolute top-0" />
+                  {/* Fragmented paths emerging - showing broken flow */}
+                  <div className="absolute right-2 top-4 w-10 h-0.5 bg-indigo-400/50 rounded-full transform rotate-12" />
+                  <div className="absolute right-3 top-8 w-8 h-0.5 bg-indigo-400/40 rounded-full" />
+                  <div className="absolute right-2 top-12 w-10 h-0.5 bg-indigo-400/50 rounded-full transform -rotate-12" />
+                  
+                  {/* Multiple scattered tab icons showing distraction */}
+                  <div className="absolute -top-1 right-6 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-md transform rotate-12">
+                    <div className="w-full h-2 bg-indigo-400/30 rounded-t-md" />
+                  </div>
+                  <div className="absolute -bottom-1 right-8 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-md transform -rotate-15">
+                    <div className="w-full h-2 bg-indigo-400/30 rounded-t-md" />
+                  </div>
+                  <div className="absolute top-6 -right-2 w-8 h-10 bg-indigo-500/30 border border-indigo-400/50 rounded-t-md transform rotate-6">
+                    <div className="w-full h-2 bg-indigo-400/30 rounded-t-md" />
                   </div>
                 </div>
               </div>

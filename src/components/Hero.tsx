@@ -144,7 +144,7 @@ const Hero = () => {
                   <span className="text-xs font-semibold text-accent">Discrete Delivery</span>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  AI discreetly blends into your thoughts through your earbuds - completely invisible to others. It feels like having a brilliant co-pilot in your mind.
+                  AI discreetly blends into your thoughts through your earbuds - completely invisible to others.
                 </p>
               </div>
             </div>

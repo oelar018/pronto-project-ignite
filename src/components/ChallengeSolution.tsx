@@ -40,6 +40,10 @@ const ChallengeSolution = () => {
                       <div className="absolute -left-5 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
                       <div className="absolute -left-4 top-2/3 w-5 h-0.5 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '0.1s'}} />
                       
+                      {/* Chat bubbles in center */}
+                      <MessageSquare className="w-16 h-16 text-cyan-400 relative z-10" strokeWidth={1.5} />
+                      <MessageSquare className="w-14 h-14 text-cyan-300 absolute top-3 left-3 opacity-40" strokeWidth={1.5} />
+                      
                       {/* Motion lines AFTER (right side) */}
                       <div className="absolute -right-2 top-1/3 w-6 h-0.5 bg-cyan-400/60 rounded-full animate-pulse" />
                       <div className="absolute -right-3 top-1/2 w-4 h-0.5 bg-cyan-400/40 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
@@ -64,23 +68,29 @@ const ChallengeSolution = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl" />
                   
                   <div className="relative mb-8 mt-4">
-                    {/* Grid of document icons - 2x2 formation */}
-                    <div className="grid grid-cols-2 gap-3 w-28">
-                      {/* Top left - Mail */}
-                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
-                        <Mail className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
+                    {/* Grid of document icons - 2x2 formation with question mark in center */}
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                      <div className="grid grid-cols-2 gap-3 w-28">
+                        {/* Top left - Mail */}
+                        <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                          <Mail className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
+                        </div>
+                        {/* Top right - FileText */}
+                        <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                          <FileText className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
+                        </div>
+                        {/* Bottom left - Calendar */}
+                        <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                          <Calendar className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
+                        </div>
+                        {/* Bottom right - Globe */}
+                        <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
+                          <Globe className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
+                        </div>
                       </div>
-                      {/* Top right - FileText */}
-                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
-                        <FileText className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
-                      </div>
-                      {/* Bottom left - Calendar */}
-                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
-                        <Calendar className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
-                      </div>
-                      {/* Bottom right - Globe */}
-                      <div className="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-400/30 flex items-center justify-center">
-                        <Globe className="w-6 h-6 text-pink-400/80" strokeWidth={1.5} />
+                      {/* Central question mark icon */}
+                      <div className="absolute z-10 w-14 h-14 rounded-full bg-pink-500/30 border-2 border-pink-400 flex items-center justify-center">
+                        <HelpCircle className="w-7 h-7 text-pink-300" strokeWidth={2} />
                       </div>
                     </div>
                   </div>

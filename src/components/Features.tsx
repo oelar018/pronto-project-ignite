@@ -120,39 +120,6 @@ Powered by the Future.
               </Card>
             </div>
           </article>
-
-          {/* Technical Excellence */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 text-center hover-lift hover:shadow-glow transition-all duration-500">
-              <div className="p-3 rounded-lg bg-primary/10 w-fit mx-auto mb-4">
-                <Brain className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-semibold mb-2">Context Intelligence</h4>
-              <p className="text-sm text-muted-foreground">
-                Advanced NLP understands nuance, tone, and conversation dynamics
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center hover-lift hover:shadow-glow transition-all duration-500">
-              <div className="p-3 rounded-lg bg-accent/10 w-fit mx-auto mb-4">
-                <TrendingUp className="w-6 h-6 text-accent" />
-              </div>
-              <h4 className="font-semibold mb-2">Adaptive Timing</h4>
-              <p className="text-sm text-muted-foreground">
-                AI learns your conversation patterns to deliver insights at perfect moments
-              </p>
-            </Card>
-
-            <Card className="p-6 text-center hover-lift hover:shadow-glow transition-all duration-500">
-              <div className="p-3 rounded-lg bg-primary/10 w-fit mx-auto mb-4">
-                <Database className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-semibold mb-2">Invisible Integration</h4>
-              <p className="text-sm text-muted-foreground">
-                Works completely invisibly - even with phone asleep in your pocket
-              </p>
-            </Card>
-          </div>
         </div>
       </div>
     </section>;

@@ -5,14 +5,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
-    const form = document.getElementById('waitlist-form') as HTMLFormElement;
+    const formEl = document.getElementById('waitlist-form') as HTMLFormElement;
     
     const handleSubmit = async (e: Event) => {
       e.preventDefault();
-      const formElement = e.currentTarget as HTMLFormElement;
-      const data = Object.fromEntries(new FormData(formElement).entries());
+      const form = e.currentTarget as HTMLFormElement;
+      const data = Object.fromEntries(new FormData(form).entries());
 
-      // Basic email validation
+      // Basic email check
       const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email as string || "");
       if (!emailOk) { 
         alert("Please enter a valid email."); 
@@ -34,24 +34,30 @@ const Footer = () => {
       };
 
       try {
-        const r = await fetch("https://discord.com/api/webhooks/1427033593007571024/wjfBS4Gg92S0vXzGXb5efJ24MTbDBXhtplZLh9M7Cd3hss2C4SJlzawhhNG6EYJAh7vM", {
+        const resp = await fetch("https://discord.com/api/webhooks/1427033593007571024/wjfBS4Gg92S0vXzGXb5efJ24MTbDBXhtplZLh9M7Cd3hss2C4SJlzawhhNG6EYJAh7vM", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
         });
-        if (!r.ok) throw new Error("Discord error");
-        formElement.reset();
+        const text = await resp.text(); // debug aid
+        if (!resp.ok) {
+          console.error("Discord webhook error", resp.status, text);
+          alert("Submission failed. Please try again.");
+          return;
+        }
+        form.reset();
         alert("You're on the list! 🎉");
+        // window.location.href = "/thank-you"; // optional redirect
       } catch (err) {
-        console.error(err);
-        alert("Something went wrong. Please try again.");
+        console.error("Network error", err);
+        alert("Network error. Please try again.");
       }
     };
 
-    form?.addEventListener('submit', handleSubmit);
+    formEl?.addEventListener('submit', handleSubmit);
 
     return () => {
-      form?.removeEventListener('submit', handleSubmit);
+      formEl?.removeEventListener('submit', handleSubmit);
     };
   }, []);
 

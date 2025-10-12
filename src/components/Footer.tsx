@@ -1,7 +1,59 @@
+import { useEffect } from "react";
 import { Twitter, Linkedin, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    const form = document.getElementById('waitlist-form') as HTMLFormElement;
+    
+    const handleSubmit = async (e: Event) => {
+      e.preventDefault();
+      const formElement = e.currentTarget as HTMLFormElement;
+      const data = Object.fromEntries(new FormData(formElement).entries());
+
+      // Basic email validation
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email as string || "");
+      if (!emailOk) { 
+        alert("Please enter a valid email."); 
+        return; 
+      }
+
+      const payload = {
+        content: null,
+        embeds: [{
+          title: "📝 New Waitlist Signup",
+          description: "Neura AI waitlist submission",
+          fields: [
+            { name: "Name", value: data.name || "—", inline: true },
+            { name: "Email", value: data.email || "—", inline: true },
+            { name: "Usage", value: data.usage || "—", inline: false }
+          ],
+          timestamp: new Date().toISOString()
+        }]
+      };
+
+      try {
+        const r = await fetch("https://discord.com/api/webhooks/1427033593007571024/wjfBS4Gg92S0vXzGXb5efJ24MTbDBXhtplZLh9M7Cd3hss2C4SJlzawhhNG6EYJAh7vM", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!r.ok) throw new Error("Discord error");
+        formElement.reset();
+        alert("You're on the list! 🎉");
+      } catch (err) {
+        console.error(err);
+        alert("Something went wrong. Please try again.");
+      }
+    };
+
+    form?.addEventListener('submit', handleSubmit);
+
+    return () => {
+      form?.removeEventListener('submit', handleSubmit);
+    };
+  }, []);
 
   return (
     <footer className="py-12 bg-[#0A0A0A] border-t border-white/10">

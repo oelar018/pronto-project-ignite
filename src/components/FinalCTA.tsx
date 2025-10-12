@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
@@ -216,17 +217,16 @@ const FinalCTA = () => {
                       )}
                     </div>
                     <div>
-                      <Input
-                        type="text"
+                      <Textarea
                         name="usage"
-                        placeholder="How do you plan to use Neura AI? *"
+                        placeholder="How do you plan to use Neura AI?"
+                        rows={3}
                         value={formData.purpose}
                         onChange={(e) => setFormData({...formData, purpose: sanitizeInput(e.target.value)})}
-                        className={`h-12 px-4 bg-background/50 border-border/50 focus:border-primary ${
+                        className={`px-4 py-3 bg-background/50 border-border/50 focus:border-primary ${
                           fieldErrors.purpose ? 'border-destructive focus:border-destructive' : ''
                         }`}
                         disabled={isLoading}
-                        required
                         maxLength={500}
                       />
                       {fieldErrors.purpose && (

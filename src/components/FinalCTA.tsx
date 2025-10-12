@@ -187,12 +187,11 @@ const FinalCTA = () => {
                         name="name"
                         placeholder="Your name (optional)"
                         value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: sanitizeInput(e.target.value)})}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
                         className={`h-12 px-4 bg-background/50 border-border/50 focus:border-primary ${
                           fieldErrors.name ? 'border-destructive focus:border-destructive' : ''
                         }`}
                         disabled={isLoading}
-                        maxLength={100}
                       />
                       {fieldErrors.name && (
                         <p className="text-sm text-destructive mt-1">{fieldErrors.name}</p>
@@ -202,15 +201,14 @@ const FinalCTA = () => {
                       <Input
                         type="email"
                         name="email"
-                        placeholder="Enter your professional email *"
+                        placeholder="Enter your professional email"
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: sanitizeInput(e.target.value)})}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
                         className={`h-12 px-4 bg-background/50 border-border/50 focus:border-primary ${
                           fieldErrors.email ? 'border-destructive focus:border-destructive' : ''
                         }`}
                         disabled={isLoading}
                         required
-                        maxLength={255}
                       />
                       {fieldErrors.email && (
                         <p className="text-sm text-destructive mt-1">{fieldErrors.email}</p>
@@ -222,12 +220,12 @@ const FinalCTA = () => {
                         placeholder="How do you plan to use Neura AI?"
                         rows={3}
                         value={formData.purpose}
-                        onChange={(e) => setFormData({...formData, purpose: sanitizeInput(e.target.value)})}
+                        onChange={(e) => setFormData({...formData, purpose: e.target.value})}
                         className={`px-4 py-3 bg-background/50 border-border/50 focus:border-primary ${
                           fieldErrors.purpose ? 'border-destructive focus:border-destructive' : ''
                         }`}
                         disabled={isLoading}
-                        maxLength={500}
+                        required
                       />
                       {fieldErrors.purpose && (
                         <p className="text-sm text-destructive mt-1">{fieldErrors.purpose}</p>

@@ -183,6 +183,7 @@ const FinalCTA = () => {
                     <div>
                       <Input
                         type="text"
+                        name="name"
                         placeholder="Your name (optional)"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: sanitizeInput(e.target.value)})}
@@ -199,6 +200,7 @@ const FinalCTA = () => {
                     <div>
                       <Input
                         type="email"
+                        name="email"
                         placeholder="Enter your professional email *"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: sanitizeInput(e.target.value)})}
@@ -216,6 +218,7 @@ const FinalCTA = () => {
                     <div>
                       <Input
                         type="text"
+                        name="usage"
                         placeholder="How do you plan to use Neura AI? *"
                         value={formData.purpose}
                         onChange={(e) => setFormData({...formData, purpose: sanitizeInput(e.target.value)})}

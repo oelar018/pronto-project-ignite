@@ -135,7 +135,7 @@ const FinalCTA = () => {
   }
 
   return (
-    <section id="waitlist-form" className="relative py-24 md:py-32 bg-black overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-black overflow-hidden">
       {/* Massive vibrant glows */}
       <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-gradient-to-br from-cyan-500/30 to-purple-500/30 rounded-full blur-[200px]" />
       <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-pink-500/30 to-purple-500/30 rounded-full blur-[180px]" />
@@ -179,7 +179,7 @@ const FinalCTA = () => {
                   Get <span className="text-cyan-400 font-bold">early access</span> to Neura AI.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form id="waitlist-form" className="space-y-4">
                   <div className="space-y-4">
                     <div>
                       <Input

@@ -12,10 +12,10 @@ const Footer = () => {
       const form = e.currentTarget as HTMLFormElement;
       const data = Object.fromEntries(new FormData(form).entries());
 
-      // Basic email check
+      // Email validation
       const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email as string || "");
       if (!emailOk) { 
-        alert("Please enter a valid email."); 
+        window.showNeuraToast("Please enter a valid email.", "error");
         return; 
       }
 
@@ -39,18 +39,18 @@ const Footer = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
         });
-        const text = await resp.text(); // debug aid
+        const text = await resp.text(); // debug
         if (!resp.ok) {
           console.error("Discord webhook error", resp.status, text);
-          alert("Submission failed. Please try again.");
+          window.showNeuraToast("Submission failed. Please try again.", "error");
           return;
         }
         form.reset();
-        alert("You're on the list! 🎉");
-        // window.location.href = "/thank-you"; // optional redirect
+        window.showNeuraToast("You're on the list! 🎉", "success");
+        // Optional: window.location.href = "/thank-you";
       } catch (err) {
         console.error("Network error", err);
-        alert("Network error. Please try again.");
+        window.showNeuraToast("Network error. Please try again.", "error");
       }
     };
 
